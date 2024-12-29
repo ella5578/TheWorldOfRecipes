@@ -4,17 +4,19 @@ namespace TheWorldOfRecipes.Models
 {
     public class Recipe
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+ //       [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int RecipeID { get; set; } // מפתח ראשי
         public string RecipeName { get; set; } // שם המתכון
         public string Description { get; set; } // תיאור המתכון
         public string VideoURL { get; set; } // קישור לסרטון
         public int TimerMinutes { get; set; } // זמן בישול בדקות
-        public int SpecificCategoryID { get; set; } // מזהה קטגוריה ספציפית
         public int LikesCount { get; set; } // מספר לייקים
+        public int CategoryID { get; set; } // מזהה קטגוריה 
+        public Category Category { get; set; }
 
         //public SpecificCategory SpecificCategory { get; set; } // ניווט לקטגוריה ספציפית
         public ICollection<RatingAndComment> RatingsAndComments { get; set; } // דירוגים ותגובות
+        public ICollection<RecipeIngredient> RecipeIngredients { get; set; }// קישור לרכיבים
     }
 
 }

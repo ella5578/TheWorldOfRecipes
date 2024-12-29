@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TheWorldOfRecipes.Data;
 using TheWorldOfRecipes.Models;
 
-namespace TheWorldOfRecipes.Pages.Users
+namespace TheWorldOfRecipes.Pages.Ingredients
 {
     public class EditModel : PageModel
     {
@@ -20,7 +21,7 @@ namespace TheWorldOfRecipes.Pages.Users
         }
 
         [BindProperty]
-        public new User User { get; set; } = default!;
+        public Ingredient Ingredient { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,48 +30,48 @@ namespace TheWorldOfRecipes.Pages.Users
                 return NotFound();
             }
 
-            // חיפוש המשתמש מה-Database לפי ה-id
-            User = await _context.Users.FindAsync(id);
-
-            if (User == null)
+            var ingredient =  await _context.Ingredients.FirstOrDefaultAsync(m => m.IngredientID == id);
+            if (ingredient == null)
             {
                 return NotFound();
             }
-
+            Ingredient = ingredient;
             return Page();
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
-        public async Task<IActionResult> OnPostAsync(int id)
+        // For more information, see https://aka.ms/RazorPagesCRUD.
+        public async Task<IActionResult> OnPostAsync()
         {
-            var userToUpdate = await _context.Users.FindAsync(id);
-
-            if (userToUpdate == null)
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                return Page();
             }
 
-            // עדכון ערכי המשתמש לפי המודל
-            if (await TryUpdateModelAsync<User>(
-                userToUpdate,
-                "user",
-                u => u.Username,
-                u => u.Email,
-                u => u.IsAdmin,
-                u => u.FirstName,
-                u => u.LastName,
-                u => u.RegistrationDate))
+            _context.Attach(Ingredient).State = EntityState.Modified;
+
+            try
             {
                 await _context.SaveChangesAsync();
-                return RedirectToPage("./Index");
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!IngredientExists(Ingredient.IngredientID))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
 
-            return Page();
+            return RedirectToPage("./Index");
         }
 
-        private bool UserExists(int id)
+        private bool IngredientExists(int id)
         {
-            return _context.Users.Any(e => e.UserID == id);
+            return _context.Ingredients.Any(e => e.IngredientID == id);
         }
     }
 }

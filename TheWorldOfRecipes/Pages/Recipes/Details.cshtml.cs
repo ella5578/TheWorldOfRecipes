@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using TheWorldOfRecipes.Data;
 using TheWorldOfRecipes.Models;
 
-namespace TheWorldOfRecipes.Pages.Users
+namespace TheWorldOfRecipes.Pages.Recipes
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace TheWorldOfRecipes.Pages.Users
             _context = context;
         }
 
-        public new User User { get; set; } = default!;
+        public Recipe Recipe { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,19 +28,16 @@ namespace TheWorldOfRecipes.Pages.Users
                 return NotFound();
             }
 
-            // חיפוש המשתמש כולל כל השדות החדשים ונתוני RatingsAndComments
-            User = await _context.Users
-                .Include(u => u.RatingsAndComments) // טעינת הקשרים
-                .ThenInclude(rc => rc.Recipe) // טעינת פרטי המתכון
-                .AsNoTracking() // הבטחת קריאה בלבד ללא מעקב אחר שינויים
-                .FirstOrDefaultAsync(u => u.UserID == id);
+            var recipe = await _context.Recipes.FirstOrDefaultAsync(m => m.RecipeID == id);
 
-            if (User == null)
+            if (recipe is not null)
             {
-                return NotFound();
+                Recipe = recipe;
+
+                return Page();
             }
 
-            return Page();
+            return NotFound();
         }
     }
 }

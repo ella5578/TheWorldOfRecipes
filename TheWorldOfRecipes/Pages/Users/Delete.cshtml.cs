@@ -21,7 +21,7 @@ namespace TheWorldOfRecipes.Pages.Users
         }
 
         [BindProperty]
-        public User User { get; set; }
+        public new User User { get; set; }
         public string ErrorMessage { get; set; }
 
         // הצגת המשתמש לפני מחיקתו
