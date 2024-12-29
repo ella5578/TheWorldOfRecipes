@@ -1,0 +1,56 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: lavender;
+}
+
+.text-center {
+    text-align: right;
+    direction: rtl;
+    font-family: 'Alef', sans-serif;
+    background-color: lightblue;
+    color: darkblue;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.small-image {
+    width: 30%; /* מקטין את התמונה ל-50% מהרוחב */
+    height: auto; /* שומר על פרופורציות */
+    border-radius: 15px; /* פינות מעוגלות */
+    margin-bottom: 20px; /* מרווח למטה */
+}
+.card-text {
+    color:darkmagenta;
+    text-align: right;
+    direction: rtl;
+    font-family: 'Alef', sans-serif;
+}
+.titleofweb {
+    color: orange;
+    font-size: 18px;
+
+}
+.divone {
+    text-align: right; /* יישור הפסקה לימין */
+    margin-right: 20px; /* ריווח חיצוני מימין */
+    padding-left: 400px; /* ריווח פנימי מימין */
+}
