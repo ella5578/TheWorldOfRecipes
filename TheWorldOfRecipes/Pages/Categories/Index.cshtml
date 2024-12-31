@@ -5,32 +5,34 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-center">קטגוריות</h1> <!-- כותרת ממורכזת -->
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Category[0].CategoryName)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Category) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryName)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.CategoryID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.CategoryID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.CategoryID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+@* <p class="text-center">
+    <a asp-page="Create">Create New</a> <!-- כפתור ליצירת קטגוריה חדשה -->
+</p> *@
+
+<div class="container">
+    <div class="row justify-content-center"> <!-- ממרכז את השורות -->
+        @foreach (var item in Model.Category)
+        {
+            <div class="col-4 col-lg-3 text-center mb-3"> <!-- התאמה לגודל מסך -->
+                <div class="card border-0 p-3" style="background-color: #f8f9fa; border-radius: 15px;"> <!-- עיצוב כרטיס -->
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <!-- קצוות מעוגלים + תמונה ריבועית -->
+                        <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <img src="~/images/@item.ImageUrl"
+                                 class="rounded"
+                                 style="width: 180px; height: 180px; object-fit: cover;"
+                                 alt="Category Image" />
+                        </div>
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@item.CategoryName</h5> <!-- שם הקטגוריה -->
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

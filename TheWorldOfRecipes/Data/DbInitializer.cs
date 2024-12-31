@@ -23,15 +23,16 @@ namespace TheWorldOfRecipes.Data
             context.Users.AddRange(users);
             context.SaveChanges();
 
+
             var categories = new Category[]
             {
-                new Category { CategoryName = "קינוחים" },
-                new Category { CategoryName = "מנות עיקריות" },
-                new Category { CategoryName = "ארוחות בוקר" },
-                new Category { CategoryName = "סלטים" },
-                new Category { CategoryName = "ארוחות צהריים" },
-                new Category { CategoryName = "צמחונים" },
-                new Category { CategoryName = "מאכלים דיאטטים" }
+                new Category { CategoryName = "קינוחים", ImageUrl = "desserts.jpg" },
+                new Category { CategoryName = "מנות עיקריות", ImageUrl="maindishes.jpg"},
+                new Category { CategoryName = "ארוחות בוקר", ImageUrl = "breakfast.jpg" },
+                new Category { CategoryName = "סלטים", ImageUrl = "salad.jpg" },
+                new Category { CategoryName = "ארוחות צהריים", ImageUrl = "lunch.jpg" },
+                new Category { CategoryName = "מאפים", ImageUrl="bread.jpg"  }
+                
 
             };
             foreach (var category in categories)
@@ -46,7 +47,7 @@ namespace TheWorldOfRecipes.Data
                     TimerMinutes=60, VideoURL="KbyahTnzbKA?si=KRYAchT3Bd8e8my-"
                     //"https://youtu.be/KbyahTnzbKA?si=kgAr_Dbzh30MW_7H"
                 },
-                new Recipe{/*RecipeID=4022,*/Description="cake", CategoryID = 1},
+                new Recipe{/*RecipeID=4022,*/Description="cake", CategoryID = 1, TimerMinutes=30, VideoURL="EBAE91Os2VA?si=m7bn3GyeGy7t_-9B"},
                 new Recipe{/*RecipeID=4041,*/Description="cookie", CategoryID = 1},
                 new Recipe{/*RecipeID=1045,*/Description="soup", CategoryID = 2},
                 new Recipe{/*RecipeID=3141,*/Description="Trigonometry", CategoryID = 3}
