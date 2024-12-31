@@ -15,44 +15,13 @@ namespace TheWorldOfRecipes.Data
 
             var users = new User[]
             {
-                new User{Username="Carson",Password="Alexander",Email="user@gmail.com", IsAdmin=false,FirstName="Carson",LastName="Alexander",RegistrationDate=DateTime.Parse("2019-09-01")},
-                new User{Username="Meredith",Password="Alonso",Email="user@gmail.com", IsAdmin=false, FirstName="merdith", LastName="ggg"},
+                new User{UserName="Carson",Password="Alexander",Email="user@gmail.com", IsAdmin=false,FirstName="Carson",LastName="Alexander",RegistrationDate=DateTime.Parse("2019-09-01")},
+                new User{UserName="Meredith",Password="Alonso",Email="user@gmail.com", IsAdmin=false, FirstName="merdith", LastName="ggg"},
                
             };
 
             context.Users.AddRange(users);
             context.SaveChanges();
-
-            var recipes = new Recipe[]
-            {
-                new Recipe{RecipeID=1050,Description="pie"},
-                new Recipe{RecipeID=4022,Description="cake"},
-                new Recipe{RecipeID=4041,Description="cookie"},
-                new Recipe{RecipeID=1045,Description="soup"},
-                new Recipe{RecipeID=3141,Description="Trigonometry"}
-                
-            };
-
-            context.Recipes.AddRange(recipes);
-            context.SaveChanges();
-
-            var ratingsandcomments = new RatingAndComment[]
-            {
-                new RatingAndComment{UserID=1,RecipeID=1050,Rating=5},
-                new RatingAndComment{UserID=1,RecipeID=4022,Rating=4},
-                new RatingAndComment{UserID=1,RecipeID=4041,Rating=3}
-            };
-
-            context.RatingAndComments.AddRange(ratingsandcomments);
-            context.SaveChanges();
-
-            context.Database.EnsureCreated();
-
-            // בדיקה אם כבר יש קטגוריות
-            if (context.Categories.Any())
-            {
-                return; // אם כבר יש נתונים, לא מוסיפים שוב
-            }
 
             var categories = new Category[]
             {
@@ -71,23 +40,57 @@ namespace TheWorldOfRecipes.Data
             }
             context.SaveChanges();
 
+            var recipes = new Recipe[]
+            {
+                new Recipe{/*RecipeID=1050,*/RecipeName="Apple Pie", Description="pie", CategoryID = 1,
+                    TimerMinutes=60, VideoURL="KbyahTnzbKA?si=KRYAchT3Bd8e8my-"
+                    //"https://youtu.be/KbyahTnzbKA?si=kgAr_Dbzh30MW_7H"
+                },
+                new Recipe{/*RecipeID=4022,*/Description="cake", CategoryID = 1},
+                new Recipe{/*RecipeID=4041,*/Description="cookie", CategoryID = 1},
+                new Recipe{/*RecipeID=1045,*/Description="soup", CategoryID = 2},
+                new Recipe{/*RecipeID=3141,*/Description="Trigonometry", CategoryID = 3}
+                
+            };
+
+            context.Recipes.AddRange(recipes);
+            context.SaveChanges();
+
+            var ratingsandcomments = new RatingAndComment[]
+            {
+                new RatingAndComment{UserID=1,RecipeID=1,Rating=5},
+                new RatingAndComment{UserID=1,RecipeID=2,Rating=4},
+                new RatingAndComment{UserID=2,RecipeID=3,Rating=3}
+            };
+
+            context.RatingAndComments.AddRange(ratingsandcomments);
+            context.SaveChanges();
+
+            context.Database.EnsureCreated();
+
+            //// בדיקה אם כבר יש קטגוריות
+            //if (context.Categories.Any())
+            //{
+            //    return; // אם כבר יש נתונים, לא מוסיפים שוב
+            //}
+
             var ingredients = new Ingredient[]
             {
-                new Ingredient{IngredientID = 1, IngredientName = "ביצים"},
-                new Ingredient{IngredientID = 2, IngredientName = "חלב"},
-                new Ingredient{IngredientID = 3, IngredientName = "קמח"},
-                new Ingredient{IngredientID = 4, IngredientName = "שוקולד"},
-                new Ingredient{IngredientID = 5, IngredientName = "סוכר"},
-                new Ingredient{IngredientID = 6, IngredientName = "תפוזים"},
-                new Ingredient{IngredientID = 7, IngredientName = "בשר טחון"},
-                new Ingredient{IngredientID = 8, IngredientName = "חזה עוף"},
-                new Ingredient{IngredientID = 9, IngredientName = "אורז"},
-                new Ingredient{IngredientID = 10, IngredientName = "פסטה"},
-                new Ingredient{IngredientID = 11, IngredientName = "רסק עגבניות"},
-                new Ingredient{IngredientID = 12, IngredientName = "שמנת מתוקה"},
-                new Ingredient{IngredientID = 13, IngredientName = "מלח"},
-                new Ingredient{IngredientID = 14, IngredientName = "פטריות"},
-                new Ingredient{IngredientID = 15, IngredientName = "בצל"}
+                new Ingredient{/*IngredientID = 1, */IngredientName = "ביצים"},
+                new Ingredient{/*IngredientID = 2, */IngredientName = "חלב"},
+                new Ingredient{/*IngredientID = 3,*/ IngredientName = "קמח"},
+                new Ingredient{/*IngredientID = 4,*/ IngredientName = "שוקולד"},
+                new Ingredient{/*IngredientID = 5,*/ IngredientName = "סוכר"},
+                new Ingredient{/*IngredientID = 6,*/ IngredientName = "תפוזים"},
+                new Ingredient{/*IngredientID = 7,*/ IngredientName = "בשר טחון"},
+                new Ingredient{/*IngredientID = 8,*/ IngredientName = "חזה עוף"},
+                new Ingredient{/*IngredientID = 9,*/ IngredientName = "אורז"},
+                new Ingredient{/*IngredientID = 10,*/ IngredientName = "פסטה"},
+                new Ingredient{/*IngredientID = 11,*/ IngredientName = "רסק עגבניות"},
+                new Ingredient{/*IngredientID = 12,*/ IngredientName = "שמנת מתוקה"},
+                new Ingredient{/*IngredientID = 13,*/ IngredientName = "מלח"},
+                new Ingredient{/*IngredientID = 14,*/ IngredientName = "פטריות"},
+                new Ingredient{/*IngredientID = 15,*/ IngredientName = "בצל"}
             };
 
             // הוספת המרכיבים לבסיס הנתונים

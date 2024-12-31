@@ -54,7 +54,7 @@ namespace TheWorldOfRecipes.Pages.Users
             if (await TryUpdateModelAsync<User>(
                 userToUpdate,
                 "user",
-                u => u.Username,
+                u => u.UserName,
                 u => u.Email,
                 u => u.IsAdmin,
                 u => u.FirstName,

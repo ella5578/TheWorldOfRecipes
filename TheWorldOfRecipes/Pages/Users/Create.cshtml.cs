@@ -33,7 +33,7 @@ namespace TheWorldOfRecipes.Pages.Users
                 emptyUser,
                 "user",   // Prefix for form value.
                 u => u.FirstName, u => u.LastName, u => u.RegistrationDate, u=>u.Email, 
-                u=>u.IsAdmin, u=>u.Username, u =>u.Password))
+                u=>u.IsAdmin, u=>u.UserName, u =>u.Password))
             {
                 _context.Users.Add(emptyUser);
                 await _context.SaveChangesAsync();

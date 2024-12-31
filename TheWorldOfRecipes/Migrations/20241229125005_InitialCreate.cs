@@ -21,7 +21,7 @@ namespace TheWorldOfRecipes.Migrations
                 newName: "RatingAndCommentID");
 
             migrationBuilder.AlterColumn<string>(
-                name: "Username",
+                name: "UserName",
                 table: "User",
                 type: "nvarchar(50)",
                 maxLength: 50,
@@ -192,7 +192,7 @@ namespace TheWorldOfRecipes.Migrations
                 newName: "RatingID");
 
             migrationBuilder.AlterColumn<string>(
-                name: "Username",
+                name: "UserName",
                 table: "User",
                 type: "nvarchar(max)",
                 nullable: true,

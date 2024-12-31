@@ -14,7 +14,7 @@ namespace TheWorldOfRecipes.Models
 
         [Required(ErrorMessage = "שם משתמש הוא חובה.")]
         [StringLength(50, ErrorMessage = "שם המשתמש חייב להיות באורך של עד 50 תווים.")]
-        public string Username { get; set; } // שם משתמש
+        public string UserName { get; set; } // שם משתמש
 
         [Required(ErrorMessage = "סיסמה היא חובה.")]
         [StringLength(100, MinimumLength = 6, ErrorMessage = "הסיסמה חייבת להיות בין 6 ל-100 תווים.")]
