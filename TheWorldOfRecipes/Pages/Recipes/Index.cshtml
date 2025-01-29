@@ -3,19 +3,48 @@
 
 @{
     ViewData["Title"] = "Index";
-
-    var videoLinkBegin = " width=\"560\" height=\"315\" src=";
-    var videoLinkEnd = " title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen";
 }
 
 <div dir="rtl">
-
     <h1>מתכונים</h1>
 
     <p>
         <a asp-page="Create">Create New</a>
     </p>
-    <table class="table">
+
+    <!-- מיכל שכולל את כל המתכונים -->
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.Recipe)
+            {
+                <!-- עמודה שמתאימה לגודל מסכים -->
+                <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                    <!-- עיצוב של הכרטיס -->
+                    <div class="card border-0 p-3" style="background-color: #f8f9fa; border-radius: 15px;">
+                        @if (!string.IsNullOrEmpty(item.VideoURL))
+                        {
+                            <!-- סרטון יוטיוב בתוך iframe -->
+                            <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <iframe width="280" height="158" src="https://www.youtube.com/embed/@item.VideoURL"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                            </div>
+                        }
+                        <!-- שם המתכון -->
+                        <div class="card-body">
+                            <h5 class="card-title">@item.RecipeName</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+    
+   @*  <table class="table">
         <thead>
             <tr>
                 <th>
@@ -42,6 +71,7 @@
         <tbody>
             @foreach (var item in Model.Recipe)
             {
+               
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.RecipeName)
@@ -72,5 +102,5 @@
                 </tr>
             }
         </tbody>
-    </table>
+    </table> *@
 </div>

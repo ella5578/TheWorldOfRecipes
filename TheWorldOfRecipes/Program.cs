@@ -34,6 +34,13 @@ using (var scope = app.Services.CreateScope())
     DbInitializer.Initialize(context);
 }
 
+//הפעל את שירותי האימות והמשך
+
+app.UseAuthentication(); //הגבלת גישה
+app.UseAuthorization();
+app.UseSession(); //זכירה שהוא עבר את האימות
+
+//
 app.UseHttpsRedirection();
 
 app.UseRouting();

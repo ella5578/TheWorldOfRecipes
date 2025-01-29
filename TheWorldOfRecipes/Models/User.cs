@@ -17,7 +17,7 @@ namespace TheWorldOfRecipes.Models
         public string UserName { get; set; } // שם משתמש
 
         [Required(ErrorMessage = "סיסמה היא חובה.")]
-        [StringLength(100, MinimumLength = 6, ErrorMessage = "הסיסמה חייבת להיות בין 6 ל-100 תווים.")]
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "הסיסמה חייבת להיות בין 6 ל-20 תווים.")]
         public string Password { get; set; } // סיסמה
 
         public bool IsAdmin { get; set; } // האם המשתמש הוא מנהל

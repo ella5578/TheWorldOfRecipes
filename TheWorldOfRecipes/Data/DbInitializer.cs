@@ -43,14 +43,14 @@ namespace TheWorldOfRecipes.Data
 
             var recipes = new Recipe[]
             {
-                new Recipe{/*RecipeID=1050,*/RecipeName="Apple Pie", Description="pie", CategoryID = 1,
+                new Recipe{RecipeName="Apple Pie", Description="pie", CategoryID = 1,
                     TimerMinutes=60, VideoURL="KbyahTnzbKA?si=KRYAchT3Bd8e8my-"
                     //"https://youtu.be/KbyahTnzbKA?si=kgAr_Dbzh30MW_7H"
                 },
-                new Recipe{/*RecipeID=4022,*/Description="cake", CategoryID = 1, TimerMinutes=30, VideoURL="EBAE91Os2VA?si=m7bn3GyeGy7t_-9B"},
-                new Recipe{/*RecipeID=4041,*/Description="cookie", CategoryID = 1},
-                new Recipe{/*RecipeID=1045,*/Description="soup", CategoryID = 2},
-                new Recipe{/*RecipeID=3141,*/Description="Trigonometry", CategoryID = 3}
+                new Recipe{Description="cake", CategoryID = 1, TimerMinutes=30, VideoURL="EBAE91Os2VA?si=m7bn3GyeGy7t_-9B"},
+                new Recipe{Description="cookie", CategoryID = 1},
+                new Recipe{Description="soup", CategoryID = 2},
+                new Recipe{Description="Trigonometry", CategoryID = 3}
                 
             };
 

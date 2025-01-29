@@ -1,0 +1,21 @@
+﻿@page
+@model TheWorldOfRecipes.Pages.Auth.LoginModel
+@{
+    ViewData["title"] = "Login";
+}
+<h2>Login</h2>
+<form method="post">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="UserName" required />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" required />
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+@if (Model.ErrorMessage != null){
+    <p style="color:red">@Model.ErrorMessage</p>
+}

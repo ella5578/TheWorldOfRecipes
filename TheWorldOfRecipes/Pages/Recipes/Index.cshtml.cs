@@ -21,10 +21,28 @@ namespace TheWorldOfRecipes.Pages.Recipes
 
         public IList<Recipe> Recipe { get;set; } = default!;
 
+        [BindProperty(SupportsGet =true)]
+        public int? SelectedCategoryId { get; set; }
+
+
         public async Task OnGetAsync()
         {
-            Recipe = await _context.Recipes
-                .Include(r => r.Category).ToListAsync();
+            if (SelectedCategoryId.HasValue)
+            {
+                Recipe = await _context.Recipes
+                    .Where(r=>r.CategoryID== SelectedCategoryId)
+                    .Include(r=>r.Category)
+                    .ToListAsync();    
+                   
+                    
+            }
+            else
+            {
+                Recipe = await _context.Recipes
+                               .Include(r => r.Category).ToListAsync();
+            }
+
+           
         }
     }
 }

@@ -17,19 +17,22 @@
         {
             <div class="col-4 col-lg-3 text-center mb-3"> <!-- התאמה לגודל מסך -->
                 <div class="card border-0 p-3" style="background-color: #f8f9fa; border-radius: 15px;"> <!-- עיצוב כרטיס -->
-                    @if (!string.IsNullOrEmpty(item.ImageUrl))
-                    {
-                        <!-- קצוות מעוגלים + תמונה ריבועית -->
-                        <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <img src="~/images/@item.ImageUrl"
-                                 class="rounded"
-                                 style="width: 180px; height: 180px; object-fit: cover;"
-                                 alt="Category Image" />
+                    <a asp-page="/Recipe/Index" asp-route-SelectedCategoryId ="@item.CategoryID">
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <!-- קצוות מעוגלים + תמונה ריבועית -->
+                            <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="~/images/@item.ImageUrl"
+                                     class="rounded"
+                                     style="width: 180px; height: 180px; object-fit: cover;"
+                                     alt="Category Image" />
+                            </div>
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@item.CategoryName</h5> <!-- שם הקטגוריה -->
                         </div>
-                    }
-                    <div class="card-body">
-                        <h5 class="card-title">@item.CategoryName</h5> <!-- שם הקטגוריה -->
-                    </div>
+                    </a>
+                    
                 </div>
             </div>
         }

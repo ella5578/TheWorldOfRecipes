@@ -38,7 +38,7 @@ namespace TheWorldOfRecipes.Migrations
 
                     b.HasKey("CategoryID");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("TheWorldOfRecipes.Models.Ingredient", b =>
