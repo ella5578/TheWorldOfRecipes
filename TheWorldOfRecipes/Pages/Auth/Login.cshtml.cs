@@ -35,7 +35,21 @@ namespace TheWorldOfRecipes.Pages.Auth
             }
 
             var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == UserName);
-            if (user == null || !BCrypt.Net.BCrypt.Verify(Password, user.Password))
+            if (user == null)
+            {
+                ErrorMessage = "Invalid username or password.";
+                return Page();
+            }
+
+            try
+            {
+                if (!BCrypt.Net.BCrypt.Verify(Password, user.Password))
+                {
+                    ErrorMessage = "Invalid username or password.";
+                    return Page();
+                }
+            }
+            catch (BCrypt.Net.SaltParseException)
             {
                 ErrorMessage = "Invalid username or password.";
                 return Page();

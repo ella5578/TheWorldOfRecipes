@@ -8,8 +8,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<TheWorldOfRecipesContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TheWorldOfRecipesContext") ?? throw new InvalidOperationException("Connection string 'TheWorldOfRecipesContext' not found.")));
-
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+builder.Services.AddSession();
+
+// Add authentication services
+builder.Services.AddAuthentication("Cookies")
+    .AddCookie("Cookies", options =>
+    {
+        options.LoginPath = "/Auth/Login";
+        options.AccessDeniedPath = "/Auth/AccessDenied";
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -48,7 +59,6 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+app.MapRazorPages().WithStaticAssets();
 
 app.Run();
