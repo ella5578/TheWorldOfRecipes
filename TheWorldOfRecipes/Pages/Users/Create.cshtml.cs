@@ -1,9 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
-using System;
-using System.Threading.Tasks;
+using EllaRecipes.Shared.Models;
+using EllaRecipes.Shared.Data;
+
 
 namespace TheWorldOfRecipes.Pages.Users
 {
@@ -24,16 +23,24 @@ namespace TheWorldOfRecipes.Pages.Users
             return Page();
         }
 
-        // כששולחים את הטופס, שומרים את המידע למסד נתונים
+        // כששולחים את הטופס, שומרים את המידע למסד נתונים  
         public async Task<IActionResult> OnPostAsync()
         {
-            var emptyUser = new User();
+            // Initialize required properties to avoid CS9035 errors  
+            User emptyUser = new User
+            {
+                Email = string.Empty,
+                UserName = string.Empty,
+                Password = string.Empty,
+                FirstName = string.Empty,
+                LastName = string.Empty
+            };
 
             if (await TryUpdateModelAsync<User>(
                 emptyUser,
-                "user",   // Prefix for form value.
-                u => u.FirstName, u => u.LastName, u => u.RegistrationDate, u=>u.Email, 
-                u=>u.IsAdmin, u=>u.UserName, u =>u.Password))
+                "user",   // Prefix for form value.  
+                u => u.FirstName, u => u.LastName, u => u.RegistrationDate, u => u.Email,
+                u => u.IsAdmin, u => u.UserName, u => u.Password))
             {
                 _context.Users.Add(emptyUser);
                 await _context.SaveChangesAsync();
@@ -41,7 +48,6 @@ namespace TheWorldOfRecipes.Pages.Users
             }
 
             return Page();
-
         }
     }
 

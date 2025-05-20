@@ -1,9 +1,10 @@
-﻿namespace TheWorldOfRecipes.Models
+﻿namespace EllaRecipes.Shared.Models
+
 {
     public class Category
     {
         public int CategoryID { get; set; } // מזהה קטגורייה כללית (מפתח ראשי)
-        public string CategoryName { get; set; } // שם קטגורייה (לדוגמה: קינוחים, בשרי, ארוחת ערב)
+        public required string CategoryName { get; set; } // שם קטגורייה (לדוגמה: קינוחים, בשרי, ארוחת ערב)
 
         public string ImageUrl { get; set; }  // הוספת השדה ImageUrl
 

@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EllaRecipes.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
+
+using EllaRecipes.Shared.Data;
+
+
+
+
 
 namespace TheWorldOfRecipes.Pages.Categories
 {
     public class CreateModel : PageModel
     {
-        private readonly TheWorldOfRecipes.Data.TheWorldOfRecipesContext _context;
+        private readonly TheWorldOfRecipesContext _context;
 
-        public CreateModel(TheWorldOfRecipes.Data.TheWorldOfRecipesContext context)
+        public CreateModel(TheWorldOfRecipesContext context)
         {
             _context = context;
         }

@@ -1,0 +1,6 @@
+@EllaRecipesWebService_HostAddress = http://localhost:5212
+
+GET {{EllaRecipesWebService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

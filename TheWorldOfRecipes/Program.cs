@@ -1,5 +1,4 @@
-using Microsoft.Extensions.DependencyInjection;
-using TheWorldOfRecipes.Data;
+using EllaRecipes.Shared.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

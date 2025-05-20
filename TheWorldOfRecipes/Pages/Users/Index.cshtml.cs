@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
+using EllaRecipes.Shared.Models;
+using EllaRecipes.Shared.Data;
+
 
 namespace TheWorldOfRecipes.Pages.Users
 {
     [Authorize]
     public class IndexModel : PageModel
     {
-        private readonly TheWorldOfRecipes.Data.TheWorldOfRecipesContext _context;
+        private readonly TheWorldOfRecipesContext _context;
         private readonly IConfiguration Configuration;
 
         public IndexModel(TheWorldOfRecipesContext context, IConfiguration configuration)

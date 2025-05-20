@@ -1,4 +1,7 @@
-﻿namespace TheWorldOfRecipes.Models
+﻿using System.Collections.Generic;
+
+namespace EllaRecipes.Shared.Models
+
 {
     public class Ingredient
     {

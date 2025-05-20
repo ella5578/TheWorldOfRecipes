@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
+using EllaRecipes.Shared.Models;
+using EllaRecipes.Shared.Data;
+
 
 namespace TheWorldOfRecipes.Pages.Recipes
 {
     public class EditModel : PageModel
     {
-        private readonly TheWorldOfRecipes.Data.TheWorldOfRecipesContext _context;
+        private readonly TheWorldOfRecipesContext _context;
 
-        public EditModel(TheWorldOfRecipes.Data.TheWorldOfRecipesContext context)
+        public EditModel(TheWorldOfRecipesContext context)
         {
             _context = context;
         }

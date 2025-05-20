@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
+using EllaRecipes.Shared.Models;
+using EllaRecipes.Shared.Data;
 
 namespace TheWorldOfRecipes.Pages.RatingsAndComments
 {
     public class CreateModel : PageModel
     {
-        private readonly TheWorldOfRecipes.Data.TheWorldOfRecipesContext _context;
+        private readonly TheWorldOfRecipesContext _context;
 
-        public CreateModel(TheWorldOfRecipes.Data.TheWorldOfRecipesContext context)
+        public CreateModel(TheWorldOfRecipesContext context)
         {
             _context = context;
         }

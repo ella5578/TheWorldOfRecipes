@@ -1,4 +1,5 @@
-﻿namespace TheWorldOfRecipes.Models
+﻿namespace EllaRecipes.Shared.Models
+
 {
     public class RecipeIngredient
     {
@@ -6,8 +7,8 @@
         public int IngredientID { get; set; } // 
         public int RecipeID { get; set; }
         public int Quantity {  get; set; }  //כמות
-        public string Units { get; set; }  //יחידות מידה  
-        public Ingredient Ingredient { get; set; }
-        public Recipe Recipe { get; set; }
+        public required string Units { get; set; }  //יחידות מידה  
+        public required Ingredient Ingredient { get; set; }
+        public required Recipe Recipe { get; set; }
     }
 }

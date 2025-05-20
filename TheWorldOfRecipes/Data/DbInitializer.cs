@@ -1,5 +1,5 @@
-﻿using TheWorldOfRecipes.Models;
-using System.Diagnostics;
+﻿using EllaRecipes.Shared.Data;
+using EllaRecipes.Shared.Models;
 
 namespace TheWorldOfRecipes.Data
 {
@@ -100,28 +100,28 @@ namespace TheWorldOfRecipes.Data
 
 
             var recipeIngredients = new RecipeIngredient[]
-             {
-                // מתכון 1: עוגה שוקולד
-                new RecipeIngredient { RecipeID = 1, IngredientID = 3, Quantity = 200, Units = "grams" },   // קמח
-                new RecipeIngredient { RecipeID = 1, IngredientID = 5, Quantity = 100, Units = "grams" },   // סוכר
-                new RecipeIngredient { RecipeID = 1, IngredientID = 1, Quantity = 2, Units = "eggs" },      // ביצים
-                new RecipeIngredient { RecipeID = 1, IngredientID = 4, Quantity = 1, Units = "cup" },        // שוקולד
-                new RecipeIngredient { RecipeID = 1, IngredientID = 2, Quantity = 1, Units = "tsp" },        // קינמון
+            {  
+               // מתכון 1: עוגה שוקולד  
+               new RecipeIngredient { RecipeID = 1, IngredientID = 3, Quantity = 200, Units = "grams", Ingredient = ingredients[2], Recipe = recipes[0] },   // קמח  
+               new RecipeIngredient { RecipeID = 1, IngredientID = 5, Quantity = 100, Units = "grams", Ingredient = ingredients[4], Recipe = recipes[0] },   // סוכר  
+               new RecipeIngredient { RecipeID = 1, IngredientID = 1, Quantity = 2, Units = "eggs", Ingredient = ingredients[0], Recipe = recipes[0] },      // ביצים  
+               new RecipeIngredient { RecipeID = 1, IngredientID = 4, Quantity = 1, Units = "cup", Ingredient = ingredients[3], Recipe = recipes[0] },        // שוקולד  
+               new RecipeIngredient { RecipeID = 1, IngredientID = 2, Quantity = 1, Units = "tsp", Ingredient = ingredients[1], Recipe = recipes[0] },        // קינמון  
 
-                // מתכון 2: סלט ירקות
-                new RecipeIngredient { RecipeID = 2, IngredientID = 6, Quantity = 1, Units = "cup" },        // מלפפון
-                new RecipeIngredient { RecipeID = 2, IngredientID = 7, Quantity = 1, Units = "cup" },        // עגבניה
-                new RecipeIngredient { RecipeID = 2, IngredientID = 13, Quantity = 2, Units = "tsp" },       // מלח
-                new RecipeIngredient { RecipeID = 2, IngredientID = 12, Quantity = 3, Units = "tsp" },       // שמן זית
-                new RecipeIngredient { RecipeID = 2, IngredientID = 11, Quantity = 1, Units = "tbsp" },      // חומץ
+               // מתכון 2: סלט ירקות  
+               new RecipeIngredient { RecipeID = 2, IngredientID = 6, Quantity = 1, Units = "cup", Ingredient = ingredients[5], Recipe = recipes[1] },        // מלפפון  
+               new RecipeIngredient { RecipeID = 2, IngredientID = 7, Quantity = 1, Units = "cup", Ingredient = ingredients[6], Recipe = recipes[1] },        // עגבניה  
+               new RecipeIngredient { RecipeID = 2, IngredientID = 13, Quantity = 2, Units = "tsp", Ingredient = ingredients[12], Recipe = recipes[1] },       // מלח  
+               new RecipeIngredient { RecipeID = 2, IngredientID = 12, Quantity = 3, Units = "tsp", Ingredient = ingredients[11], Recipe = recipes[1] },       // שמן זית  
+               new RecipeIngredient { RecipeID = 2, IngredientID = 11, Quantity = 1, Units = "tbsp", Ingredient = ingredients[10], Recipe = recipes[1] },      // חומץ  
 
-                // מתכון 3: חומוס
-                new RecipeIngredient { RecipeID = 3, IngredientID = 9, Quantity = 300, Units = "grams" },    // חומוס יבש
-                new RecipeIngredient { RecipeID = 3, IngredientID = 8, Quantity = 3, Units = "tsp" },        // טחינה
-                new RecipeIngredient { RecipeID = 3, IngredientID = 15, Quantity = 1, Units = "tsp" },       // שום כתוש
-                new RecipeIngredient { RecipeID = 3, IngredientID = 6, Quantity = 2, Units = "tbsp" },       // לימון סחוט
-                new RecipeIngredient { RecipeID = 3, IngredientID = 10, Quantity = 1, Units = "cup" },       // מים
-             };
+               // מתכון 3: חומוס  
+               new RecipeIngredient { RecipeID = 3, IngredientID = 9, Quantity = 300, Units = "grams", Ingredient = ingredients[8], Recipe = recipes[2] },    // חומוס יבש  
+               new RecipeIngredient { RecipeID = 3, IngredientID = 8, Quantity = 3, Units = "tsp", Ingredient = ingredients[7], Recipe = recipes[2] },        // טחינה  
+               new RecipeIngredient { RecipeID = 3, IngredientID = 15, Quantity = 1, Units = "tsp", Ingredient = ingredients[14], Recipe = recipes[2] },       // שום כתוש  
+               new RecipeIngredient { RecipeID = 3, IngredientID = 6, Quantity = 2, Units = "tbsp", Ingredient = ingredients[5], Recipe = recipes[2] },       // לימון סחוט  
+               new RecipeIngredient { RecipeID = 3, IngredientID = 10, Quantity = 1, Units = "cup", Ingredient = ingredients[9], Recipe = recipes[2] },       // מים  
+            };
 
             // הוספת מרכיבי המתכונים לבסיס הנתונים
             context.RecipeIngredients.AddRange(recipeIngredients);

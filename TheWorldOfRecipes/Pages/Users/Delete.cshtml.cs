@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
+using EllaRecipes.Shared.Models;
+using EllaRecipes.Shared.Data;
+
 
 namespace TheWorldOfRecipes.Pages.Users
 {

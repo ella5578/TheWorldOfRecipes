@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
 
-namespace TheWorldOfRecipes.Models
+namespace EllaRecipes.Shared.Models
 {
     public class RatingAndComment
     {

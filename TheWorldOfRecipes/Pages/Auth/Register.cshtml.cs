@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using EllaRecipes.Shared.Models;
+using EllaRecipes.Shared.Data;
 
-using TheWorldOfRecipes.Models;
+
 
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -10,9 +12,9 @@ namespace TheWorldOfRecipes.Pages.Auth
 {
     public class RegisterModel : PageModel
     {
-        private readonly Data.TheWorldOfRecipesContext _context;
+        private readonly TheWorldOfRecipesContext _context;
 
-        public RegisterModel(Data.TheWorldOfRecipesContext context)
+        public RegisterModel(TheWorldOfRecipesContext context)
         {
             _context = context;  /*קו תחתון - פרטי*/
         }

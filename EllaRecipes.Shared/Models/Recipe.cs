@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TheWorldOfRecipes.Models
+namespace EllaRecipes.Shared.Models
 {
     public class Recipe
     {

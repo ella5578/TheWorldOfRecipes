@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
+using EllaRecipes.Shared.Models;
+using EllaRecipes.Shared.Data;
+
 
 namespace TheWorldOfRecipes.Pages.Categories
 {
     public class DetailsModel : PageModel
     {
-        private readonly TheWorldOfRecipes.Data.TheWorldOfRecipesContext _context;
+        private readonly TheWorldOfRecipesContext _context;
 
-        public DetailsModel(TheWorldOfRecipes.Data.TheWorldOfRecipesContext context)
+        public DetailsModel(TheWorldOfRecipesContext context)
         {
             _context = context;
         }

@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using EllaRecipes.Shared.Data;
+using EllaRecipes.Shared.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using TheWorldOfRecipes.Data;
-using TheWorldOfRecipes.Models;
+
+
 
 namespace TheWorldOfRecipes.Pages.RatingsAndComments
 {
     public class IndexModel : PageModel
     {
-        private readonly TheWorldOfRecipes.Data.TheWorldOfRecipesContext _context;
+        private readonly TheWorldOfRecipesContext _context;
 
-        public IndexModel(TheWorldOfRecipes.Data.TheWorldOfRecipesContext context)
+        public IndexModel(TheWorldOfRecipesContext context)
         {
             _context = context;
         }
