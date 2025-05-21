@@ -1,5 +1,6 @@
 using EllaRecipes.Shared.Data;
 using Microsoft.EntityFrameworkCore;
+using TheWorldOfRecipes.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,9 +40,9 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
-    var context = services.GetRequiredService<TheWorldOfRecipesContext>();
-    context.Database.EnsureCreated();
-    DbInitializer.Initialize(context);
+    //var context = services.GetRequiredService<TheWorldOfRecipesContext>();
+    //context.Database.EnsureCreated();
+    //DbInitializer.Initialize(context);
 }
 
 //הפעל את שירותי האימות והמשך

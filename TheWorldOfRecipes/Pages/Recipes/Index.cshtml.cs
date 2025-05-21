@@ -30,13 +30,22 @@ namespace TheWorldOfRecipes.Pages.Recipes
                     .Where(r=>r.CategoryID== SelectedCategoryId)
                     .Include(r=>r.Category)
                     .ToListAsync();    
-                   
-                    
             }
             else
             {
-                Recipe = await _context.Recipes
-                               .Include(r => r.Category).ToListAsync();
+                Recipe = (IList<Recipe>)await _context.Recipes
+                    .Where(r => r.CategoryID == SelectedCategoryId)
+                    .Include(r => r.Category)
+                    .Select(r => new
+                    {
+                        r.RecipeID,
+                        r.RecipeName,
+                        r.Description,
+                        r.RecipeIngredients,
+                        r.CategoryID,
+                        r.Category.CategoryName,
+                    })
+                    .ToListAsync();
             }
 
            

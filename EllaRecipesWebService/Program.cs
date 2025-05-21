@@ -1,8 +1,10 @@
-using EllaRecipesWebService.Data;
+using EllaRecipes.Shared.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<TheWorldOfRecipesContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 

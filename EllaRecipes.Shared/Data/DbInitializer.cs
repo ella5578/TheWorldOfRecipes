@@ -17,12 +17,10 @@ namespace TheWorldOfRecipes.Data
             {
                new User{UserName="Carson",Password="Alexander",Email="user@gmail.com", IsAdmin=false,FirstName="Carson",LastName="Alexander",RegistrationDate=DateTime.Parse("2019-09-01")},
                new User{UserName="Meredith",Password="Alonso",Email="user@gmail.com", IsAdmin=false, FirstName="merdith", LastName="ggg"},
-
             };
 
             context.Users.AddRange(users);
             context.SaveChanges();
-
 
             var categories = new Category[]
             {
@@ -32,27 +30,68 @@ namespace TheWorldOfRecipes.Data
                new Category { CategoryName = "סלטים", ImageUrl = "salad.jpg" },
                new Category { CategoryName = "ארוחות צהריים", ImageUrl = "lunch.jpg" },
                new Category { CategoryName = "מאפים", ImageUrl="bread.jpg"  }
-
-
             };
+
             foreach (var category in categories)
             {
                 context.Categories.Add(category);
             }
             context.SaveChanges();
 
-            var recipes = new Recipe[]
-            {
-               new Recipe{RecipeName="Apple Pie", Description="pie", CategoryID = 1,
-                   TimerMinutes=60, VideoURL="KbyahTnzbKA?si=KRYAchT3Bd8e8my-"  
-                   //"https://youtu.be/KbyahTnzbKA?si=kgAr_Dbzh30MW_7H"  
-               },
-               new Recipe{Description="cake", CategoryID = 1, TimerMinutes=30, VideoURL="EBAE91Os2VA?si=m7bn3GyeGy7t_-9B"},
-               new Recipe{Description="cookie", CategoryID = 1},
-               new Recipe{Description="soup", CategoryID = 2},
-               new Recipe{Description="Trigonometry", CategoryID = 3}
+            var recipes = new List<Recipe>
+                {
+                new Recipe
+                {
+                    RecipeName = "Apple Pie",
+                    Description = "pie",
+                    CategoryID = 1,
+                    Category = categories.First(c => c.CategoryID == 1),
+                    TimerMinutes = 60,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/KbyahTnzbKA?si=KRYAchT3Bd8e8my-"
+                },
+                new Recipe
+                {
+                    RecipeName = "Chocolate Cake",
+                    Description = "cake",
+                    CategoryID = 1,
+                    Category = categories.First(c => c.CategoryID == 1),
+                    TimerMinutes = 30,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/EBAE91Os2VA?si=m7bn3GyeGy7t_-9B"
+                },
+                new Recipe
+                {
+                    RecipeName = "Chocolate Chip Cookie",
+                    Description = "cookie",
+                    CategoryID = 1,
+                    Category = categories.First(c => c.CategoryID == 1),
+                    TimerMinutes = 20,
+                    LikesCount = 0,
+                    VideoURL = null
+                },
+                new Recipe
+                {
+                    RecipeName = "Tomato Soup",
+                    Description = "soup",
+                    CategoryID = 2,
+                    Category = categories.First(c => c.CategoryID == 2),
+                    TimerMinutes = 25,
+                    LikesCount = 0,
+                    VideoURL = null
+                },
+                new Recipe
+                {
+                    RecipeName = "Trigonometry Pie",
+                    Description = "Trigonometry",
+                    CategoryID = 3,
+                    Category = categories.First(c => c.CategoryID == 3),
+                    TimerMinutes = 45,
+                    LikesCount = 0,
+                    VideoURL = null
+                }
+                };
 
-            };
 
             context.Recipes.AddRange(recipes);
             context.SaveChanges();
