@@ -4,7 +4,7 @@ using EllaRecipes.Shared.Models;
 using EllaRecipes.Shared.Data;
 
 
-namespace TheWorldOfRecipes.Pages.Categories
+namespace TheWorldOfRecipes.Pages.Categories 
 {
     public class IndexModel : PageModel
     {

@@ -38,7 +38,7 @@ namespace TheWorldOfRecipes.Data
             }
             context.SaveChanges();
 
-            var recipes = new List<Recipe>
+            var recipes = new Recipe[]
                 {
                 new Recipe
                 {

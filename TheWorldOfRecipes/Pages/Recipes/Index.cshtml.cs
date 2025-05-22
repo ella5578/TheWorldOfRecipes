@@ -16,39 +16,41 @@ namespace TheWorldOfRecipes.Pages.Recipes
             _context = context;
         }
 
-        public IList<Recipe> Recipe { get;set; } = default!;
+        public IList<Recipe> Recipe { get; set; } = default!;
 
-        [BindProperty(SupportsGet =true)]
+        [BindProperty(SupportsGet = true)]
         public int? SelectedCategoryId { get; set; }
-
 
         public async Task OnGetAsync()
         {
             if (SelectedCategoryId.HasValue)
             {
+
                 Recipe = await _context.Recipes
-                    .Where(r=>r.CategoryID== SelectedCategoryId)
-                    .Include(r=>r.Category)
-                    .ToListAsync();    
+                    .Where(r => r.CategoryID == SelectedCategoryId)
+                    .Include(r => r.Category)
+                    .ToListAsync();
             }
             else
             {
-                Recipe = (IList<Recipe>)await _context.Recipes
+                Recipe = await _context.Recipes
                     .Where(r => r.CategoryID == SelectedCategoryId)
                     .Include(r => r.Category)
-                    .Select(r => new
+                    .Select(r => new Recipe
                     {
-                        r.RecipeID,
-                        r.RecipeName,
-                        r.Description,
-                        r.RecipeIngredients,
-                        r.CategoryID,
-                        r.Category.CategoryName,
+                        RecipeID = r.RecipeID,
+                        RecipeName = r.RecipeName, // Required member explicitly set  
+                        Description = r.Description,
+                        RecipeIngredients = r.RecipeIngredients,
+                        CategoryID = r.CategoryID,
+                        Category = new Category
+                        {
+                            CategoryName = r.Category.CategoryName,
+                            ImageUrl = r.Category.ImageUrl // Fix: Set the required 'ImageUrl' property  
+                        }
                     })
                     .ToListAsync();
             }
-
-           
         }
     }
 }

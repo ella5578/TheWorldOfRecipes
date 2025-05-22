@@ -14,7 +14,7 @@ namespace EllaRecipes.Shared.Models
         public int LikesCount { get; set; } // מספר לייקים
         public int CategoryID { get; set; } // מזהה קטגוריה 
         public required Category Category { get; set; }
-        //public string? ImageUrl { get; set; } // שדה חדש לתמונה
+        public string? ImageUrl { get; set; } // שדה חדש לתמונה
 
         //public SpecificCategory SpecificCategory { get; set; } // ניווט לקטגוריה ספציפית
         public ICollection<RatingAndComment> RatingsAndComments { get; set; } // דירוגים ותגובות

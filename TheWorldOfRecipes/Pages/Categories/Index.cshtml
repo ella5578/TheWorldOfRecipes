@@ -17,7 +17,7 @@
         {
             <div class="col-4 col-lg-3 text-center mb-3"> <!-- התאמה לגודל מסך -->
                 <div class="card border-0 p-3" style="background-color: #f8f9fa; border-radius: 15px;"> <!-- עיצוב כרטיס -->
-                    <a asp-page="/Recipe/Index" asp-route-SelectedCategoryId ="@item.CategoryID">
+                    <a asp-page="/Recipes/Index" asp-route-SelectedCategoryId ="@item.CategoryID">
                         @if (!string.IsNullOrEmpty(item.ImageUrl))
                         {
                             <!-- קצוות מעוגלים + תמונה ריבועית -->
