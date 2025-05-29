@@ -7,8 +7,7 @@ namespace TheWorldOfRecipes.Data
     {
         public static void Initialize(TheWorldOfRecipesContext context)
         {
-            context.Database.EnsureCreated();   
-            // Look for any Users.  
+            // Look for any Categories.  
             if (context.Categories.Any())
             {
                 return;   // DB has been seeded  
@@ -43,8 +42,8 @@ namespace TheWorldOfRecipes.Data
                 {
                 new Recipe
                 {
-                    RecipeName = "Apple Pie",
-                    Description = "pie",
+                    RecipeName = "עוגת תפוחים",
+                    Description = "לחתוך תפוחים ולטגן עם סוכר, להוסיף לתבנית עם הבצק לשטח ולפזר קינמון. ובתיאבון!",
                     CategoryID = 1,
                     Category = categories.First(c => c.CategoryID == 1),
                     ImageUrl = "bread.jpg", 

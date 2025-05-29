@@ -27,7 +27,8 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<TheWorldOfRecipesContext>();
-    TheWorldOfRecipes.Data.DbInitializer.Initialize(context);
+    context.Database.EnsureCreated();
+    DbInitializer.Initialize(context);
 }
 
 // Configure the HTTP request pipeline.
