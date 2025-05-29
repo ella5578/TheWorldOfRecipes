@@ -5,8 +5,11 @@ using System;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TheWorldOfRecipesContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("TheWorldOfRecipesContext"),
+        sqlOptions => sqlOptions.EnableRetryOnFailure()
+    )
+);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -10,6 +10,9 @@ namespace EllaRecipes.Shared.Data
             : base(options)
         {
         }
+
+        public TheWorldOfRecipesContext() { }
+
         public DbSet<User> Users { get; set; }
         public DbSet<RatingAndComment> RatingAndComments { get; set; }
         public DbSet<Recipe> Recipes { get; set; }

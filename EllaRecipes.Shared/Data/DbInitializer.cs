@@ -8,7 +8,7 @@ namespace TheWorldOfRecipes.Data
         public static void Initialize(TheWorldOfRecipesContext context)
         {
             // Look for any Users.  
-            if (context.Users.Any())
+            if (context.Categories.Any())
             {
                 return;   // DB has been seeded  
             }
@@ -98,9 +98,9 @@ namespace TheWorldOfRecipes.Data
 
             var ratingsandcomments = new RatingAndComment[]
             {
-               new RatingAndComment{UserID=1,RecipeID=1,Rating=5},
-               new RatingAndComment{UserID=1,RecipeID=2,Rating=4},
-               new RatingAndComment{UserID=2,RecipeID=3,Rating=3}
+               new RatingAndComment{UserID=1,RecipeID=1,Rating=5, Comment = "Great!"},
+               new RatingAndComment{UserID=1,RecipeID=2,Rating=4, Comment = "Tasty."},
+               new RatingAndComment{UserID=2,RecipeID=3,Rating=3, Comment = "Okay."}
             };
 
             context.RatingAndComments.AddRange(ratingsandcomments);
