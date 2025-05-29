@@ -7,6 +7,7 @@ namespace TheWorldOfRecipes.Data
     {
         public static void Initialize(TheWorldOfRecipesContext context)
         {
+            context.Database.EnsureCreated();   
             // Look for any Users.  
             if (context.Categories.Any())
             {
@@ -46,6 +47,7 @@ namespace TheWorldOfRecipes.Data
                     Description = "pie",
                     CategoryID = 1,
                     Category = categories.First(c => c.CategoryID == 1),
+                    ImageUrl = "bread.jpg", 
                     TimerMinutes = 60,
                     LikesCount = 0,
                     VideoURL = "https://youtu.be/KbyahTnzbKA?si=KRYAchT3Bd8e8my-"
@@ -57,6 +59,7 @@ namespace TheWorldOfRecipes.Data
                     CategoryID = 1,
                     Category = categories.First(c => c.CategoryID == 1),
                     TimerMinutes = 30,
+                    ImageUrl = "brauniz.jpg",
                     LikesCount = 0,
                     VideoURL = "https://youtu.be/EBAE91Os2VA?si=m7bn3GyeGy7t_-9B"
                 },
@@ -67,6 +70,7 @@ namespace TheWorldOfRecipes.Data
                     CategoryID = 1,
                     Category = categories.First(c => c.CategoryID == 1),
                     TimerMinutes = 20,
+                    ImageUrl = "bread.jpg",
                     LikesCount = 0,
                     VideoURL = null
                 },
@@ -77,6 +81,7 @@ namespace TheWorldOfRecipes.Data
                     CategoryID = 2,
                     Category = categories.First(c => c.CategoryID == 2),
                     TimerMinutes = 25,
+                    ImageUrl = "bread.jpg",
                     LikesCount = 0,
                     VideoURL = null
                 },
@@ -87,6 +92,7 @@ namespace TheWorldOfRecipes.Data
                     CategoryID = 3,
                     Category = categories.First(c => c.CategoryID == 3),
                     TimerMinutes = 45,
+                    ImageUrl = "bread.jpg",
                     LikesCount = 0,
                     VideoURL = null
                 }

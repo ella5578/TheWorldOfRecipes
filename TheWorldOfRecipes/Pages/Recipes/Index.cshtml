@@ -15,7 +15,7 @@
     <!-- מיכל שכולל את כל המתכונים -->
     <div class="container">
         <div class="row">
-            @foreach (var item in Model.Recipe)
+            @* @foreach (var item in Model.Recipe)
             {
                 <!-- עמודה שמתאימה לגודל מסכים -->
                 <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
@@ -38,7 +38,25 @@
                         </div>
                     </div>
                 </div>
+            } *@
+            @foreach (var item in Model.Recipe)
+            {
+                <div class="col-12 col-md-6 col-lg-4 text-center mb-4">
+                    <div class="card border-0 p-3" style="background-color: #f8f9fa; border-radius: 15px;">
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <!-- הצגת תמונה של המתכון -->
+                            <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="~/images/@item.ImageUrl" alt="@item.RecipeName" style="max-width: 100%; max-height: 200px; border-radius: 10px;" />
+                            </div>
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@item.RecipeName</h5>
+                        </div>
+                    </div>
+                </div>
             }
+
         </div>
     </div>
 </div>
