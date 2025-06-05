@@ -20,6 +20,7 @@ namespace TheWorldOfRecipes.Pages.Recipes
         public Recipe Recipe { get; set; } = default!;
 
         public IList<(string IngredientName, int Quantity, string Units)> Ingredients { get; set; } = new List<(string, int, string)>();
+        public IList<RatingAndComment> RecipeComments { get; set; } = new List<RatingAndComment>();
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -42,6 +43,11 @@ namespace TheWorldOfRecipes.Pages.Recipes
                           ri => ri.IngredientID,
                           i => i.IngredientID,
                           (ri, i) => new ValueTuple<string, int, string>(i.IngredientName, ri.Quantity, ri.Units))
+                    .ToListAsync();
+
+                RecipeComments = await _context.RatingAndComments
+                    .Include(rc => rc.User)
+                    .Where(rc => rc.RecipeID == Recipe.RecipeID)
                     .ToListAsync();
 
                 return Page();

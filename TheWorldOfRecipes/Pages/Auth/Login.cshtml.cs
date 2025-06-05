@@ -60,9 +60,10 @@ namespace TheWorldOfRecipes.Pages.Auth
             }
 
             var claims = new List<Claim>
-               {
-                   new Claim(ClaimTypes.Name, user.UserName)
-               };
+            {
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.NameIdentifier, user.UserID.ToString()) // Add this line
+            };
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 

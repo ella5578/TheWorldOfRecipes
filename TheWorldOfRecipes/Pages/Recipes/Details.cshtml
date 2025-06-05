@@ -99,6 +99,34 @@
         }
     }
 
+    <h3>תגובות ודירוגים</h3>
+    @if (Model.RecipeComments.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var comment in Model.RecipeComments)
+                {
+                    <tr>
+                        <td>@comment.User.UserName</td>
+                        <td>@comment.Rating</td>
+                        <td>@comment.Comment</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>אין תגובות למתכון זה.</p>
+    }
+
 </div>
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Recipe.RecipeID">Edit</a> |
