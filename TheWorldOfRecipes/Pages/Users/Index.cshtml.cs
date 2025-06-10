@@ -43,7 +43,7 @@ namespace TheWorldOfRecipes.Pages.Users
             }
             CurrentFilter = searchString;
 
-            IQueryable<User> usersIQ = from s in _context.Users
+            IQueryable<User> usersIQ = from s in _context. Users
             select s;
 
             if (!String.IsNullOrEmpty(searchString))

@@ -7,6 +7,8 @@ using EllaRecipes.Shared.Data;
 
 
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using ServiceLibrary.Helpers;
 
 namespace TheWorldOfRecipes.Pages.Auth
 {
@@ -49,14 +51,16 @@ namespace TheWorldOfRecipes.Pages.Auth
                 return Page();
             }
 
+            var passwordHashSalt = PasswordHelper.HashPassword(Password);
+
             var user = new User
             {
                 UserName = UserName,
-                Password = BCrypt.Net.BCrypt.HashPassword(Password),
+                Email = Email,
+                PasswordHash = passwordHashSalt.hash,
+                PasswordSalt = passwordHashSalt.salt,
                 FirstName = FirstName,
                 LastName = LastName,
-                Email = Email,
-
                 RegistrationDate = DateTime.Now
             };
 

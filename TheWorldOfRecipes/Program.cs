@@ -1,3 +1,7 @@
+using CoreWCF;
+using CoreWCF.Configuration;
+using ServiceLibrary.Contracts;
+using ServiceLibrary.Implementations;
 using EllaRecipes.Shared.Data;
 using Microsoft.EntityFrameworkCore;
 using TheWorldOfRecipes.Data;

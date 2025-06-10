@@ -20,8 +20,9 @@ namespace TheWorldOfRecipes.Data
                 new User
                 {
                     UserName = "EmilyR",
-                    Password = "Pass1234",
                     Email = "emily.rose@example.com",
+                    PasswordHash = "b5vIFu4ggiBkxbr4Jpdmylv4v/BT2Xizv5lHnDpCH+k=",
+                    PasswordSalt = "54kLVUii1hvgeiDpmZHr3Q==",
                     IsAdmin = false,
                     FirstName = "Emily",
                     LastName = "Rose",
@@ -30,7 +31,8 @@ namespace TheWorldOfRecipes.Data
                 new User
                 {
                     UserName = "DavidK",
-                    Password = "Secure789",
+                    PasswordHash = "b5vIFu4ggiBkxbr4Jpdmylv4v/BT2Xizv5lHnDpCH+k=",
+                    PasswordSalt = "54kLVUii1hvgeiDpmZHr3Q==",
                     Email = "david.klein@example.com",
                     IsAdmin = true,
                     FirstName = "David",
@@ -40,7 +42,8 @@ namespace TheWorldOfRecipes.Data
                 new User
                 {
                     UserName = "NoaS",
-                    Password = "NoaPass12",
+                    PasswordHash = "b5vIFu4ggiBkxbr4Jpdmylv4v/BT2Xizv5lHnDpCH+k=",
+                    PasswordSalt = "54kLVUii1hvgeiDpmZHr3Q==",
                     Email = "noa.sasson@example.com",
                     IsAdmin = false,
                     FirstName = "Noa",
@@ -50,7 +53,8 @@ namespace TheWorldOfRecipes.Data
                 new User
                 {
                     UserName = "LiorB",
-                    Password = "Lior456!",
+                    PasswordHash = "b5vIFu4ggiBkxbr4Jpdmylv4v/BT2Xizv5lHnDpCH+k=",
+                    PasswordSalt = "54kLVUii1hvgeiDpmZHr3Q==",
                     Email = "lior.ben@example.com",
                     IsAdmin = false,
                     FirstName = "Lior",
@@ -60,7 +64,8 @@ namespace TheWorldOfRecipes.Data
                 new User
                 {
                     UserName = "SarahM",
-                    Password = "Sarah987",
+                    PasswordHash = "b5vIFu4ggiBkxbr4Jpdmylv4v/BT2Xizv5lHnDpCH+k=",
+                    PasswordSalt = "54kLVUii1hvgeiDpmZHr3Q==",
                     Email = "sarah.mizrahi@example.com",
                     IsAdmin = false,
                     FirstName = "Sarah",

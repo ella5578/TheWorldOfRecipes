@@ -1,52 +1,34 @@
+﻿using CoreWCF;
+using CoreWCF.Configuration;
 using EllaRecipes.Shared.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using System;
+using ServiceLibrary.Contracts;
+using ServiceLibrary.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<TheWorldOfRecipesContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("TheWorldOfRecipesContext"),
-        sqlOptions => sqlOptions.EnableRetryOnFailure()
-    )
-);
 
+// Register dependencies, e.g. DbContext
 // Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddRazorPages();
+builder.Services.AddDbContext<TheWorldOfRecipesContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TheWorldOfRecipesContext")
+        ?? throw new InvalidOperationException("Connection string 'TheWorldOfRecipesContext' not found.")));
+
+builder.Services.AddServiceModelServices();
+builder.Services.AddSingleton<IUserService, UserService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseServiceModel(serviceBuilder =>
 {
-    app.MapOpenApi();
-}
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    serviceBuilder.AddService<UserService>();
+    serviceBuilder.AddServiceEndpoint<UserService, IUserService>(
+        new BasicHttpBinding(),
+        "/UserService.svc"
+    );
+    // Enable WSDL
+    var smb = app.Services.GetRequiredService<CoreWCF.Description.ServiceMetadataBehavior>();
+    smb.HttpGetEnabled = true;
+});
 
 app.Run();
-
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

@@ -15,10 +15,12 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EllaRecipes.Shared\EllaRecipes.Shared.csproj" />
+    <ProjectReference Include="..\EllaRecipes.Shared\EllaRecipes.DAL.csproj" />
+    <ProjectReference Include="..\EllaRecipesWebService\EllaRecipes.WebService.csproj" />
   </ItemGroup>
 
 </Project>

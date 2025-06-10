@@ -45,15 +45,7 @@ namespace TheWorldOfRecipes.Pages.Auth
                 return Page();
             }
 
-            try
-            {
-                if (!BCrypt.Net.BCrypt.Verify(Password, user.Password))
-                {
-                    ErrorMessage = "Invalid username or password.";
-                    return Page();
-                }
-            }
-            catch (BCrypt.Net.SaltParseException)
+            if (!ServiceLibrary.Helpers.PasswordHelper.VerifyPassword(Password, user.PasswordHash, user.PasswordSalt))
             {
                 ErrorMessage = "Invalid username or password.";
                 return Page();

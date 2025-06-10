@@ -31,7 +31,8 @@ namespace TheWorldOfRecipes.Pages.Users
             {
                 Email = string.Empty,
                 UserName = string.Empty,
-                Password = string.Empty,
+                PasswordHash = string.Empty,
+                PasswordSalt = string.Empty,
                 FirstName = string.Empty,
                 LastName = string.Empty
             };

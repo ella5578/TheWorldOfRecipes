@@ -5,9 +5,9 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWorldOfRecipes", "TheWorldOfRecipes\TheWorldOfRecipes.csproj", "{D814479F-3F27-40FC-AA92-C829429843F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllaRecipesWebService", "EllaRecipesWebService\EllaRecipesWebService.csproj", "{E3E0D2A3-BBE0-4177-BF59-D4B77F1577D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllaRecipes.WebService", "EllaRecipesWebService\EllaRecipes.WebService.csproj", "{E3E0D2A3-BBE0-4177-BF59-D4B77F1577D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllaRecipes.Shared", "EllaRecipes.Shared\EllaRecipes.Shared.csproj", "{54FC95B4-047E-46E7-812B-D9E81810FDD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllaRecipes.DAL", "EllaRecipes.Shared\EllaRecipes.DAL.csproj", "{54FC95B4-047E-46E7-812B-D9E81810FDD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {392083D3-A952-41D0-8DE2-67A46D782394}
 	EndGlobalSection
 EndGlobal
