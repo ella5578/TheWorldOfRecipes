@@ -1,0 +1,56 @@
+@startuml
+entity User {
+  *UserID : int <<PK>>
+  Email : string
+  UserName : string
+  Password : string
+  IsAdmin : bool
+  FirstName : string
+  LastName : string
+  RegistrationDate : DateTime
+}
+
+entity Recipe {
+  *RecipeID : int <<PK>>
+  RecipeName : string
+  Description : string
+  VideoURL : string
+  TimerMinutes : int
+  LikesCount : int
+  CategoryID : int
+  ImageUrl : string
+}
+
+entity Category {
+  *CategoryID : int <<PK>>
+  CategoryName : string
+  ImageUrl : string
+}
+
+entity Ingredient {
+  *IngredientID : int <<PK>>
+  IngredientName : string
+}
+
+entity RatingAndComment {
+  *RatingAndCommentID : int <<PK>>
+  UserID : int
+  RecipeID : int
+  Comment : string
+  Rating : int
+}
+
+entity RecipeIngredient {
+  *RecipeIngredientID : int <<PK>>
+  IngredientID : int
+  RecipeID : int
+  Quantity : int
+  Units : string
+}
+
+User ||--o{ RatingAndComment : ""
+Recipe ||--o{ RatingAndComment : ""
+Category ||--o{ Recipe : ""
+Recipe ||--o{ RecipeIngredient : ""
+Ingredient ||--o{ RecipeIngredient : ""
+@enduml

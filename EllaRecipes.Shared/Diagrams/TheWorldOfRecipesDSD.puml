@@ -1,0 +1,59 @@
+@startuml
+' Data Structure Diagram for EllaRecipes
+
+entity User {
+  *UserID : int <<PK>>
+  Email : string
+  UserName : string
+  Password : string
+  IsAdmin : bool
+  FirstName : string
+  LastName : string
+  RegistrationDate : DateTime
+}
+
+entity Category {
+  *CategoryID : int <<PK>>
+  CategoryName : string
+  ImageUrl : string
+}
+
+entity Recipe {
+  *RecipeID : int <<PK>>
+  RecipeName : string
+  Description : string
+  VideoURL : string
+  TimerMinutes : int
+  LikesCount : int
+  CategoryID : int <<FK>>
+  ImageUrl : string
+}
+
+entity Ingredient {
+  *IngredientID : int <<PK>>
+  IngredientName : string
+}
+
+entity RatingAndComment {
+  *RatingAndCommentID : int <<PK>>
+  UserID : int <<FK>>
+  RecipeID : int <<FK>>
+  Comment : string
+  Rating : int
+}
+
+entity RecipeIngredient {
+  *RecipeIngredientID : int <<PK>>
+  IngredientID : int <<FK>>
+  RecipeID : int <<FK>>
+  Quantity : int
+  Units : string
+}
+
+' Relationships
+User ||--o{ RatingAndComment : ""
+Recipe ||--o{ RatingAndComment : ""
+Category ||--o{ Recipe : ""
+Recipe ||--o{ RecipeIngredient : ""
+Ingredient ||--o{ RecipeIngredient : ""
+@enduml

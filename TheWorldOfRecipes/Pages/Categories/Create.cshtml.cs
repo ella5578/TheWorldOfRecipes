@@ -4,10 +4,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 using EllaRecipes.Shared.Data;
 
-
-
-
-
 namespace TheWorldOfRecipes.Pages.Categories
 {
     public class CreateModel : PageModel
