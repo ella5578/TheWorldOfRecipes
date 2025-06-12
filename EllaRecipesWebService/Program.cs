@@ -1,5 +1,6 @@
 ﻿using CoreWCF;
 using CoreWCF.Configuration;
+using CoreWCF.Description;
 using EllaRecipes.Shared.Data;
 using Microsoft.EntityFrameworkCore;
 using ServiceLibrary.Contracts;
@@ -15,7 +16,14 @@ builder.Services.AddDbContext<TheWorldOfRecipesContext>(options =>
         ?? throw new InvalidOperationException("Connection string 'TheWorldOfRecipesContext' not found.")));
 
 builder.Services.AddServiceModelServices();
-builder.Services.AddSingleton<IUserService, UserService>();
+builder.Services.AddServiceModelMetadata();
+builder.Services.AddScoped<IUserService, UserService>();
+
+// Remove or comment out this block, as ServiceBehaviorOptions does not exist in CoreWCF
+// builder.Services.Configure<ServiceBehaviorOptions>(options =>
+// {
+//     options.IncludeExceptionDetailInFaults = true;
+// });
 
 var app = builder.Build();
 
@@ -27,7 +35,7 @@ app.UseServiceModel(serviceBuilder =>
         "/UserService.svc"
     );
     // Enable WSDL
-    var smb = app.Services.GetRequiredService<CoreWCF.Description.ServiceMetadataBehavior>();
+    var smb = app.Services.GetRequiredService<ServiceMetadataBehavior>();
     smb.HttpGetEnabled = true;
 });
 

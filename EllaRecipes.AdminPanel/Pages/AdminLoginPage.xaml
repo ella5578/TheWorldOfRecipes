@@ -1,0 +1,75 @@
+﻿<Window x:Class="EllaRecipes.AdminPanel.Pages.AdminLoginPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:EllaRecipes.AdminPanel.Converters"
+        Title="Admin Login" Height="350" Width="400" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <converters:StringNullOrEmptyToVisibilityConverter x:Key="StringNullOrEmptyToVisibilityConverter"/>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <converters:BoolToEyeIconConverter x:Key="BoolToEyeIconConverter"/>
+    </Window.Resources>
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Admin Login" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- Username -->
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,0,0,10">
+            <TextBlock Text="Username" Margin="0,0,0,2"/>
+            <Grid>
+                <TextBox x:Name="UsernameTextBox" Height="30"/>
+                <TextBlock Text="Enter username"
+                           IsHitTestVisible="False"
+                           Foreground="Gray"
+                           Margin="5,0,0,0"
+                           VerticalAlignment="Center"
+                           Visibility="{Binding Text, ElementName=UsernameTextBox, Converter={StaticResource StringNullOrEmptyToVisibilityConverter}}"/>
+            </Grid>
+        </StackPanel>
+
+        <!-- Password -->
+        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,0,0,10">
+            <TextBlock Text="Password" Margin="0,0,0,2"/>
+            <Grid>
+                <!-- PasswordBox always shown, overlays TextBox for plain text -->
+                <PasswordBox x:Name="PasswordBox" Height="30"
+                     Margin="0,0,40,0"
+                     PasswordChanged="PasswordBox_PasswordChanged"
+                     Visibility="{Binding IsPasswordVisible, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=False}"/>
+                <!-- TextBox overlays PasswordBox when visible -->
+                <TextBox x:Name="PasswordTextBox" Height="30"
+                 Margin="0,0,40,0"
+                 Text="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding IsPasswordVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                <!-- Eye button inside the box -->
+                <Button x:Name="TogglePasswordButton"
+                Width="30" Height="30"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Click="TogglePasswordButton_Click"
+                ToolTip="Show/Hide Password"
+                Background="Transparent"
+                BorderThickness="0"
+                Padding="0">
+                    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16"
+                       Text="{Binding IsPasswordVisible, Converter={StaticResource BoolToEyeIconConverter}}"
+                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+        <!-- Error Message -->
+        <TextBlock x:Name="ErrorTextBlock" Grid.Row="3" Foreground="Red" Margin="0,0,0,10" Visibility="Collapsed"/>
+
+        <!-- Login Button and ProgressBar -->
+        <StackPanel Grid.Row="4" Orientation="Vertical" HorizontalAlignment="Center">
+            <Button x:Name="LoginButton" Content="Login" Width="120" Height="35" Click="LoginButton_Click" Margin="0,0,0,10"/>
+            <ProgressBar x:Name="ProgressBar" Width="120" Height="8" IsIndeterminate="True" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Window>

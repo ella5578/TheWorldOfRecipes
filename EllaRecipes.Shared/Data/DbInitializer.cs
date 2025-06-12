@@ -19,6 +19,17 @@ namespace TheWorldOfRecipes.Data
             {
                 new User
                 {
+                    UserName = "aryeh",
+                    Email = "aryeh@example.com",
+                    PasswordHash = "b5vIFu4ggiBkxbr4Jpdmylv4v/BT2Xizv5lHnDpCH+k=",
+                    PasswordSalt = "54kLVUii1hvgeiDpmZHr3Q==",
+                    IsAdmin = true,
+                    FirstName = "Aryeh",
+                    LastName = "Wiesen",
+                    RegistrationDate = DateTime.Parse("2022-03-15")
+                },
+                new User
+                {
                     UserName = "EmilyR",
                     Email = "emily.rose@example.com",
                     PasswordHash = "b5vIFu4ggiBkxbr4Jpdmylv4v/BT2Xizv5lHnDpCH+k=",

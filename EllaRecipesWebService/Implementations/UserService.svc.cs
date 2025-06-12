@@ -4,7 +4,8 @@ using ServiceLibrary.DTOs;
 using ServiceLibrary.Helpers;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using EllaRecipes.Shared.Models; // Add this using directive for EF Core async methods
+using EllaRecipes.Shared.Models;
+using CoreWCF; // Add this using directive for EF Core async methods
 
 namespace ServiceLibrary.Implementations
 {
@@ -42,25 +43,36 @@ namespace ServiceLibrary.Implementations
 
         public async Task<UserDTO> LoginAsync(string username, string password)
         {
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.UserName == username);
-            if (user == null)
-                throw new InvalidOperationException("User not found");
-
-            if (PasswordHelper.VerifyPassword(password, user.PasswordHash, user.PasswordSalt))
+            try
             {
-                return new UserDTO
+                var user = await _db.Users.FirstOrDefaultAsync(u => u.UserName == username);
+                if (user == null)
+                    throw new FaultException("User not found");
+
+                if (PasswordHelper.VerifyPassword(password, user.PasswordHash, user.PasswordSalt))
                 {
-                    Id = user.UserID,
-                    FirstName = user.FirstName,
-                    LastName = user.LastName,
-                    UserName = user.UserName,
-                    Email = user.Email,
-                    IsAdmin = user.IsAdmin,
-                    PasswordHash = user.PasswordHash,
-                    PasswordSalt = user.PasswordSalt
-                };
+                    return new UserDTO
+                    {
+                        Id = user.UserID,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        UserName = user.UserName,
+                        Email = user.Email,
+                        IsAdmin = user.IsAdmin,
+                        PasswordHash = user.PasswordHash,
+                        PasswordSalt = user.PasswordSalt
+                    };
+                }
+                throw new FaultException("Invalid password");
             }
-            throw new UnauthorizedAccessException("Invalid password");
+            catch (FaultException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new FaultException("An unexpected error occurred: " + ex.Message);
+            }
         }
 
         public async Task<List<UserDTO>> GetAllUsersAsync()

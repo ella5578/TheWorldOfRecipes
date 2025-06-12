@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "EllaRecipes.WebService": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:50983;http://localhost:50984"
+    }
+  }
+}
