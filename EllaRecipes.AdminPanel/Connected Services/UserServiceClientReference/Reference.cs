@@ -18,8 +18,6 @@ namespace UserServiceClientReference
     public partial class UserDTO : object, System.ComponentModel.INotifyPropertyChanged
     {
         
-        private System.DateTime BirthDateField;
-        
         private string EmailField;
         
         private string FirstNameField;
@@ -34,26 +32,9 @@ namespace UserServiceClientReference
         
         private string PasswordSaltField;
         
-        private bool RequirePasswordChangeOnFirstLoginField;
+        private System.DateTime RegistrationDateField;
         
         private string UserNameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime BirthDate
-        {
-            get
-            {
-                return this.BirthDateField;
-            }
-            set
-            {
-                if ((this.BirthDateField.Equals(value) != true))
-                {
-                    this.BirthDateField = value;
-                    this.RaisePropertyChanged("BirthDate");
-                }
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Email
@@ -175,18 +156,18 @@ namespace UserServiceClientReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool RequirePasswordChangeOnFirstLogin
+        public System.DateTime RegistrationDate
         {
             get
             {
-                return this.RequirePasswordChangeOnFirstLoginField;
+                return this.RegistrationDateField;
             }
             set
             {
-                if ((this.RequirePasswordChangeOnFirstLoginField.Equals(value) != true))
+                if ((this.RegistrationDateField.Equals(value) != true))
                 {
-                    this.RequirePasswordChangeOnFirstLoginField = value;
-                    this.RaisePropertyChanged("RequirePasswordChangeOnFirstLogin");
+                    this.RegistrationDateField = value;
+                    this.RaisePropertyChanged("RegistrationDate");
                 }
             }
         }
@@ -226,25 +207,49 @@ namespace UserServiceClientReference
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
+        UserServiceClientReference.UserDTO Login(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
         System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> LoginAsync(string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/RegisterUser", ReplyAction="http://tempuri.org/IUserService/RegisterUserResponse")]
+        UserServiceClientReference.UserDTO RegisterUser(UserServiceClientReference.UserDTO user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/RegisterUser", ReplyAction="http://tempuri.org/IUserService/RegisterUserResponse")]
         System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> RegisterUserAsync(UserServiceClientReference.UserDTO user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
+        UserServiceClientReference.UserDTO GetUserById(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserById", ReplyAction="http://tempuri.org/IUserService/GetUserByIdResponse")]
         System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> GetUserByIdAsync(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllUsers", ReplyAction="http://tempuri.org/IUserService/GetAllUsersResponse")]
+        UserServiceClientReference.UserDTO[] GetAllUsers();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllUsers", ReplyAction="http://tempuri.org/IUserService/GetAllUsersResponse")]
         System.Threading.Tasks.Task<UserServiceClientReference.UserDTO[]> GetAllUsersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
+        bool UpdateUser(UserServiceClientReference.UserDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/UpdateUser", ReplyAction="http://tempuri.org/IUserService/UpdateUserResponse")]
         System.Threading.Tasks.Task<bool> UpdateUserAsync(UserServiceClientReference.UserDTO user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/DeleteUser", ReplyAction="http://tempuri.org/IUserService/DeleteUserResponse")]
+        bool DeleteUser(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/DeleteUser", ReplyAction="http://tempuri.org/IUserService/DeleteUserResponse")]
         System.Threading.Tasks.Task<bool> DeleteUserAsync(int userId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/ResetPassword", ReplyAction="http://tempuri.org/IUserService/ResetPasswordResponse")]
+        bool ResetPassword(int userId, string newPassword);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/ResetPassword", ReplyAction="http://tempuri.org/IUserService/ResetPasswordResponse")]
         System.Threading.Tasks.Task<bool> ResetPasswordAsync(int userId, string newPassword);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
+        UserServiceClientReference.UserDTO GetUserByUsername(string userName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUserByUsername", ReplyAction="http://tempuri.org/IUserService/GetUserByUsernameResponse")]
         System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> GetUserByUsernameAsync(string userName);
@@ -300,9 +305,19 @@ namespace UserServiceClientReference
         {
         }
         
+        public UserServiceClientReference.UserDTO Login(string username, string password)
+        {
+            return base.Channel.Login(username, password);
+        }
+        
         public System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> LoginAsync(string username, string password)
         {
             return base.Channel.LoginAsync(username, password);
+        }
+        
+        public UserServiceClientReference.UserDTO RegisterUser(UserServiceClientReference.UserDTO user)
+        {
+            return base.Channel.RegisterUser(user);
         }
         
         public System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> RegisterUserAsync(UserServiceClientReference.UserDTO user)
@@ -310,9 +325,19 @@ namespace UserServiceClientReference
             return base.Channel.RegisterUserAsync(user);
         }
         
+        public UserServiceClientReference.UserDTO GetUserById(int userId)
+        {
+            return base.Channel.GetUserById(userId);
+        }
+        
         public System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> GetUserByIdAsync(int userId)
         {
             return base.Channel.GetUserByIdAsync(userId);
+        }
+        
+        public UserServiceClientReference.UserDTO[] GetAllUsers()
+        {
+            return base.Channel.GetAllUsers();
         }
         
         public System.Threading.Tasks.Task<UserServiceClientReference.UserDTO[]> GetAllUsersAsync()
@@ -320,9 +345,19 @@ namespace UserServiceClientReference
             return base.Channel.GetAllUsersAsync();
         }
         
+        public bool UpdateUser(UserServiceClientReference.UserDTO user)
+        {
+            return base.Channel.UpdateUser(user);
+        }
+        
         public System.Threading.Tasks.Task<bool> UpdateUserAsync(UserServiceClientReference.UserDTO user)
         {
             return base.Channel.UpdateUserAsync(user);
+        }
+        
+        public bool DeleteUser(int userId)
+        {
+            return base.Channel.DeleteUser(userId);
         }
         
         public System.Threading.Tasks.Task<bool> DeleteUserAsync(int userId)
@@ -330,9 +365,19 @@ namespace UserServiceClientReference
             return base.Channel.DeleteUserAsync(userId);
         }
         
+        public bool ResetPassword(int userId, string newPassword)
+        {
+            return base.Channel.ResetPassword(userId, newPassword);
+        }
+        
         public System.Threading.Tasks.Task<bool> ResetPasswordAsync(int userId, string newPassword)
         {
             return base.Channel.ResetPasswordAsync(userId, newPassword);
+        }
+        
+        public UserServiceClientReference.UserDTO GetUserByUsername(string userName)
+        {
+            return base.Channel.GetUserByUsername(userName);
         }
         
         public System.Threading.Tasks.Task<UserServiceClientReference.UserDTO> GetUserByUsernameAsync(string userName)

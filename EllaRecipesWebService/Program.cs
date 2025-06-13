@@ -9,7 +9,6 @@ using ServiceLibrary.Implementations;
 var builder = WebApplication.CreateBuilder(args);
 
 // Register dependencies, e.g. DbContext
-// Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<TheWorldOfRecipesContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("TheWorldOfRecipesContext")
@@ -19,11 +18,12 @@ builder.Services.AddServiceModelServices();
 builder.Services.AddServiceModelMetadata();
 builder.Services.AddScoped<IUserService, UserService>();
 
-// Remove or comment out this block, as ServiceBehaviorOptions does not exist in CoreWCF
-// builder.Services.Configure<ServiceBehaviorOptions>(options =>
-// {
-//     options.IncludeExceptionDetailInFaults = true;
-// });
+// Enable detailed exception information for debugging
+builder.Services.AddSingleton<ServiceDebugBehavior>(provider =>
+    new ServiceDebugBehavior
+    {
+        IncludeExceptionDetailInFaults = true
+    });
 
 var app = builder.Build();
 
@@ -37,6 +37,13 @@ app.UseServiceModel(serviceBuilder =>
     // Enable WSDL
     var smb = app.Services.GetRequiredService<ServiceMetadataBehavior>();
     smb.HttpGetEnabled = true;
+
+    // DO NOT add ServiceDebugBehavior explicitly here; CoreWCF handles it
+    // serviceBuilder.ConfigureServiceHostBase<UserService>(host =>
+    // {
+    //     var debugBehavior = app.Services.GetRequiredService<ServiceDebugBehavior>();
+    //     host.Description.Behaviors.Add(debugBehavior);
+    // });
 });
 
 app.Run();

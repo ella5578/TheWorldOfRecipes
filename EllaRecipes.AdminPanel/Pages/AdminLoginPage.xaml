@@ -38,25 +38,23 @@
             <Grid>
                 <!-- PasswordBox always shown, overlays TextBox for plain text -->
                 <PasswordBox x:Name="PasswordBox" Height="30"
-                     Margin="0,0,40,0"
                      PasswordChanged="PasswordBox_PasswordChanged"
-                     Visibility="{Binding IsPasswordVisible, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=False}"/>
+                     Visibility="{Binding IsPasswordVisible, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=False}" Panel.ZIndex="5"/>
                 <!-- TextBox overlays PasswordBox when visible -->
                 <TextBox x:Name="PasswordTextBox" Height="30"
-                 Margin="0,0,40,0"
                  Text="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                 Visibility="{Binding IsPasswordVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                 Visibility="{Binding IsPasswordVisible, Converter={StaticResource BoolToVisibilityConverter}}" Panel.ZIndex="-1"/>
                 <!-- Eye button inside the box -->
                 <Button x:Name="TogglePasswordButton"
                 Width="30" Height="30"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
                 Click="TogglePasswordButton_Click"
                 ToolTip="Show/Hide Password"
                 Background="Transparent"
                 BorderThickness="0"
-                Padding="0">
-                    <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="16"
+                Padding="0" Focusable="False" Margin="310,0,0,0" Panel.ZIndex="5">
+                    <TextBlock FontFamily="Arial" FontSize="16"
                        Text="{Binding IsPasswordVisible, Converter={StaticResource BoolToEyeIconConverter}}"
                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Button>

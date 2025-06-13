@@ -30,6 +30,7 @@ namespace EllaRecipes.AdminPanel.Pages
         public AdminLoginPage()
         {
             InitializeComponent();
+            TogglePasswordButton.FontFamily = new System.Windows.Media.FontFamily("Segoe MDL2 Assets");
             DataContext = this;
             IsPasswordVisible = true;
         }
@@ -45,8 +46,7 @@ namespace EllaRecipes.AdminPanel.Pages
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (!IsPasswordVisible)
-                Password = PasswordBox.Password;
+            Password = PasswordBox.Password;
         }
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)

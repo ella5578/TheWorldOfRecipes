@@ -54,13 +54,14 @@ namespace ServiceLibrary.Implementations
                     return new UserDTO
                     {
                         Id = user.UserID,
+                        Email = user.Email,
+                        UserName = user.UserName,
+                        PasswordHash = user.PasswordHash,
+                        PasswordSalt = user.PasswordSalt,
+                        IsAdmin = user.IsAdmin,
                         FirstName = user.FirstName,
                         LastName = user.LastName,
-                        UserName = user.UserName,
-                        Email = user.Email,
-                        IsAdmin = user.IsAdmin,
-                        PasswordHash = user.PasswordHash,
-                        PasswordSalt = user.PasswordSalt
+                        RegistrationDate = user.RegistrationDate,
                     };
                 }
                 throw new FaultException("Invalid password");
@@ -85,9 +86,10 @@ namespace ServiceLibrary.Implementations
                     LastName = u.LastName,
                     UserName = u.UserName,
                     Email = u.Email,
+                    PasswordHash = u.PasswordHash,
+                    PasswordSalt = u.PasswordSalt,
                     IsAdmin = u.IsAdmin,
-                    PasswordHash = u.PasswordHash, // Fix for CS9035
-                    PasswordSalt = u.PasswordSalt  // Fix for CS9035
+                    RegistrationDate = u.RegistrationDate
                 })
                 .ToListAsync();
         }
@@ -105,12 +107,12 @@ namespace ServiceLibrary.Implementations
                     PasswordHash = userDTO.PasswordHash,
                     PasswordSalt = userDTO.PasswordSalt,
                     IsAdmin = userDTO.IsAdmin,
+                    RegistrationDate = userDTO.RegistrationDate == default ? DateTime.UtcNow : userDTO.RegistrationDate
                 };
                 _db.Users.Add(user);
                 await _db.SaveChangesAsync();
 
                 userDTO.Id = user.UserID;
-                userDTO.RequirePasswordChangeOnFirstLogin = false;
                 return userDTO;
             }
             catch (Exception ex)
