@@ -100,6 +100,7 @@
     }
 
     <h3>תגובות ודירוגים</h3>
+    <h3>תגובות ודירוגים</h3>
     @if (Model.RecipeComments.Any())
     {
         <table class="table">
@@ -115,7 +116,19 @@
                 {
                     <tr>
                         <td>@comment.User.UserName</td>
-                        <td>@comment.Rating</td>
+                        <td>
+                            @for (int i = 1; i <= 5; i++)
+                            {
+                                if (comment.Rating.HasValue && i <= comment.Rating.Value)
+                                {
+                                    <span style="color: gold; font-size: 1.2em;">&#9733;</span> <!-- כוכב מלא -->
+                                }
+                                else
+                                {
+                                    <span style="color: gray; font-size: 1.2em;">&#9734;</span> <!-- כוכב ריק -->
+                                }
+                            }
+                        </td>
                         <td>@comment.Comment</td>
                     </tr>
                 }
@@ -126,6 +139,7 @@
     {
         <p>אין תגובות למתכון זה.</p>
     }
+
 
 </div>
 <div>
