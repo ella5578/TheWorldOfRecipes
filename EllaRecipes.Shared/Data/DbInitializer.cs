@@ -3,6 +3,7 @@ using EllaRecipes.Shared.Models;
 using System.IO;
 using System.Net;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static System.Net.WebRequestMethods;
 
 namespace TheWorldOfRecipes.Data
 {
@@ -111,7 +112,7 @@ namespace TheWorldOfRecipes.Data
                new Recipe
                {
                    RecipeName = "בראוניז",
-                   Description = "לחתוך תפוחים ולטגן עם סוכר, להוסיף לתבנית עם הבצק לשטח ולפזר קינמון. ובתיאבון!",
+                   Description = "ממיסים חמאה ושוקולד יחד עד לקבלת תערובת אחידה, מוסיפים סוכר, ביצים, קמח וקקאו ומערבבים. יוצקים לתבנית מרובעת ואופים עד שהקצוות יציבים והמרכז לח מעט. מתקבל קינוח שוקולדי, עשיר ודחוס מבפנים עם קראסט עדין מבחוץ. מושלם לצד גלידה.",
                    CategoryID = 1,
                    Category = categories.First(c => c.CategoryID == 1),
                    ImageUrl = "brauniz.jpg",
@@ -122,261 +123,259 @@ namespace TheWorldOfRecipes.Data
                new Recipe
                {
                    RecipeName = "עוגת שוקולד",
-                   Description = "cake",
+                   Description = "מערבבים ביצים, סוכר, שמן, קקאו, מים רותחים, קמח ואבקת אפייה – עד קבלת בלילה חלקה. יוצקים לתבנית ואופים עד שקיסם יוצא יבש. מתקבלת עוגה שוקולדית, רכה ונימוחה שמתאימה לימי הולדת או כפינוק מתוק ליד הקפה. אפשר לצפות בגנאש שוקולד.",
                    CategoryID = 1,
                    Category = categories.First(c => c.CategoryID == 1),
                    TimerMinutes = 30,
                    ImageUrl = "chocolatecake.jpg",
-                   LikesCount = 0,
+                   LikesCount = 10,
                    VideoURL = "https://youtu.be/EBAE91Os2VA?si=m7bn3GyeGy7t_-9B"
                },
                new Recipe
                {
                    RecipeName = "עוגיות שוקולד ציפ",
-                   Description = "cookie",
+                   Description = "מערבבים חמאה רכה עם סוכר לבן וחום, מוסיפים ביצה, קמח, אבקת אפייה, וניל ושוקולד צ'יפס. יוצרים כדורים קטנים ואופים עד שהשוליים מזהיבים והמרכז עדיין רך. העוגיות יוצאות פריכות מבחוץ ורכות ונמסות בפנים – בדיוק כמו בקונדיטוריה.",
                    CategoryID = 1,
                    Category = categories.First(c => c.CategoryID == 1),
                    TimerMinutes = 20,
                    ImageUrl = "cookie.jpg",
-                   LikesCount = 0,
-                   VideoURL = null
+                   LikesCount = 7,
+                   VideoURL = "https://www.youtube.com/embed/D8Tm4vaku2s?si=dguTgeyfD8GhYMkl"
                },
 
                new Recipe
                {
                    RecipeName = "כדורי שוקולד",
-                   Description = "לפורר חבילת ביסקוויטים להמיס שוקולד לערבב, לקרר להכין כדורים ולעטוף אותם בבסוכריות או בקוקוס ובתאבון!",
+                   Description = "מפוררים חבילת פתי בר לקערה, ממיסים שוקולד עם חמאה, ומערבבים עם פירורים, קוקוס, קקאו ומעט מים או חלב. מקררים מעט, יוצרים כדורים קטנים ומגלגלים בקוקוס או סוכריות צבעוניות. קינוח קל, ללא אפייה – מושלם לילדים ולכל הגילאים.",
                    CategoryID = 1,
                    Category = categories.First(c => c.CategoryID == 1),
                    ImageUrl = "chocolateballs.jpg",
                    TimerMinutes = 35,
-                   LikesCount = 0,
-                   VideoURL = null
+                   LikesCount = 9,
+                   VideoURL = "https://youtu.be/uJ_QZzWW5CU?si=By6JccyT9elAsbOF"
                },  
 
                // מנות עיקריות  
                new Recipe
                {
                    RecipeName = "שניצל קלאסי",
-                   Description = "חזה עוף בציפוי פריך של פירורי לחם, מטוגן עד להזהבה. מומלץ להגיש עם פירה או אורז.",
+                  Description = "חזה עוף פרוס דק מתובל במלח ופלפל, נטבל בביצה וקמח, מצופה בפירורי לחם ומטוגן בשמן חם עד להזהבה מושלמת. מתקבל ציפוי קריספי עם בשר עסיסי מבפנים. להגיש עם פירה, אורז או צ'יפס וקצת לימון בצד. קלאסיקה ישראלית מנצחת.",
                    CategoryID = 2,
                    Category = categories.First(c => c.CategoryID == 2),
                    ImageUrl = "schnitzel.jpg",
                    TimerMinutes = 40,
-                   LikesCount = 0,
-                   VideoURL = "https://youtu.be/bbKb-l4mM8I"
+                   LikesCount = 12,
+                   VideoURL = "https://youtu.be/yp1m9iuKYUk?si=Kjz32V-Cyc9HoS-K"
                },
                new Recipe
                {
                    RecipeName = "קציצות ברוטב עגבניות",
-                   Description = "קציצות בקר עסיסיות מבושלות ברוטב עגבניות עשיר. מושלם עם אורז לבן.",
+                   Description = "מערבבים בשר טחון עם ביצה, פירורי לחם, בצל ותיבול. יוצרים קציצות ומבשלים אותן ברוטב עשיר של רסק עגבניות, שום ותבלינים. הבישול מעניק לקציצות מרקם רך וטעמים עמוקים. מגישים לצד אורז לבן או פירה – מושלם לארוחת צהריים ביתית.",
                    CategoryID = 2,
                    Category = categories.First(c => c.CategoryID == 2),
                    ImageUrl = "meatballs.jpg",
                    TimerMinutes = 50,
-                   LikesCount = 0,
-                   VideoURL = null
+                   LikesCount = 3,
+                   VideoURL = "https://youtu.be/Zn6dEdJyTLU?si=7HB0a4b7wlsMrcv9"
                },  
 
                // ארוחות בוקר  
                new Recipe
                {
                    RecipeName = "שקשוקה קלאסית",
-                   Description = "ביצים מבושלות ברוטב עגבניות חריף עם בצל, שום ופלפל. מושלם עם חלה טרייה.",
+                  Description = "מטגנים בצל, שום ופלפל עד לריכוך, מוסיפים עגבניות קצוצות, רסק עגבניות ותבלינים ומבשלים לרוטב סמיך. שוברים ביצים ישירות לתוך הרוטב, מכסים ומבשלים עד שהחלבון מתייצב והחלמון נשאר נוזלי. מגישים עם חלה טרייה או פיתה לניגוב.",
                    CategoryID = 3,
                    Category = categories.First(c => c.CategoryID == 3),
                    ImageUrl = "shakshuka.jpg",
                    TimerMinutes = 25,
                    LikesCount = 0,
-                   VideoURL = "https://youtu.be/VZzRzqKYK-8"
-               },
-               new Recipe
-               {
-                   RecipeName = "פנקייקים אמריקאים",
-                   Description = "פנקייקים רכים ואווריריים מוגשים עם סירופ מייפל ופירות יער.",
-                   CategoryID = 3,
-                   Category = categories.First(c => c.CategoryID == 3),
-                   ImageUrl = "pancakes.jpg",
-                   TimerMinutes = 20,
-                   LikesCount = 0,
-                   VideoURL = null
-               },  
-
-               // סלטים  
-               new Recipe
-               {
-                   RecipeName = "סלט קיסר",
-                   Description = "עלי חסה פריכים, קרוטונים, גבינת פרמזן ורוטב קיסר מיוחד.",
-                   CategoryID = 4,
-                   Category = categories.First(c => c.CategoryID == 4),
-                   ImageUrl = "caesar_salad.jpg",
-                   TimerMinutes = 15,
-                   LikesCount = 0,
-                   VideoURL = null
-               },
-               new Recipe
-               {
-                   RecipeName = "פסטה שמנת פטריות",
-                   Description = "לטגן בצל עד שנהייה שקוף להוסיף את הפטריות חתוכות עד שמתרככות להוסיף שום ולערבב, שמנת מלח פלפל אבקת מרק ואגוז מוסקט לערבב ולחכות לרתיחה ואז להעביר לאש הקטנה להוסיף את הפסטה ובתיאבון!",
-                   CategoryID = 5,
-                   Category = categories.First(c => c.CategoryID == 5),
-                   ImageUrl = "pasta1.jpg",
-                   TimerMinutes = 40,
-                   LikesCount = 0,
-                   VideoURL = null
-               },  
-
-               // ארוחות צהריים  
-               new Recipe
-               {
-                   RecipeName = "מוקפץ אסייתי",
-                   Description = "רצועות עוף, ירקות צבעוניים ורוטב סויה-ג'ינג'ר מוקפצים בווק. טעים ובריא.",
-                   CategoryID = 5,
-                   Category = categories.First(c => c.CategoryID == 5),
-                   ImageUrl = "stirfry.jpg",
-                   TimerMinutes = 30,
-                   LikesCount = 0,
-                   VideoURL = "https://youtu.be/xY6nM7WmU3g"
-               },
-               new Recipe
-               {
-                   RecipeName = "קארי ירקות עם אורז",
-                   Description = "תבשיל קארי עשיר בירקות טריים וחלב קוקוס. מנה טבעונית ומלאת טעם.",
-                   CategoryID = 5,
-                   Category = categories.First(c => c.CategoryID == 5),
-                   ImageUrl = "veggie_curry.jpg",
-                   TimerMinutes = 40,
-                   LikesCount = 0,
-                   VideoURL = null
-               },  
-
-               // מאפים  
-               new Recipe
-               {
-                   RecipeName = "לחם שום ביתי",
-                   Description = "לחם פריך מבחוץ ורך מבפנים עם חמאת שום, פטרוזיליה וגבינה צהובה.",
-                   CategoryID = 6,
-                   Category = categories.First(c => c.CategoryID == 6),
-                   ImageUrl = "garlic_bread.jpg",
-                   TimerMinutes = 35,
-                   LikesCount = 0,
-                   VideoURL = null
-               },
-               new Recipe
-               {
-                   RecipeName = "בייגל ירושלמי",
-                   Description = "מאפה שמרים ארוך עם שומשום, קראנצ'י מבחוץ ורך מבפנים – מושלם עם טחינה.",
-                   CategoryID = 6,
-                   Category = categories.First(c => c.CategoryID == 6),
-                   ImageUrl = "jerusalem_bagel.jpg",
-                   TimerMinutes = 90,
-                   LikesCount = 0,
-                   VideoURL = "https://youtu.be/UZ7RhFq-VOY"
+                   VideoURL = "https://youtu.be/EqnngTy9Jr4?si=73586MTPbI3INb8_"
                },
                new Recipe
                 {
+                    RecipeName = "פנקייקים אמריקאים",
+                    Description = "מתכון קלאסי לפנקייקים אמריקאיים – רכים, אווריריים וזהובים מבחוץ. הכנה קלה ומהירה: מערבבים את החומרים היבשים והרטובים בנפרד, מאחדים לתערובת חלקה, ומטגנים על מחבת חמה משומנת עד שהפנקייקים תופחים ומשחימים. מגישים עם סירופ מייפל, פירות יער, אבקת סוכר או כל תוספת אהובה.",
+                    CategoryID = 3,
+                    Category = categories.First(c => c.CategoryID == 3),
+                    ImageUrl = "pancakes.jpg",
+                    TimerMinutes = 20,
+                   LikesCount = 0,
+                    VideoURL = "https://youtu.be/RTExkuPgxlI?si=_WT71MW4BWfSKJUh"
+                },
+  
+
+               // סלטים  
+               new Recipe
+                {
+                    RecipeName = "סלט קיסר",
+                    Description = "חוצים עלי חסה רומאית, שוטפים ומייבשים היטב. מכינים רוטב קיסר קלאסי (חלמונים, חרדל, שום, אנשובי, לימון ושמן זית), יוצקים על החסה, מוסיפים קרוטונים וגבינת פרמזן מגורדת ומערבבים קלות. מתקבל סלט רענן, פריך וטעים במיוחד.",
+                    CategoryID = 4,
+                    Category = categories.First(c => c.CategoryID == 4),
+                    ImageUrl = "caesar_salad.jpg",
+                    TimerMinutes = 15,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/w7-ZkFaZdYw?si=PBnIGN1WyxacBswN"
+                },
+                new Recipe
+                {
+                    RecipeName = "פסטה שמנת פטריות",
+                    Description = "מטגנים בצל קצוץ עד שקיפות, מוסיפים פטריות פרוסות ומבשלים עד ריכוך. מוסיפים שום, שמנת מתוקה, מלח, פלפל, אבקת מרק ואגוז מוסקט. מביאים לרתיחה ומבשלים על אש קטנה. מוסיפים את הפסטה המבושלת, מערבבים ומגישים חם.",
+                    CategoryID = 5,
+                    Category = categories.First(c => c.CategoryID == 5),
+                    ImageUrl = "pasta1.jpg",
+                    TimerMinutes = 40,
+                    LikesCount = 5,
+                    VideoURL = "https://youtu.be/Q6fMwdxqVng?si=z0gEs5wPubtajR2z"
+                },
+                new Recipe
+                {
+                    RecipeName = "מוקפץ אסייתי",
+                    Description = "חותכים עוף לרצועות ומטגנים עם מעט שמן. מוסיפים ירקות קצוצים כמו גזר, קישוא, פלפל ובצל ירוק. מתבלים ברוטב סויה, ג'ינג'ר ושום. מקפיצים יחד בווק עד ריכוך. ניתן להוסיף אטריות ביצים או אורז מאודה בצד.",
+                    CategoryID = 5,
+                    Category = categories.First(c => c.CategoryID == 5),
+                    ImageUrl = "stirfry.jpg",
+                    TimerMinutes = 30,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/86BwNVUTh8U?si=bgt_j6OF7635KPCc"
+                },
+                new Recipe
+                {
+                    RecipeName = "קארי ירקות עם אורז",
+                    Description = "מטגנים בצל, שום וג'ינג'ר טרי. מוסיפים תבליני קארי, קוביות תפוחי אדמה, גזר, קישוא ופלפל. יוצקים חלב קוקוס ומבשלים עד שהירקות רכים. מגישים עם אורז לבן או בסמטי. תבשיל טבעוני עשיר ומחמם.",
+                    CategoryID = 5,
+                    Category = categories.First(c => c.CategoryID == 5),
+                    ImageUrl = "veggie_curry.jpg",
+                    TimerMinutes = 40,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/-7MrKfR1E8w?si=sQ1FNlA7C0JqRMs8"
+                },
+                new Recipe
+                {
+                    RecipeName = "לחם שום ביתי",
+                    Description = "פורסים בגט או לחם איטלקי לאורך. מערבבים חמאה רכה עם שום כתוש, פטרוזיליה קצוצה וגבינה צהובה מגורדת. מורחים על הלחם ואופים עד שהלחם פריך והחמאה נמסה. מעדן חם שמתאים לכל ארוחה.",
+                    CategoryID = 6,
+                    Category = categories.First(c => c.CategoryID == 6),
+                    ImageUrl = "garlic_bread.jpg",
+                    TimerMinutes = 35,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/bNKsZZgaibM?si=YgR_nquGyTPbjf2n"
+                },
+                new Recipe
+                {
+                    RecipeName = "בייגל ירושלמי",
+                    Description = "מכינים בצק שמרים רך, מתפיחים, יוצרים צורת בייגל ארוכה, מברישים במים עם מעט סוכר וזורים שומשום. אופים בתנור חם עד להשחמה. טעים במיוחד עם טחינה, לבנה או גבינה מלוחה.",
+                    CategoryID = 6,
+                    Category = categories.First(c => c.CategoryID == 6),
+                    ImageUrl = "jerusalem_bagel.jpg",
+                    TimerMinutes = 90,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/SVzJG9M8BsU?si=C-4EnQr2X1che5Qj"
+                },
+                new Recipe
+                {
                     RecipeName = "טירמיסו קלאסי",
-                    Description = "קינוח איטלקי עם שכבות של בישקוטים, מסקרפונה וקפה.",
+                    Description = "טובלים בישקוטים בקפה חזק עם ליקר, מסדרים בתבנית בשכבות עם קרם מסקרפונה מוקצף. חוזרים על הפעולה, מסיימים באבקת קקאו. מקררים לפחות 4 שעות. קינוח איטלקי קלאסי, עשיר ואלגנטי.",
                     CategoryID = 1,
                     Category = categories.First(c => c.CategoryID == 1),
                     ImageUrl = "tiramisu.jpg",
                     TimerMinutes = 45,
                     LikesCount = 0,
-                    VideoURL = "https://youtu.be/6TEZfDIr-pM"
+                    VideoURL = "https://youtu.be/V3We5zttM04?si=RILy6HV0Lo4jXL5k"
                 },
-               new Recipe
+                new Recipe
                 {
                     RecipeName = "חזה עוף ברוטב טריאקי",
-                    Description = "חזה עוף מוקפץ ברוטב טריאקי מתקתק עם ירקות אסייתיים.",
+                    Description = "חותכים חזה עוף לקוביות ומטגנים. מוסיפים רוטב טריאקי, מעט דבש, ג'ינג'ר ושום. מבשלים עד שהרוטב מצפה את העוף. מגישים עם אורז או ירקות מאודים. ארוחה פשוטה עם טעם אסייתי מובהק.",
                     CategoryID = 2,
                     Category = categories.First(c => c.CategoryID == 2),
                     ImageUrl = "teriyaki_chicken.jpg",
                     TimerMinutes = 35,
                     LikesCount = 0,
-                    VideoURL = null
+                    VideoURL = "https://youtu.be/37HIVx_NhmI?si=nXUAtgQ6j2CVO8od"
                 },
+
                 new Recipe
                  {
                       RecipeName = "פיצה מרגריטה",
-                      Description = "פיצה קלאסית עם רוטב עגב tomatoes, גבינת מוצרלה ובזיליקום טרי.",
+                      Description = "1. מרדדים בצק פיצה דק על תבנית אפייה משומנת.\n2. מורחים שכבת רוטב עגבניות (רסק, שום כתוש, שמן זית, מלח ואורגנו).\n3. מפזרים מוצרלה פרוסה או מגוררת.\n4. אופים בתנור שחומם מראש ל־220 מעלות כ־10–15 דקות עד שהבצק זהוב.\n5. מוסיפים עלים של בזיליקום טרי ומזלפים מעט שמן זית לפני ההגשה.",
                       CategoryID = 6,
                       Category = categories.First(c => c.CategoryID == 6),
                       ImageUrl = "margherita_pizza.jpg",
                       TimerMinutes = 30,
                       LikesCount = 0,
-                      VideoURL = "https://youtu.be/1j4b2k3f5a8"
+                      VideoURL = "https://youtu.be/4bb3alO6w-Y?si=_VKDbe8nkwXJvcNn"
                   },
                 new Recipe
                 {
                     RecipeName = "טוסט אבוקדו וביצה",
-                    Description = "פרוסת לחם קלוי עם ממרח אבוקדו וביצה עלומה מעל. פשוט ובריא.",
+                    Description = "1. קולים פרוסת לחם כפרי עד שהופכת זהובה ופריכה.\n2. מועכים אבוקדו בשל עם מיץ לימון, מלח ופלפל.\n3. מורחים את הממרח על הטוסט.\n4. מכינים ביצה עלומה: שוברים ביצה לקערה קטנה, יוצקים למים רותחים עם מעט חומץ ומבשלים 2–3 דקות.\n5. מניחים את הביצה על האבוקדו ומפזרים מעל פתיתי צ'ילי או שומשום שחור.",
                     CategoryID = 3,
                     Category = categories.First(c => c.CategoryID == 3),
                     ImageUrl = "avocado_toast.jpg",
                     TimerMinutes = 15,
                     LikesCount = 0,
-                    VideoURL = null
+                    VideoURL = "https://youtu.be/pqHt7vXfpJI?si=ns_TyyINnl_Va343"
                 },
                 new Recipe
                 {
                     RecipeName = "סלט קינואה צבעוני",
-                    Description = "סלט בריא עם קינואה, ירקות טריים, גרגרי רימון ותיבול לימוני.",
+                    Description = "1. מבשלים קינואה לפי ההוראות – 1 כוס קינואה עם 2 כוסות מים עד שהנוזלים נספגים.\n2. מצננים ומעבירים לקערה.\n3. מוסיפים עגבניות שרי חתוכות, מלפפון, פלפל צבעוני, בצל ירוק, פטרוזיליה וגרגרי רימון.\n4. מתבלים בשמן זית, מיץ לימון, מלח, פלפל ושום כתוש.\n5. מערבבים היטב ומגישים קר.",
                     CategoryID = 4,
                     Category = categories.First(c => c.CategoryID == 4),
                     ImageUrl = "quinoa_salad.jpg",
                     TimerMinutes = 25,
-                    LikesCount = 0,
-                    VideoURL = null
+                    LikesCount = 1,
+                    VideoURL = "https://youtu.be/jRpx4beVvb8?si=mVB6oOnVByfQFBR0"
                 },
 
                 new Recipe
                 {
                     RecipeName = "פסטה פסטו עם עגבניות שרי",
-                    Description = "פסטה עם רוטב פסטו טרי ועגבניות שרי קלות. מנה קלה ומהירה.",
+                    Description = "1. מבשלים פסטה לפי ההוראות על האריזה.\n2. במחבת עם מעט שמן זית מקפיצים עגבניות שרי חצויות למשך 2–3 דקות.\n3. מוסיפים לפסטה רוטב פסטו מוכן (או ביתי: בזיליקום, שמן זית, צנוברים, שום ופרמזן בטחינה).\n4. מערבבים יחד עם העגבניות, מפזרים גבינת פרמזן ומגישים חם.",
                     CategoryID = 5,
                     Category = categories.First(c => c.CategoryID == 5),
                     ImageUrl = "pesto_pasta.jpg",
                     TimerMinutes = 20,
-                    LikesCount = 0,
-                    VideoURL = null
+                    LikesCount = 2,
+                    VideoURL = "https://youtu.be/8HdfGmQaabM?si=QjsmnpcGVHx6V66l"
                 },
                 new Recipe
                 {
                     RecipeName = "מאפינס בננה ושוקולד צ'יפס",
-                    Description = "מאפים רכים ומתוקים בטעם בננה עם שוקולד צ'יפס. מושלם לקפה.",
+                    Description =  "1. מועכים 2 בננות בשלות בקערה.\n2. מוסיפים ביצה, חצי כוס סוכר, רבע כוס שמן וקורט וניל – מערבבים היטב.\n3. מוסיפים 1 כוס קמח, 1 כפית אבקת אפייה וקמצוץ מלח.\n4. מקפלים שוקולד צ'יפס לפי הטעם.\n5. יוצקים לתבנית מאפינס ואופים כ־20–25 דקות בתנור שחומם מראש ל־180 מעלות עד שקיסם יוצא יבש.",
                     CategoryID = 6,
                     Category = categories.First(c => c.CategoryID == 6),
                     ImageUrl = "banana_muffins.jpg",
                     TimerMinutes = 30,
                     LikesCount = 0,
-                    VideoURL = null
+                    VideoURL = "https://youtu.be/-qVMQADWNFU?si=cG-MDvhF_qM7k9ub"
                 },
                 new Recipe
                 {
                     RecipeName = "עוגת גבינה קרה",
-                    Description = "עוגת גבינה ללא אפייה עם בסיס פתי בר וציפוי ג’לי.",
+                    Description = "1. מרסקים כ־200 גרם פתי בר ומערבבים עם 100 גרם חמאה מומסת.\n2. מהדקים לתבנית עגולה ושטוחים את התערובת לבסיס אחיד.\n3. מקציפים שמנת מתוקה עם אינסטנט פודינג וניל.\n4. מוסיפים גבינת שמנת וסוכר, וטורפים עד לקבלת תערובת אחידה.\n5. יוצקים את הקרם על הבסיס ומכניסים לקירור לשעתיים לפחות.\n6. ממיסים אבקת ג'לי עם מים רותחים, מצננים מעט ושופכים בעדינות מעל הקרם.\n7. מצננים עוד כשעה-שעתיים עד להתייצבות.",
                     CategoryID = 1,
                     Category = categories.First(c => c.CategoryID == 1),
                     TimerMinutes = 25,
                     ImageUrl = "cheesecake.jpg",
                     LikesCount = 0,
-                    VideoURL = null
+                    VideoURL = "https://youtu.be/tpsywnPNDsw?si=pkUZAlQKjN185xfR"
                 },
                new Recipe
                 {
                     RecipeName = "עוגת מוס שוקולד",
-                    Description = "קינוח עשיר ומרשים עם שכבות מוס שוקולד חלק וטעים.",
+                    Description = "1. ממיסים 200 גרם שוקולד מריר עם 100 גרם חמאה על בן מארי.\n2. בקערה נפרדת מקציפים שמנת מתוקה עם 2 כפות אבקת סוכר עד לקצפת רכה.\n3. מאחדים את השוקולד המומס עם השמנת בהדרגה בקיפולים עד לתערובת חלקה.\n4. יוצקים לתבנית או כוסות אישיות ומכניסים למקרר ל־4 שעות לפחות.\n5. לקישוט: אפשר להוסיף שבבי שוקולד, אגוזים קצוצים או קצפת מעל.",
                     CategoryID = 1,
                     Category = categories.First(c => c.CategoryID == 1),
                     TimerMinutes = 60,
                     ImageUrl = "mousse.jpg",
                     LikesCount = 0,
-                    VideoURL = "https://youtu.be/T2RvVgRwqTk"
+                    VideoURL = "https://youtu.be/1u-0tNFMamg?si=-Xzt_nXj-6nRPOdg"
                 },
                 new Recipe
                 {
                     RecipeName = "סלט ירקות טריים",
-                    Description = "חיתוך ירקות טריים, רוטב פשוט וטעים. אידיאלי לכל ארוחה.",
+                    Description = "1. חותכים עגבניות, מלפפונים, פלפלים ובצל סגול לקוביות קטנות.\n2. קוצצים פטרוזיליה או כוסברה לפי הטעם.\n3. מתבלים במיץ לימון סחוט, שמן זית, מלח, פלפל וטיפת חומץ בלסמי.\n4. מערבבים היטב ומגישים מיד לשמירה על פריכות.",
                     CategoryID = 4,
                     Category = categories.First(c => c.CategoryID == 4),
                     TimerMinutes = 10,
@@ -387,79 +386,79 @@ namespace TheWorldOfRecipes.Data
                 new Recipe
                 {
                     RecipeName = "פסטה ברוטב עגבניות",
-                    Description = "פסטה עם רוטב עגבניות עשיר, בזיליקום ופרמזן. קלאסיקה איטלקית.",
+                    Description = "1. מבשלים את הפסטה לפי ההוראות על האריזה.\n2. במחבת עמוקה, מטגנים בצל ושום קצוצים עד להזהבה.\n3. מוסיפים 2–3 עגבניות מגוררות או קופסה של עגבניות מרוסקות.\n4. מתבלים במלח, פלפל, סוכר, בזיליקום יבש ואורגנו.\n5. מבשלים כ־15 דקות עד שהרוטב מצטמצם.\n6. מוסיפים את הפסטה למחבת, מערבבים ומבשלים יחד עוד 2 דקות.\n7. מגישים עם עלי בזיליקום טריים ופרמזן מגורר.",
                     CategoryID = 5,
                     Category = categories.First(c => c.CategoryID == 5),
                     TimerMinutes = 30,
                     ImageUrl = "pasta_tomato.jpg",
                     LikesCount = 0,
-                    VideoURL = null
+                    VideoURL = "https://youtu.be/NQXpasFpcqw?si=XoMIg51cSHpXvcMb"
                 },
                 new Recipe
                 {
                     RecipeName = "דג סלמון עם פירה",
-                    Description = "מנת סלמון אפוי עם תיבול פשוט, מוגש לצד פירה רך וחמאתי.",
+                    Description = "1. מתבלים נתחי סלמון במלח, פלפל, מיץ לימון ושמן זית.\n2. אופים בתנור שחומם מראש ל־200 מעלות כ־15–20 דקות עד שהדג מתבשל.\n3. בינתיים, מקלפים וחותכים תפוחי אדמה ומבשלים במים עם מלח עד לריכוך.\n4. מסננים ומועכים למחית, מוסיפים חמאה, חלב חם, מלח ופלפל.\n5. מגישים את הסלמון על מצע של פירה חם עם עשבי תיבול לקישוט.",
                     CategoryID = 2,
                     Category = categories.First(c => c.CategoryID == 2),
                     TimerMinutes = 35,
                     ImageUrl = "salmon.jpg",
                     LikesCount = 0,
-                    VideoURL = "https://youtu.be/lB0xz07WZ-4"
+                    VideoURL = "https://youtu.be/jT4BsDlNjFs?si=aTHT7_xzeRLHLUmp"
                 },
                 new Recipe
                 {
                     RecipeName = "קציצות דגים",
-                    Description = "קציצות דגים רכות עם תיבול ים תיכוני, מוגשות עם טחינה.",
+                    Description = "1. טוחנים 500 גרם דג לבן נקי עם בצל, פטרוזיליה, ביצה, שן שום ותבלינים (כמון, מלח, פלפל).\n2. מוסיפים פירורי לחם עד שמתקבלת תערובת נוחה לעיצוב.\n3. יוצרים קציצות ומשטחים מעט.\n4. מטגנים בשמן חם עד להשחמה משני הצדדים או אופים בתנור.\n5. מגישים חם עם טחינה, סלט ופת לחם טרי.",
                     CategoryID = 2,
                     Category = categories.First(c => c.CategoryID == 2),
                     TimerMinutes = 30,
                     ImageUrl = "fish_cakes.jpg",
                     LikesCount = 0,
-                    VideoURL = null
+                    VideoURL = "https://youtu.be/m09beHf1PXM?si=dGFiDWbweupqWmob"
                 },
                 new Recipe
                 {
                     RecipeName = "פרנץ' טוסט",
-                    Description = "לחם מטוגן בחמאה וביצה, מוגש עם סירופ מייפל או אבקת סוכר.",
+                    Description = "1. טורפים בקערה 2 ביצים, חצי כוס חלב, כפית סוכר, קמצוץ קינמון ווניל.\n2. טובלים פרוסות לחם (עדיף בן יומיים) בתערובת מכל צד.\n3. ממיסים חמאה במחבת ומטגנים את הפרוסות כ-2–3 דקות מכל צד עד להשחמה.\n4. מגישים עם סירופ מייפל, אבקת סוכר, פירות טריים או קצפת.",
                     CategoryID = 3,
                     Category = categories.First(c => c.CategoryID == 3),
                     TimerMinutes = 15,
                     ImageUrl = "frenchtoast.jpg",
-                    LikesCount = 0,
-                    VideoURL = "https://youtu.be/6KZFMH0tC9s"
+                    LikesCount = 4,
+                    VideoURL = "https://youtu.be/mKrQGMKPqTs?si=4nfHeuoT0RYlirS0"
                 },
                 new Recipe
                 {
                     RecipeName = "עראייס",
-                    Description = "פיתה ממולאת בשר טחון עסיסי, נצרבת על מחבת או בתנור.",
+                    Description = "1. מערבבים חצי קילו בשר טחון (עדיף כבש), בצל קצוץ דק, צרור פטרוזיליה קצוצה, מלח, פלפל שחור וכף שמן זית.\n2. חוצים פיתות וממלאים כל חצי בתערובת.\n3. מורחים שמן זית מבחוץ וצולים על מחבת פסים או בתנור שחומם ל-200 מעלות.\n4. הופכים מדי פעם עד שהפיתה פריכה והבשר עשוי מבפנים (כ-10–12 דקות).\n5. מגישים עם טחינה, עמבה או סלט ירקות.",
                     CategoryID = 5,
                     Category = categories.First(c => c.CategoryID == 5),
                     TimerMinutes = 25,
                     ImageUrl = "arayes.jpg",
-                    LikesCount = 0,
-                    VideoURL = "https://youtu.be/wGLfB2zt97M"
+                    LikesCount = 3,
+                    VideoURL = "https://youtu.be/a2muVNW1U3c?si=6FcJZzi2uYmk-xvv"
                 },
                 new Recipe
                 {
                     RecipeName = "בורקס גבינה",
-                    Description = "מאפה עלים פריך ממולא גבינות – מושלם לארוחת ערב או פיקניק.",
+                    Description =  "1. מערבבים בקערה גבינה לבנה, גבינת בולגרית מפוררת וביצה אחת.\n2. פורסים בצק עלים מופשר וחותכים לריבועים.\n3. מניחים כפית מילוי במרכז כל ריבוע, מקפלים למשולש ומהדקים עם מזלג.\n4. מברישים בביצה טרופה ומפזרים שומשום.\n5. אופים בתנור שחומם מראש ל-190 מעלות כ-20–25 דקות עד להזהבה יפה.",
                     CategoryID = 6,
                     Category = categories.First(c => c.CategoryID == 6),
                     TimerMinutes = 25,
                     ImageUrl = "bourekas.jpg",
-                    LikesCount = 0,
-                    VideoURL = "https://youtu.be/FZOTFJTD-NA"
+                    LikesCount = 2,
+                    VideoURL = "https://youtu.be/7jaaOL3IVbE?si=Map8H-5FGTiApgXO"
                 },
                 new Recipe
                 {
                     RecipeName = "פרפה וניל ופירות יער",
-                    Description = "פרפה וניל מוקצף עם רוטב פירות יער חמוץ-מתוק.",
+                    Description = "1. מקציפים שמנת מתוקה עם אבקת סוכר ותמצית וניל עד לקצפת יציבה.\n2. מקפלים פנימה גבינת מסקרפונה (או יוגורט יווני) לתערובת חלקה.\n3. מבשלים פירות יער קפואים עם מעט סוכר ולימון עד לקבלת רוטב סמיך.\n4. מוזגים שכבות לסירוגין של קרם ורוטב לכוסות הגשה.\n5. מקררים 3–4 שעות לפני ההגשה. ניתן לקשט בעוגיות או עלי נענע.",
                     CategoryID = 1,
                      Category = categories.First(c => c.CategoryID == 1),
                     ImageUrl = "parfait.jpg",
                     TimerMinutes = 25,
                     LikesCount = 0,
-                    VideoURL = null
+                    VideoURL = "https://youtu.be/J_4ppU2jA0I?si=hqcxT-Z8ToUwENmm"
                 },
 
 

@@ -5,7 +5,23 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>@Html.DisplayFor(model => model.Recipe.RecipeName)</h1>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center;">
+        <h2 style="margin-left: 10px;">@Model.Recipe.RecipeName</h2>
+        <span style="display: flex; align-items: center; font-size: small; color: #555;">
+            <i class="fa fa-clock" style="margin-left: 4px;"></i>
+            @Model.Recipe.TimerMinutes דק'
+        </span>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <span style="color: red;">
+            <i class="fa fa-heart"></i>
+        </span>
+        <span style="font-size: small; margin-right: 4px;">
+            @Model.Recipe.LikesCount
+        </span>
+    </div>
+</div>
 
 <div>
     <h4>
@@ -54,18 +70,21 @@
             @Html.DisplayNameFor(model => model.Recipe.VideoURL)
         </dt>
  *@
-        <dt class="col-sm-2">
+        @* <dt class="col-sm-2">
+            <i class="fa fa-clock" style="color: #555;"></i>
             @Html.DisplayNameFor(model => model.Recipe.TimerMinutes)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Recipe.TimerMinutes)
+            @Model.Recipe.TimerMinutes דק'
         </dd>
         <dt class="col-sm-2">
+            <i class="fa fa-heart" style="color: red;"></i>
             @Html.DisplayNameFor(model => model.Recipe.LikesCount)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Recipe.LikesCount)
-        </dd>
+            @Model.Recipe.LikesCount
+        </dd> *@
+
     </dl>
 
     @if (!string.IsNullOrEmpty(Model.Recipe.VideoURL))
@@ -98,6 +117,8 @@
             return $"https://www.youtube.com/embed/{videoId}";
         }
     }
+
+
 
     <h3>תגובות ודירוגים</h3>
     <h3>תגובות ודירוגים</h3>
