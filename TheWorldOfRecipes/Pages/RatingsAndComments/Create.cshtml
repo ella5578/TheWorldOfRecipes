@@ -46,8 +46,27 @@
     <a asp-page="Index">Back to List</a>
 </div>
 
-@section Scripts {
+@* @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+} *@
+@section Scripts {
+    <script>
+        await Html.RenderPartialAsync("_ValidationScriptsPartial")
+        window.addEventListener('DOMContentLoaded', function () {
+            var showLoginAlert = '@TempData["ShowLoginAlert"]';
+            if (showLoginAlert === 'True') {
+                alert('אי אפשר לכתוב תגובה ולדרג אם אינך משתמש רשום. תועבר/י לדף ההתחברות.');
+                window.location.href = '/Auth/Login';
+            }
+
+            var welcomeUser = '@TempData["WelcomeUser"]';
+            if (welcomeUser) {
+                alert('היי ' + welcomeUser + ' ברוך הבא לאתר');
+            }
+        })
+
+    </script>
 }
+

@@ -1,8 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 using EllaRecipes.Shared.Models;
 using EllaRecipes.Shared.Data;
 
@@ -43,9 +43,24 @@ namespace TheWorldOfRecipes.Pages.RatingsAndComments
                 return Page();
             }
 
-            // שיוך אוטומטי של UserID (אם יש מערכת התחברות)
-            // RatingAndComment.UserID = ...;
+            // קבלת שם המשתמש מה־Claims
+            var userName = User.Identity?.Name;
 
+            // בדיקה שהמשתמש מחובר
+            if (string.IsNullOrEmpty(userName))
+            {
+                return RedirectToPage("/Auth/Login");
+            }
+
+            // שליפת ה־UserID מהמסד לפי שם המשתמש
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, "משתמש לא נמצא");
+                return Page();
+            }
+
+            RatingAndComment.UserID = user.UserID;
             _context.RatingAndComments.Add(RatingAndComment);
             await _context.SaveChangesAsync();
 
@@ -54,4 +69,3 @@ namespace TheWorldOfRecipes.Pages.RatingsAndComments
         }
     }
 }
-

@@ -31,10 +31,19 @@ namespace TheWorldOfRecipes.Pages.Categories
                 return Page();
             }
 
+            // בדיקה אם המשתמש מחובר
+            var userName = User.Identity?.Name;
+            if (string.IsNullOrEmpty(userName))
+            {
+                TempData["ShowLoginAlert"] = true;
+                return Page();
+            }
+
             _context.Categories.Add(Category);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }
+
     }
 }

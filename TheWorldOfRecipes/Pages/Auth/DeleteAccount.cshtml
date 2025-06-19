@@ -1,0 +1,15 @@
+﻿@page
+@model TheWorldOfRecipes.Pages.Auth.DeleteAccountModel
+
+@{
+    ViewData["Title"] = "מחיקת חשבון";
+}
+
+<h2>מחיקת חשבון</h2>
+<div class="alert alert-danger">
+    <strong>אזהרה:</strong> פעולה זו תמחק את החשבון שלך וכל המידע המשויך אליו (תגובות, דירוגים וכו') לצמיתות. לא ניתן לשחזר את המידע לאחר המחיקה.
+</div>
+<form method="post">
+    <button type="submit" class="btn btn-danger">מחק חשבון לצמיתות</button>
+    <a asp-page="/Index" class="btn btn-secondary ms-2">ביטול</a>
+</form>

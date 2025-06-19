@@ -29,30 +29,59 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/Recipes/Index">מתכונים</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Users/Index">משתמשים</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/RatingsAndComments/Index">תגובות וביקורות</a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Recipes/Index">האהובים</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Recipes/Index">Tic tac toe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Recipes/Index">DAMKA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/About">אודות</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Auth/Register">הרשמה</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">אודות</a>
                         </li>
                     </ul>
-                </div>
+                    <div class="d-flex align-items-center ms-3">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @* <span class="fw-bold text-primary fs-5">  שלום @User.Identity.Name   </span> *@
+                            @* <div class="d-flex align-items-center ms-3">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                   
+                                    <form method="post" asp-area="" asp-page="/Auth/Logout" class="mb-0">
+                                        <button type="submit" class="btn btn-danger btn-sm">  התנתקות  </button>
+                                    </form>
+                                    <form method="post" asp-area="" asp-page="/Auth/DeleteAccount" class="mb-0 ms-2" onsubmit="return confirm('האם אתה בטוח שברצונך למחוק את החשבון? פעולה זו בלתי הפיכה!');">
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">מחיקת חשבון</button>
+                                    </form>
+
+                                 
+                                }
+                                else
+                                {
+                                    <a class="btn btn-outline-primary ms-2" href="/Auth/Login">התחברות / הרשמה</a>
+                                }
+                            </div> *@
+                            <div class="d-flex align-items-center ms-3">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <span class="fw-bold text-primary fs-5 ms-4">שלום @User.Identity.Name</span>
+                                    <form method="post" asp-area="" asp-page="/Auth/Logout" class="mb-0 ms-3">
+                                        <button type="submit" class="btn btn-danger btn-sm">התנתקות</button>
+                                    </form>
+                                    <form method="post" asp-area="" asp-page="/Auth/DeleteAccount" class="mb-0 ms-2" onsubmit="return confirm('האם אתה בטוח שברצונך למחוק את החשבון? פעולה זו בלתי הפיכה!');">
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">מחיקת חשבון</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <a class="btn btn-outline-primary ms-2" href="/Auth/Login">התחברות / הרשמה</a>
+                                }
+                            </div>
+
+
+                        }
+                        else
+                        {
+                            <a class="btn btn-outline-primary ms-2" href="/Auth/Login">התחברות</a>
+                        }
+                    </div>
+                </div>  
             </div>
         </nav>
     </header>
@@ -63,9 +92,9 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
+        @* <div class="container">
             &copy; 2024 - The World Of Recipes - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
+        </div> *@
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
