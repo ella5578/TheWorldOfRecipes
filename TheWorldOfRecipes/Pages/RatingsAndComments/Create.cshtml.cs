@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using EllaRecipes.Shared.Models;
 using EllaRecipes.Shared.Data;
 
@@ -19,17 +17,25 @@ namespace TheWorldOfRecipes.Pages.RatingsAndComments
             _context = context;
         }
 
-        public IActionResult OnGet()
-        {
-        ViewData["RecipeID"] = new SelectList(_context.Recipes, "RecipeID", "RecipeID");
-        ViewData["UserID"] = new SelectList(_context.Users, "UserID", "Email");
-            return Page();
-        }
-
         [BindProperty]
         public RatingAndComment RatingAndComment { get; set; } = default!;
 
-        // For more information, see https://aka.ms/RazorPagesCRUD.
+        // קבלת RecipeID מה-QueryString
+        public IActionResult OnGet(int? recipeId)
+        {
+            if (recipeId == null)
+            {
+                return NotFound();
+            }
+
+            RatingAndComment = new RatingAndComment
+            {
+                RecipeID = recipeId.Value
+            };
+
+            return Page();
+        }
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -37,10 +43,15 @@ namespace TheWorldOfRecipes.Pages.RatingsAndComments
                 return Page();
             }
 
+            // שיוך אוטומטי של UserID (אם יש מערכת התחברות)
+            // RatingAndComment.UserID = ...;
+
             _context.RatingAndComments.Add(RatingAndComment);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            // הפנייה חזרה לדף פרטי המתכון
+            return RedirectToPage("/Recipes/Details", new { id = RatingAndComment.RecipeID });
         }
     }
 }
+
