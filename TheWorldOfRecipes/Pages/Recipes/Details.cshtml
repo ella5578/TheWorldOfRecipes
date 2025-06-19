@@ -158,9 +158,13 @@
     {
         <p>אין תגובות למתכון זה.</p>
     }
-    <a class="btn btn-primary" href="/RatingsAndComments/Create?recipeId=@Model.Recipe.RecipeID">
-        הוסף תגובה ודירוג
-    </a>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a class="btn btn-primary" href="/RatingsAndComments/Create?recipeId=@Model.Recipe.RecipeID">
+            הוסף תגובה ודירוג
+        </a>
+    }
+
 
 
 
