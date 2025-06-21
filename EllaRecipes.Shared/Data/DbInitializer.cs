@@ -118,7 +118,7 @@ namespace TheWorldOfRecipes.Data
                    ImageUrl = "brauniz.jpg",
                    TimerMinutes = 60,
                    LikesCount = 0,
-                   VideoURL = "https://youtu.be/KbyahTnzbKA?si=KRYAchT3Bd8e8my-"
+                   VideoURL = "https://youtu.be/Cn0vE38OiNM?si=uuUCcfI82tG1qydV"
                },
                new Recipe
                {
@@ -284,7 +284,7 @@ namespace TheWorldOfRecipes.Data
                 },
                 new Recipe
                 {
-                    RecipeName = "חזה עוף ברוטב טריאקי",
+                    RecipeName = "חזה עוף בטריאקי",
                     Description = "חותכים חזה עוף לקוביות ומטגנים. מוסיפים רוטב טריאקי, מעט דבש, ג'ינג'ר ושום. מבשלים עד שהרוטב מצפה את העוף. מגישים עם אורז או ירקות מאודים. ארוחה פשוטה עם טעם אסייתי מובהק.",
                     CategoryID = 2,
                     Category = categories.First(c => c.CategoryID == 2),
@@ -330,7 +330,7 @@ namespace TheWorldOfRecipes.Data
 
                 new Recipe
                 {
-                    RecipeName = "פסטה פסטו עם עגבניות שרי",
+                    RecipeName = "פסטה פסטו",
                     Description = "1. מבשלים פסטה לפי ההוראות על האריזה.\n2. במחבת עם מעט שמן זית מקפיצים עגבניות שרי חצויות למשך 2–3 דקות.\n3. מוסיפים לפסטה רוטב פסטו מוכן (או ביתי: בזיליקום, שמן זית, צנוברים, שום ופרמזן בטחינה).\n4. מערבבים יחד עם העגבניות, מפזרים גבינת פרמזן ומגישים חם.",
                     CategoryID = 5,
                     Category = categories.First(c => c.CategoryID == 5),
@@ -341,7 +341,7 @@ namespace TheWorldOfRecipes.Data
                 },
                 new Recipe
                 {
-                    RecipeName = "מאפינס בננה ושוקולד צ'יפס",
+                    RecipeName = "מאפינס בננה ושוקולד",
                     Description =  "1. מועכים 2 בננות בשלות בקערה.\n2. מוסיפים ביצה, חצי כוס סוכר, רבע כוס שמן וקורט וניל – מערבבים היטב.\n3. מוסיפים 1 כוס קמח, 1 כפית אבקת אפייה וקמצוץ מלח.\n4. מקפלים שוקולד צ'יפס לפי הטעם.\n5. יוצקים לתבנית מאפינס ואופים כ־20–25 דקות בתנור שחומם מראש ל־180 מעלות עד שקיסם יוצא יבש.",
                     CategoryID = 6,
                     Category = categories.First(c => c.CategoryID == 6),
@@ -460,6 +460,142 @@ namespace TheWorldOfRecipes.Data
                     LikesCount = 0,
                     VideoURL = "https://youtu.be/J_4ppU2jA0I?si=hqcxT-Z8ToUwENmm"
                 },
+                new Recipe
+                {
+                    RecipeName = "עוגת שמרים שוקולד",
+                    Description = "בקערה מערבבים קמח, סוכר, שמרים וביצים. מוסיפים חמאה וחלב ולשים לבצק רך. מתפיחים כשעה. בינתיים ממיסים שוקולד עם קקאו להכנת המלית. מרדדים את הבצק, מורחים את המלית ומגלגלים לרולדה. יוצרים בורג, מניחים בתבנית ומתפיחים שוב. אופים עד שהעוגה זהובה וריחנית. מתאימה להגשה חמה או קרה.",
+                    CategoryID = 6,
+                    Category = categories.First(c => c.CategoryID == 6),
+                    ImageUrl = "chocolate_yeast_cake.jpg",
+                    TimerMinutes = 120,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/-tX-ht5OpUo?si=Oev1V_PW9R54xkyg"
+                },
+                new Recipe
+                {
+                    RecipeName = "סלט עוף אסייאתי",
+                    Description = "במחבת חמה חממי כף שמן וצלי את רצועות העוף כ־3–4 דקות מכל צד עד שהן מזהיבות ומבושלות היטב. הוציאי לצלחת. " +
+                                  "באותה מחבת, הקפיצי את הירקות (כמו כרוב קצוץ, גזר מגורר, ופלפל אדום חתוך לרצועות דקות) עם מעט שמן למשך 2–3 דקות עד שהן מתרככות קלות אך שומרות על פריכות. " +
+                                  "החזירי את רצועות העוף למחבת והוסיפי את רוטב הטריאקי, מלח ופלפל לפי הטעם. ערבבי היטב במשך דקה נוספת לאיחוד הטעמים. " +
+                                  "בינתיים חתכי מלפפון לרצועות דקות ואת עגבניות השרי לחצאים. " +
+                                  "סדרי בקערת סלט – תחילה בסיס של ירקות טריים (מלפפון, עגבניות שרי, חסה), מעליהם תערובת העוף והירקות החמים. " +
+                                  "לפני ההגשה פזרי מעל עשבי תיבול קצוצים (כגון כוסברה או נענע). ניתן להגיש חם או בטמפרטורת החדר.",
+                    CategoryID = 4,
+                    Category = categories.First(c => c.CategoryID == 4), // סלטים
+                    ImageUrl = "asian_chicken_salad.jpg",
+                    TimerMinutes = 25,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/81pGxNcU1M4?si=qnvmtO1mO1wKLbC-"
+                },
+                new Recipe
+                {
+                    RecipeName = "מוזלי ביתי",
+                    Description =
+                    "1. בחרי יוגורט טבעי או יוגורט בטעמים לפי העדפתך (כמו יוגורט יווני או יוגורט דל שומן) ומזגי כמות של כ־200 מ״ל לקערה אישית.\n" +
+                    "2. פזרי מעל כ־3 כפות גרנולה קראנצ'ית – ניתן להשתמש בגרנולה ביתית או קנויה. אם רוצים גרסה בריאה יותר, השתמשי בגרנולה ללא סוכר.\n" +
+                    "3. הוסיפי מעל חופן פירות טריים חתוכים – מומלץ להשתמש בתותים, בננה, תפוח, קיווי או ענבים. ניתן גם להוסיף פירות יער קפואים שהופשרו.\n" +
+                    "4. להמתקה קלה – הוסיפי כפית דבש, סירופ מייפל טבעי או מעט סילאן לפי הטעם.\n" +
+                    "5. לקישוט וטעם עשיר יותר, הוסיפי אגוזים קצוצים, קוקוס קלוי או זרעי צ'יה.\n" +
+                    "6. הגישי מיד – המוזלי טעים במיוחד כשהוא קר וטרי.",
+                    CategoryID = 3, // ארוחות בוקר
+                    Category = categories.First(c => c.CategoryID == 3),
+                    ImageUrl = "muesli.jpg",
+                    TimerMinutes = 10,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/mMIwWFi1LJg?si=Tka0LKOTD1gxrQY9"
+                },
+                new Recipe
+                {
+                    RecipeName = "פסטה בולונז",
+                    Description =
+                    "1. קצצי בצל ושום וטגני אותם בסיר עם כף שמן זית עד שהם מתרככים ושקופים.\n" +
+                    "2. הוסיפי כ־400 גרם בשר טחון וטגני תוך ערבוב עד שהבשר משנה את צבעו ומתבשל.\n" +
+                    "3. תבלי במלח, פלפל שחור, פפריקה, וקמצוץ סוכר (לאיזון החומציות).\n" +
+                    "4. הוסיפי כוס רסק עגבניות, חצי כוס מים, ואפשר גם רסק עגבניות מרוכז (אם רוצים טעם עמוק יותר).\n" +
+                    "5. הביאי לרתיחה, ואז הנמיכי את הלהבה ובשלי כ־15–20 דקות עד שהרוטב מסמיך והטעמים מתמזגים.\n" +
+                    "6. במקביל, בשלי פסטה (פנה, ספגטי או פוזילי) לפי הוראות היצרן.\n" +
+                    "7. סנני את הפסטה, והגישי עם רוטב הבולונז מעל. אפשר לפזר גבינת פרמזן מגוררת מעל להגשה.",
+                    CategoryID = 5, // ארוחות צהריים
+                    Category = categories.First(c => c.CategoryID == 5),
+                    ImageUrl = "bolognese_pasta.jpg",
+                    TimerMinutes = 40,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/_6tMM2dnaiY?si=7znCIZtsnqrcg2NG"
+                },
+                new Recipe
+                {
+                    RecipeName = "חלה ביתית רכה",
+                    Description =
+                    "1. בקערה גדולה, ערבבי 1 ק״ג קמח, 1 כף שמרים יבשים, חצי כוס סוכר וכפית מלח.\n" +
+                    "2. הוסיפי 2 ביצים, רבע כוס שמן ו-1.5 כוסות מים פושרים (בהדרגה) ולושי עד קבלת בצק אחיד ורך.\n" +
+                    "3. לכסי את הקערה והתפיחי כשעה במקום חמים, עד להכפלת נפח.\n" +
+                    "4. חלקי את הבצק ל־2–3 חלות, צרי קליעות לפי בחירתך.\n" +
+                    "5. הניחי על תבנית עם נייר אפייה, כסי שוב והתפיחי 30 דקות נוספות.\n" +
+                    "6. הברישי בביצה טרופה ופזרי שומשום או פרג מעל.\n" +
+                    "7. אפי בתנור שחומם מראש ל־180 מעלות במשך 25–30 דקות, עד שהחלה זהובה ומוכנה.",
+                    CategoryID = 6, // מאפים
+                    Category = categories.First(c => c.CategoryID == 6),
+                    ImageUrl = "homemade_challah.jpg",
+                    TimerMinutes = 120,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/6uJTqGiCbPo?si=subppIOiwb4fe1P0"
+                },
+                new Recipe
+                {
+                    RecipeName = "סלט חצילים קלויים",
+                    Description =
+                    "1. חרצי קלות 2–3 חצילים עם סכין וצלי אותם על גז פתוח או בתנור (220 מעלות) במשך כ־30–40 דקות, עד שהקליפה שרופה והחצילים רכים.\n" +
+                    "2. קררי מעט, קלי את הקליפה, וקצצי את תוכן החצילים עם סכין או מועך.\n" +
+                    "3. הוסיפי שן שום כתושה, כף מיץ לימון, כף שמן זית, מלח ופלפל שחור לפי הטעם.\n" +
+                    "4. אפשר להוסיף מעט פטרוזיליה קצוצה או טחינה גולמית לתוספת טעם.\n" +
+                    "5. הגישי בטמפרטורת החדר עם לחם טרי או חלה.",
+                    CategoryID = 4, // סלטים
+                    Category = categories.First(c => c.CategoryID == 4),
+                    ImageUrl = "roasted_eggplant_salad.jpg",
+                    TimerMinutes = 45,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/PmKKOnwpbak?si=5ayld0L_iFZuq0Nt"
+                },
+                new Recipe
+                {
+                    RecipeName = "תבשיל בשר עם פטריות",
+                    Description =
+                    "1. חתכי 500 גרם בשר בקר לקוביות (כמו כתף מס' 5 או צלי כתף) וצרבי בסיר רחב עם 2 כפות שמן מכל הצדדים עד להשחמה.\n" +
+                    "2. הוסיפי בצל קצוץ וטגני עד שהוא מתרכך. הוסיפי גם 2 שיני שום כתושות.\n" +
+                    "3. הוסיפי כוס פטריות פרוסות (טריות או משומרות), וערבבי יחד עם הבשר.\n" +
+                    "4. תבלי במלח, פלפל שחור, פפריקה מתוקה, קמצוץ כמון ואם רוצים – מעט עלי טימין טריים.\n" +
+                    "5. הוסיפי כוס מים רותחים וכף רסק עגבניות. הביאי לרתיחה, כסי, והנמיכי את הלהבה.\n" +
+                    "6. בשלי על אש נמוכה כשעתיים–שעתיים וחצי, עד שהבשר רך ונימוח והרוטב מצטמצם.\n" +
+                    "7. הגישי עם אורז לבן, פירה או קוסקוס.",
+                    CategoryID = 2, // מנות עיקריות
+                    Category = categories.First(c => c.CategoryID == 2),
+                    ImageUrl = "beef_mushroom_stew.jpg",
+                    TimerMinutes = 150,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/9vWI7ZpbGxU?si=SFk9UfoJBUEj9Qf0"
+                },
+                new Recipe
+                {
+                    RecipeName = "סלט כרוב במיונז",
+                    Description =
+                    "1. קצצי דק חצי כרוב לבן (כ־400 גרם) או גררי אותו בפומפייה גסה.\n" +
+                    "2. גררי 1–2 גזרים (כ־150 גרם) והוסיפי לכרוב.\n" +
+                    "3. חתכי 2 גבעולי בצל ירוק לפרוסות דקות והוסיפי לקערה.\n" +
+                    "4. בקערית נפרדת ערבבי 3 כפות מיונז, כפית מיץ לימון, חצי כפית סוכר, ומעט מלח ופלפל שחור.\n" +
+                    "5. שפכי את הרוטב על הסלט וערבבי היטב עד שכל המרכיבים מצופים.\n" +
+                    "6. כסי את הקערה והכניסי למקרר למשך כחצי שעה לספיגת טעמים.\n" +
+                    "7. הגישי קר לצד מנות עיקריות.",
+                    CategoryID = 4, // סלטים
+                    Category = categories.First(c => c.CategoryID == 4),
+                    ImageUrl = "cabbage_salad.jpg",
+                    TimerMinutes = 15,
+                    LikesCount = 0,
+                    VideoURL = "https://youtu.be/7m49zlV2jnM?si=-oCfYJcjuWwMgeQy",
+                }
+
+
+
+
 
 
 
@@ -491,11 +627,11 @@ namespace TheWorldOfRecipes.Data
             var veggieCurry = context.Recipes.First(r => r.RecipeName == "קארי ירקות עם אורז");
             var garlicBread = context.Recipes.First(r => r.RecipeName == "לחם שום ביתי");
             var jerusalemBagel = context.Recipes.First(r => r.RecipeName == "בייגל ירושלמי");
-            var bananaMuffins = context.Recipes.First(r => r.RecipeName == "מאפינס בננה ושוקולד צ'יפס");
-            var pestoPasta = context.Recipes.First(r => r.RecipeName == "פסטה פסטו עם עגבניות שרי");
+            var bananaMuffins = context.Recipes.First(r => r.RecipeName == "מאפינס בננה ושוקולד");
+            var pestoPasta = context.Recipes.First(r => r.RecipeName == "פסטה פסטו");
             var creamyMushroomPasta = context.Recipes.First(r => r.RecipeName == "פסטה שמנת פטריות");
             var quinoaSalad = context.Recipes.First(r => r.RecipeName == "סלט קינואה צבעוני");
-            var teriyakiChicken = context.Recipes.First(r => r.RecipeName == "חזה עוף ברוטב טריאקי");
+            var teriyakiChicken = context.Recipes.First(r => r.RecipeName == "חזה עוף בטריאקי");
             var pizza = context.Recipes.First(r => r.RecipeName == "פיצה מרגריטה");
             var tiramisu = context.Recipes.First(r => r.RecipeName == "טירמיסו קלאסי");
             var avocadoToast = context.Recipes.First(r => r.RecipeName == "טוסט אבוקדו וביצה");
@@ -509,6 +645,14 @@ namespace TheWorldOfRecipes.Data
             var parfait = context.Recipes.First(r => r.RecipeName == "פרפה וניל ופירות יער");
             var ChocolateMousse = context.Recipes.First(r => r.RecipeName == "עוגת מוס שוקולד");
             var cheesecake = context.Recipes.First(r => r.RecipeName == "עוגת גבינה קרה");
+            var chocolateYeastCake = context.Recipes.First(r => r.RecipeName == "עוגת שמרים שוקולד");
+            var asianChickenSalad = context.Recipes.First(r => r.RecipeName == "סלט עוף אסייאתי");
+            var yogurtMuesli = context.Recipes.First(r => r.RecipeName == "מוזלי ביתי");
+            var pastaBolognese = context.Recipes.First(r => r.RecipeName == "פסטה בולונז");
+            var homemadeChallah = context.Recipes.First(r => r.RecipeName == "חלה ביתית רכה");
+            var roastedEggplantSalad = context.Recipes.First(r => r.RecipeName == "סלט חצילים קלויים");
+            var beefMushroomStew = context.Recipes.First(r => r.RecipeName == "תבשיל בשר עם פטריות");
+            var cabbageSalad = context.Recipes.First(r => r.RecipeName == "סלט כרוב במיונז");
 
 
             var ratingsandcomments = new RatingAndComment[]
@@ -613,7 +757,25 @@ namespace TheWorldOfRecipes.Data
              new Ingredient { IngredientName = "פיתה" },
               new Ingredient { IngredientName = "בצק עלים" },
               new Ingredient { IngredientName = "גבינה לבנה" },
-              new Ingredient { IngredientName = "קינמון" } //61
+              new Ingredient { IngredientName = "קינמון" }, //61
+              new Ingredient { IngredientName = "שומשום" }, // 62
+              new Ingredient { IngredientName = "יוגורט" },         // למוזלי63
+            new Ingredient { IngredientName = "גרנולה" },         // 64
+            new Ingredient { IngredientName = "דבש" },            // ל65י
+            new Ingredient { IngredientName = "פירות טריים" },    // 66
+            new Ingredient { IngredientName = "רוטב סויה" },      // 67
+            new Ingredient { IngredientName = "חומץ אורז" },
+            new Ingredient { IngredientName = "אגוזים קצוצים" },//69
+            new Ingredient { IngredientName = "חצילים" }, // 70
+              new Ingredient { IngredientName = "טימין" },   // 71
+               new Ingredient { IngredientName = "נתח אונטריב / כתף" }, //72
+               new Ingredient{ IngredientName = "אבוקדו" }, //73
+               new Ingredient { IngredientName = "נס קפה דק" }, //74
+               new Ingredient { IngredientName = "כרוב" },           // 75
+               new Ingredient { IngredientName = "בצל ירוק" },       // 76
+
+
+
             };
 
 
@@ -629,7 +791,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = stirFry.RecipeID,
                     IngredientID = 32, // ירקות מוקפצים
                     Quantity = 300,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == stirFry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 32)
                 },
@@ -638,7 +800,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = stirFry.RecipeID,
                     IngredientID = 9, // חזה עוף
                     Quantity = 300,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == stirFry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 9)
                 },
@@ -647,7 +809,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = stirFry.RecipeID,
                     IngredientID = 47, // עשבי תיבול
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == stirFry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 47)
                 },
@@ -656,44 +818,53 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = stirFry.RecipeID,
                     IngredientID = 30, // שמן
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == stirFry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 30)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = stirFry.RecipeID,
-                    IngredientID = 48, // תבלין קארי
+                    IngredientID = 33, // תבלין קארי
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == stirFry.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 48)
+                    Ingredient = ingredients.First(i => i.IngredientID == 33)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = stirFry.RecipeID,
-                    IngredientID = 45, // שמן זית
+                    IngredientID = 14, // מלח
                     Quantity = 1,
-                    Units = "tbsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == stirFry.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 45)
+                    Ingredient = ingredients.First(i => i.IngredientID == 14)
                 },
+
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 75, Quantity = 400, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 75) }, // כרוב  
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 40, Quantity = 150, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 40) }, // גזר  
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 76, Quantity = 2, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 76) }, // בצל ירוק  
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 25, Quantity = 3, Units = "כף", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 25) }, // מיונז  
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 26, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 26) }, // מיץ לימון  
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 6, Quantity = 1, Units = "קורט", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 6) }, // סוכר  
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 14, Quantity = 1, Units = "קורט", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+                new RecipeIngredient { RecipeID = cabbageSalad.RecipeID, IngredientID = 31, Quantity = 1, Units = "קורט", Recipe = recipes.First(r => r.RecipeID == cabbageSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
 
                 new RecipeIngredient
                 {
                     RecipeID = tiramisu.RecipeID,
-                    IngredientID = 5, // שוקולד
+                    IngredientID = 74, // קפה
                     Quantity = 100,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == tiramisu.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 5)
+                    Ingredient = ingredients.First(i => i.IngredientID == 74)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = tiramisu.RecipeID,
                     IngredientID = 6, // סוכר
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == tiramisu.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
@@ -702,7 +873,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = tiramisu.RecipeID,
                     IngredientID = 1, // ביצים
                     Quantity = 3,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == tiramisu.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -718,20 +889,20 @@ namespace TheWorldOfRecipes.Data
                 new RecipeIngredient
                 {
                     RecipeID = tiramisu.RecipeID,
-                    IngredientID = 18, // וניל
+                    IngredientID = 19, // וניל
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == tiramisu.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 18)
+                    Ingredient = ingredients.First(i => i.IngredientID == 19)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = tiramisu.RecipeID,
-                    IngredientID = 17, // קקאו
+                    IngredientID = 18, // קקאו
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == tiramisu.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 17)
+                    Ingredient = ingredients.First(i => i.IngredientID == 18)
                 },
 
                 new RecipeIngredient
@@ -739,16 +910,25 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = garlicBread.RecipeID,
                     IngredientID = 49, // פטרוזיליה קצוצה  
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == garlicBread.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 35)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = garlicBread.RecipeID,
+                    IngredientID = 27, //שום  
+                    Quantity = 3,
+                    Units = "שיניים",
+                    Recipe = recipes.First(r => r.RecipeID == garlicBread.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 27)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = garlicBread.RecipeID,
                     IngredientID = 50, // גבינה צהובה מגוררת  
                     Quantity = 100,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == garlicBread.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 36)
                 },
@@ -757,11 +937,28 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = garlicBread.RecipeID,
                     IngredientID = 31, // פלפל שחור  
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == garlicBread.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 31)
                 },
-
+                new RecipeIngredient
+                {
+                    RecipeID = garlicBread.RecipeID,
+                    IngredientID = 17, // חמאה  
+                    Quantity = 50,
+                    Units = "גרם",
+                    Recipe = recipes.First(r => r.RecipeID == garlicBread.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 17)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = garlicBread.RecipeID,
+                    IngredientID = 34, // כיכר לחם  
+                    Quantity = 6,
+                    Units = "פרוסות",
+                    Recipe = recipes.First(r => r.RecipeID == garlicBread.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 34)
+                },
                 // Recipe 10: Curry with Rice
                 
                 new RecipeIngredient
@@ -769,25 +966,25 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = veggieCurry.RecipeID,
                     IngredientID = 15, // פטריות  
                     Quantity = 200,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == veggieCurry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 15)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = veggieCurry.RecipeID,
-                    IngredientID = 29, // שמן  
+                    IngredientID = 30, // שמן  
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == veggieCurry.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 29)
+                    Ingredient = ingredients.First(i => i.IngredientID == 30)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = veggieCurry.RecipeID,
                     IngredientID = 16, // בצל  
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידה",
                     Recipe = recipes.First(r => r.RecipeID == veggieCurry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 16)
                 },
@@ -796,7 +993,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = veggieCurry.RecipeID,
                     IngredientID = 13, // שמנת מתוקה  
                     Quantity = 200,
-                    Units = "ml",
+                    Units = "מייל",
                     Recipe = recipes.First(r => r.RecipeID == veggieCurry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 13)
                 },
@@ -805,7 +1002,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = veggieCurry.RecipeID,
                     IngredientID = 33, // תבלין קארי  
                     Quantity = 1,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == veggieCurry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 33)
                 },
@@ -814,7 +1011,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID =veggieCurry.RecipeID,
                     IngredientID = 10, // אורז  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == veggieCurry.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 10)
                 },
@@ -825,7 +1022,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pancakes.RecipeID,
                     IngredientID = 4, // קמח  
                     Quantity = 1,
-                    Units = "cups",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == pancakes.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 4)
                 },
@@ -834,7 +1031,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pancakes.RecipeID,
                     IngredientID = 6, // סוכר  
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == pancakes.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
@@ -843,7 +1040,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pancakes.RecipeID,
                     IngredientID = 1, // ביצים  
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידה",
                     Recipe = recipes.First(r => r.RecipeID == pancakes.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -852,7 +1049,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pancakes.RecipeID,
                     IngredientID = 2, // חלב  
                     Quantity = 2,
-                    Units = "cups",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == pancakes.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 2)
                 },
@@ -861,7 +1058,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pancakes.RecipeID,
                     IngredientID = 23, // אבקת אפייה  
                     Quantity = 1,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == pancakes.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 23)
                 },
@@ -881,7 +1078,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = shakshuka.RecipeID,
                     IngredientID = 1, // ביצים  
                     Quantity = 4,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == shakshuka.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -890,7 +1087,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = shakshuka.RecipeID,
                     IngredientID = 12, // רסק עגבניות  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == shakshuka.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 12)
                 },
@@ -899,7 +1096,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = shakshuka.RecipeID,
                     IngredientID = 38, // עגבניות  
                     Quantity = 3,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == shakshuka.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 38)
                 },
@@ -908,25 +1105,25 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = shakshuka.RecipeID,
                     IngredientID = 16, // בצל  
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידה",
                     Recipe = recipes.First(r => r.RecipeID == shakshuka.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 16)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = shakshuka.RecipeID,
-                    IngredientID = 28, // שום  
+                    IngredientID = 27, // שום  
                     Quantity = 2,
-                    Units = "cloves",
+                    Units = "שיניים",
                     Recipe = recipes.First(r => r.RecipeID == shakshuka.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 28)
+                    Ingredient = ingredients.First(i => i.IngredientID == 27)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = shakshuka.RecipeID,
                     IngredientID = 14, // מלח  
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == shakshuka.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 14)
                 },
@@ -935,7 +1132,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = shakshuka.RecipeID,
                     IngredientID = 31, // פלפל שחור  
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == shakshuka.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 31)
                 },
@@ -946,7 +1143,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = schnitzel.RecipeID,
                    IngredientID = 9, // חזה עוף  
                    Quantity = 500,
-                   Units = "grams",
+                   Units = "גרם",
                    Recipe = recipes.First(r => r.RecipeID == schnitzel.RecipeID),
                    Ingredient = ingredients.First(i => i.IngredientID == 9)
                },
@@ -955,7 +1152,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = schnitzel.RecipeID,
                    IngredientID = 1, // ביצים  
                    Quantity = 2,
-                   Units = "units",
+                   Units = "יחידות",
                    Recipe = recipes.First(r => r.RecipeID == schnitzel.RecipeID),
                    Ingredient = ingredients.First(i => i.IngredientID == 1)
                },
@@ -964,7 +1161,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = schnitzel.RecipeID,
                    IngredientID = 3, // פירורי לחם  
                    Quantity = 1,
-                   Units = "cup",
+                   Units = "כוס",
                    Recipe = recipes.First(r => r.RecipeID == schnitzel.RecipeID),
                    Ingredient = ingredients.First(i => i.IngredientID == 3)
                },
@@ -973,7 +1170,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = schnitzel.RecipeID,
                    IngredientID = 14, // מלח  
                    Quantity = 1,
-                   Units = "tsp",
+                   Units = "כפית",
                    Recipe = recipes.First(r => r.RecipeID == schnitzel.RecipeID),
                    Ingredient = ingredients.First(i => i.IngredientID == 14)
                },
@@ -982,7 +1179,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = schnitzel.RecipeID,
                    IngredientID = 31, // פלפל שחור  
                    Quantity = 1,
-                   Units = "tsp",
+                   Units = "כפית",
                    Recipe = recipes.First(r => r.RecipeID == schnitzel.RecipeID),
                    Ingredient = ingredients.First(i => i.IngredientID == 31)
                },
@@ -991,7 +1188,7 @@ namespace TheWorldOfRecipes.Data
                   RecipeID = schnitzel.RecipeID,
                    IngredientID = 30, // שמן  
                    Quantity = 1,
-                   Units = "liter",
+                   Units = "ליטר",
                    Recipe = recipes.First(r => r.RecipeID == schnitzel.RecipeID),
                    Ingredient = ingredients.First(i => i.IngredientID == 30)
                },
@@ -1000,7 +1197,7 @@ namespace TheWorldOfRecipes.Data
                   RecipeID = schnitzel.RecipeID,
                    IngredientID = 4, // קמח  
                    Quantity = 1,
-                   Units = "cup",
+                   Units = "כוס",
                    Recipe = recipes.First(r => r.RecipeID == schnitzel.RecipeID),
                    Ingredient = ingredients.First(i => i.IngredientID == 4)
                },  
@@ -1010,7 +1207,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = chocolateBalls.RecipeID,
                    IngredientID = 17, // חמאה  
                    Quantity = 100,
-                   Units = "grams",
+                   Units = "גרם",
                    Recipe = recipes.First(r => r.RecipeID == 4),
                    Ingredient = ingredients.First(i => i.IngredientID == 17)
                },
@@ -1019,7 +1216,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = chocolateBalls.RecipeID,
                    IngredientID = 5, // שוקולד  
                    Quantity = 200,
-                   Units = "grams",
+                   Units = "גרם",
                    Recipe = recipes.First(r => r.RecipeID == 4),
                    Ingredient = ingredients.First(i => i.IngredientID == 5)
                },
@@ -1028,7 +1225,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = chocolateBalls.RecipeID,
                    IngredientID = 22, // קוקוס  
                    Quantity = 100,
-                   Units = "gram",
+                   Units = "גרם",
                    Recipe = recipes.First(r => r.RecipeID == 4),
                    Ingredient = ingredients.First(i => i.IngredientID == 22)
                },
@@ -1037,7 +1234,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = chocolateBalls.RecipeID,
                    IngredientID = 21, // פירורי פתי בר  
                    Quantity = 500,
-                   Units = "grams",
+                   Units = "גרם",
                    Recipe = recipes.First(r => r.RecipeID == 4),
                    Ingredient = ingredients.First(i => i.IngredientID == 21)
                },
@@ -1046,7 +1243,7 @@ namespace TheWorldOfRecipes.Data
                   RecipeID = chocolateBalls.RecipeID,
                    IngredientID = 2, // חלב  
                    Quantity = 1,
-                   Units = "cup",
+                   Units = "כוס",
                    Recipe = recipes.First(r => r.RecipeID == 4),
                    Ingredient = ingredients.First(i => i.IngredientID == 2)
                },
@@ -1056,7 +1253,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = caesarSalad.RecipeID,
                     IngredientID = 35, // חסה 
                     Quantity = 1,
-                    Units = "head",
+                    Units = "חבילה",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 35)
                 },
@@ -1065,7 +1262,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = caesarSalad.RecipeID,
                     IngredientID = 36, // אנשובי
                     Quantity = 4,
-                    Units = "filets",
+                    Units = "פילטים",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 36)
                 },
@@ -1074,7 +1271,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = caesarSalad.RecipeID,
                     IngredientID = 25, // מיונז
                     Quantity = 3,
-                    Units = "tablespoons",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 25)
                 },
@@ -1083,7 +1280,7 @@ namespace TheWorldOfRecipes.Data
                    RecipeID = caesarSalad.RecipeID,
                     IngredientID = 28, // גבינת פרמזן
                     Quantity = 50,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 28)
                 },
@@ -1092,7 +1289,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = caesarSalad.RecipeID,
                     IngredientID = 26, // מיץ לימון
                     Quantity = 1,
-                    Units = "tablespoon",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 26)
                 },
@@ -1101,7 +1298,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = caesarSalad.RecipeID,
                     IngredientID = 27, // שום
                     Quantity = 1,
-                    Units = "clove",
+                    Units = "שיניים",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 27)
                 },
@@ -1110,7 +1307,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = caesarSalad.RecipeID,
                     IngredientID = 30, // שמן (שמן זית)
                     Quantity = 2,
-                    Units = "tablespoons",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 30)
                 },
@@ -1119,7 +1316,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = caesarSalad.RecipeID,
                     IngredientID = 37, // קרוטונים
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == caesarSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 37)
                 },
@@ -1129,7 +1326,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 8, // בשר טחון
                     Quantity = 500,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 8)
                 },
@@ -1138,7 +1335,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 1, // ביצים
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידה",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -1147,7 +1344,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 3, // פירורי לחם
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 3)
                 },
@@ -1156,7 +1353,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 15, // בצל
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 15)
                 },
@@ -1165,7 +1362,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 14, // מלח
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 14)
                 },
@@ -1174,7 +1371,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 30, // פלפל שחור
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 30)
                 },
@@ -1183,7 +1380,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 27, // שום
                     Quantity = 2,
-                    Units = "cloves",
+                    Units = "שיניים",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 27)
                 },
@@ -1192,7 +1389,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 31, // רסק עגבניות
                     Quantity = 3,
-                    Units = "tablespoons",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 31)
                 },
@@ -1201,7 +1398,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 30, // שמן
                     Quantity = 2,
-                    Units = "tablespoons",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 30)
                 },
@@ -1210,7 +1407,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = meatballs.RecipeID,
                     IngredientID = 38, // אורז
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == meatballs.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 38)
                 },
@@ -1220,7 +1417,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateCake.RecipeID,
                     IngredientID = 5, // שוקולד
                     Quantity = 200,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == chocolateCake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 5)
                 },
@@ -1229,7 +1426,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateCake.RecipeID,
                     IngredientID = 17, // חמאה
                     Quantity = 200,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == chocolateCake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 17)
                 },
@@ -1238,7 +1435,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateCake.RecipeID,
                     IngredientID = 1, // ביצים
                     Quantity = 4,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == chocolateCake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -1247,7 +1444,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateCake.RecipeID,
                     IngredientID = 4, // קמח
                     Quantity = 200,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == chocolateCake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 4)
                 },
@@ -1256,34 +1453,34 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateCake.RecipeID,
                     IngredientID = 2, // חלב
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == chocolateCake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 2)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = chocolateCake.RecipeID,
-                    IngredientID = 19, // סוכר
+                    IngredientID = 6, // סוכר
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == chocolateCake.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 19)
+                    Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = chocolateCake.RecipeID,
-                    IngredientID = 20, // אבקת אפייה
+                    IngredientID = 23, // אבקת אפייה
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == chocolateCake.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 20)
+                    Ingredient = ingredients.First(i => i.IngredientID == 23)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = bananaMuffins.RecipeID,
                     IngredientID = 4, // קמח
                     Quantity = 1,
-                    Units = "cups",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == bananaMuffins.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 4)
                 },
@@ -1292,7 +1489,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = bananaMuffins.RecipeID,
                     IngredientID = 1, // ביצים
                     Quantity = 2,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == bananaMuffins.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -1301,34 +1498,34 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = bananaMuffins.RecipeID,
                     IngredientID = 6, // סוכר
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == bananaMuffins.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = bananaMuffins.RecipeID,
-                    IngredientID = 29, // שמן
+                    IngredientID = 30, // שמן
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == bananaMuffins.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 29)
+                    Ingredient = ingredients.First(i => i.IngredientID == 30)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = bananaMuffins.RecipeID,
-                    IngredientID = 24, // אבקת אפייה
+                    IngredientID = 23, // אבקת אפייה
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == bananaMuffins.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 24)
+                    Ingredient = ingredients.First(i => i.IngredientID == 23)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = bananaMuffins.RecipeID,
                     IngredientID = 20, // שוקולד צ’יפס
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == bananaMuffins.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 20)
                 },
@@ -1337,7 +1534,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = bananaMuffins.RecipeID,
                     IngredientID = 45, // בננה
                     Quantity = 2,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == bananaMuffins.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 45)
                 },
@@ -1346,7 +1543,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pestoPasta.RecipeID,
                     IngredientID = 11, // פסטה
                     Quantity = 250,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == pestoPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 11)
                 },
@@ -1355,25 +1552,25 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pestoPasta.RecipeID,
                     IngredientID = 42, // רוטב פסטו
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == pestoPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 42)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = pestoPasta.RecipeID,
-                    IngredientID = 41, // עגבניות שרי
+                    IngredientID = 43, // עגבניות שרי
                     Quantity = 10,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == pestoPasta.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 41)
+                    Ingredient = ingredients.First(i => i.IngredientID == 43)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = pestoPasta.RecipeID,
                     IngredientID = 44, // שמן זית
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == pestoPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 44)
                 },
@@ -1382,7 +1579,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pestoPasta.RecipeID,
                     IngredientID = 14, // מלח
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == pestoPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 14)
                 },
@@ -1391,25 +1588,25 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = creamyMushroomPasta.RecipeID,
                     IngredientID = 11, // פסטה
                     Quantity = 250,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == creamyMushroomPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 11)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = creamyMushroomPasta.RecipeID,
-                    IngredientID = 14, // שמנת מתוקה
+                    IngredientID = 13, // שמנת מתוקה
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == creamyMushroomPasta.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 14)
+                    Ingredient = ingredients.First(i => i.IngredientID == 13)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = creamyMushroomPasta.RecipeID,
                     IngredientID = 15, // פטריות
                     Quantity = 200,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == creamyMushroomPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 15)
                 },
@@ -1418,7 +1615,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = creamyMushroomPasta.RecipeID,
                     IngredientID = 16, // בצל
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידה",
                     Recipe = recipes.First(r => r.RecipeID == creamyMushroomPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 16)
                 },
@@ -1427,7 +1624,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = creamyMushroomPasta.RecipeID,
                     IngredientID = 14, // מלח
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == creamyMushroomPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 14)
                 },
@@ -1436,7 +1633,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = creamyMushroomPasta.RecipeID,
                     IngredientID = 31, // פלפל שחור
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == creamyMushroomPasta.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 31)
                 },
@@ -1445,7 +1642,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = quinoaSalad.RecipeID,
                     IngredientID = 46, // קינואה
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == quinoaSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 46)
                 },
@@ -1454,7 +1651,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = quinoaSalad.RecipeID,
                     IngredientID = 39, // מלפפונים
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == quinoaSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 39)
                 },
@@ -1463,7 +1660,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = quinoaSalad.RecipeID,
                     IngredientID = 38, // עגבניות
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == quinoaSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 38)
                 },
@@ -1481,7 +1678,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = quinoaSalad.RecipeID,
                     IngredientID = 27, // מיץ לימון
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == quinoaSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 27)
                 },
@@ -1490,7 +1687,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = quinoaSalad.RecipeID,
                     IngredientID = 44, // שמן זית
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == quinoaSalad.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 44)
                 },
@@ -1499,25 +1696,25 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = teriyakiChicken.RecipeID,
                     IngredientID = 9, // חזה עוף
                     Quantity = 500,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == teriyakiChicken.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 9)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = teriyakiChicken.RecipeID,
-                    IngredientID = 47, // רוטב טריאקי
+                    IngredientID = 48, // רוטב טריאקי
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == teriyakiChicken.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 47)
+                    Ingredient = ingredients.First(i => i.IngredientID == 48)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = teriyakiChicken.RecipeID,
                     IngredientID = 31, // פלפל שחור
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == teriyakiChicken.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 31)
                 },
@@ -1526,7 +1723,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = teriyakiChicken.RecipeID,
                     IngredientID = 16, // בצל
                     Quantity = 1,
-                    Units = "unit",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == teriyakiChicken.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 16)
                 },
@@ -1536,7 +1733,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = brownies.RecipeID,
                     IngredientID = 5, // שוקולד  
                     Quantity = 200,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == brownies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 5)
                 },
@@ -1545,7 +1742,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = brownies.RecipeID,
                     IngredientID = 6, // סוכר  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == brownies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
@@ -1554,7 +1751,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = brownies.RecipeID,
                     IngredientID = 1, // ביצים  
                     Quantity = 3,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == brownies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -1563,7 +1760,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = brownies.RecipeID,
                     IngredientID = 17, // חמאה  
                     Quantity = 150,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == brownies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 17)
                 },
@@ -1572,7 +1769,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = brownies.RecipeID,
                     IngredientID = 4, // קמח  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == brownies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 4)
                 },
@@ -1581,7 +1778,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = brownies.RecipeID,
                     IngredientID = 18, // קקאו  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == brownies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 18)
                 },
@@ -1590,7 +1787,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = brownies.RecipeID,
                     IngredientID = 23, // אבקת אפייה  
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == brownies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 23)
                 },
@@ -1600,7 +1797,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateChipCookies.RecipeID,
                     IngredientID = 17, // חמאה  
                     Quantity = 150,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == chocolateChipCookies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 17)
                 },
@@ -1609,7 +1806,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateChipCookies.RecipeID,
                     IngredientID = 6, // סוכר  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == chocolateChipCookies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
@@ -1618,7 +1815,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateChipCookies.RecipeID,
                     IngredientID = 1, // ביצים  
                     Quantity = 2,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == chocolateChipCookies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 1)
                 },
@@ -1627,7 +1824,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateChipCookies.RecipeID,
                     IngredientID = 4, // קמח  
                     Quantity = 2,
-                    Units = "cups",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == chocolateChipCookies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 4)
                 },
@@ -1636,7 +1833,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateChipCookies.RecipeID,
                     IngredientID = 19, // וניל  
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == chocolateChipCookies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 19)
                 },
@@ -1645,7 +1842,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = chocolateChipCookies.RecipeID,
                     IngredientID = 20, // שוקולד צ’יפס  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == chocolateChipCookies.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 20)
                 },
@@ -1655,7 +1852,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 4, // קמח
                     Quantity = 3,
-                    Units = "cups",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 4)
                 },
@@ -1664,7 +1861,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 30, // שמן
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 30)
                 },
@@ -1673,7 +1870,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 23, // אבקת אפייה
                     Quantity = 1,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 23)
                 },
@@ -1682,7 +1879,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 24, // מים
                     Quantity = 1,
-                    Units = "cups",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 24)
                 },
@@ -1691,16 +1888,25 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 12, // רסק עגבניות
                     Quantity = 5,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 12)
                 },
                 new RecipeIngredient
                 {
                     RecipeID = pizza.RecipeID,
+                    IngredientID = 50, // רסק עגבניות
+                    Quantity = 400,
+                    Units = "גרם",
+                    Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 50)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = pizza.RecipeID,
                     IngredientID = 14, // מלח
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 14)
                 },
@@ -1709,7 +1915,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 28, // גבינת פרמזן
                     Quantity = 100,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 28)
                 },
@@ -1718,7 +1924,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 43, // עגבניות שרי
                     Quantity = 6,
-                    Units = "units",
+                    Units = "יחידות",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 43)
                 },
@@ -1727,7 +1933,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = pizza.RecipeID,
                     IngredientID = 47, // עשבי תיבול
                     Quantity = 2,
-                    Units = "tbsp",
+                    Units = "כף",
                     Recipe = recipes.First(r => r.RecipeID == pizza.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 47)
                 },
@@ -1737,7 +1943,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 21, // פתי בר  
                     Quantity = 1,
-                    Units = "pack",
+                    Units = "חבילה",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 21)
                 },
@@ -1747,7 +1953,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 17, // חמאה  
                     Quantity = 100,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 17)
                 },
@@ -1757,7 +1963,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 60, // גבינה לבנה  
                     Quantity = 500,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 60)
                 },
@@ -1767,7 +1973,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 13, // שמנת מתוקה  
                     Quantity = 250,
-                    Units = "ml",
+                    Units = "מייל",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 13)
                 },
@@ -1777,7 +1983,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 6, // סוכר  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
@@ -1787,7 +1993,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 19, // וניל  
                     Quantity = 1,
-                    Units = "tsp",
+                    Units = "כפית",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 19)
                 },
@@ -1797,7 +2003,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 51, // ג’לי תות  
                     Quantity = 1,
-                    Units = "pack",
+                    Units = "חבילה",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 51)
                 },
@@ -1807,7 +2013,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = cheesecake.RecipeID,
                     IngredientID = 24, // מים  
                     Quantity = 1,
-                    Units = "cup",
+                    Units = "כוס",
                     Recipe = recipes.First(r => r.RecipeID == cheesecake.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 24)
                 },
@@ -1818,7 +2024,7 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = ChocolateMousse.RecipeID,
                     IngredientID = 52, // שוקולד מריר  
                     Quantity = 200,
-                    Units = "grams",
+                    Units = "גרם",
                     Recipe = recipes.First(r => r.RecipeID == ChocolateMousse.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 52)
                 },
@@ -1828,82 +2034,201 @@ namespace TheWorldOfRecipes.Data
                     RecipeID = ChocolateMousse.RecipeID,
                     IngredientID = 13, // שמנת מתוקה  
                     Quantity = 250,
-                    Units = "ml",
+                    Units = "מייל",
                     Recipe = recipes.First(r => r.RecipeID == ChocolateMousse.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 13)
                 },
 
-                new RecipeIngredient
-                {
-                    RecipeID = ChocolateMousse.RecipeID,
-                    IngredientID = 1, // ביצים  
-                    Quantity = 2,
-                    Units = "units",
-                    Recipe = recipes.First(r => r.RecipeID == ChocolateMousse.RecipeID),
-                    Ingredient = ingredients.First(i => i.IngredientID == 1)
-                },
+                
 
+               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 38, Quantity = 2, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 38) }, // עגבניות  
+               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 39, Quantity = 1, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 39) }, // מלפפונים  
+               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 40, Quantity = 1, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 40) }, // גזר  
+               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 44, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 44) }, // שמן זית
+
+               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 11, Quantity = 300, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 11) }, // פסטה  
+               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 12, Quantity = 100, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 12) }, // רסק עגבניות  
+               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 54, Quantity = 5, Units = "עלים", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 54) }, // בזיליקום  
+               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 30, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן  
+
+               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 55, Quantity = 2, Units = "נתחים", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 55) }, // פילה סלמון  
+               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 56, Quantity = 3, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 56) }, // תפוחי אדמה  
+               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 17, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 17) }, // חמאה  
+               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 31, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור
+               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 26, Quantity = 1, Units = "כוס", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 26) }, // לימון
+               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 47, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 47) }, // עשבי תיבול  
+               
+
+               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 1, Quantity = 2, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
+               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 2, Quantity = 1, Units = "כוס", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 2) }, // חלב  
+               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 34, Quantity = 4, Units = "פרוסות", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 34) }, // לחם  
+               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 18, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 18) }, // חמאה  
+               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 61, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 61) }, // קינמון
+
+               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 8, Quantity = 300, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 8) }, // בשר טחון  
+               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 16, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 16) }, // בצל  
+               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 31, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
+               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 58, Quantity = 4, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 58) }, // פיתה  
+               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 30, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן
+
+               new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 59, Quantity = 1, Units = "חבילה", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 59) }, // בצק עלים  
+                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 60, Quantity = 250, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 60) }, // גבינה לבנה  
+                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 1, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
+                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 50, Quantity = 50, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 50) }, // גבינה צהובה מגוררת  
+                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 30, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן  
+
+                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 13, Quantity = 250, Units = "מייל", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 13) }, // שמנת מתוקה  
+                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 19, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 19) }, // וניל  
+                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 53, Quantity = 100, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 53) }, // פירות יער קפואים  
+                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 6, Quantity = 3, Units = "כף", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 6) }, // סוכר
+
+                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 57, Quantity = 500, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 57) }, // דג טחון  
+                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 16, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 16) }, // בצל  
+                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 1, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
+                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 4, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 4) }, // קמח  
+                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 31, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
+                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 30, Quantity = 3, Units = "כף", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן לטיגון  
+
+
+    
                 new RecipeIngredient
                 {
-                    RecipeID = ChocolateMousse.RecipeID,
-                    IngredientID = 6, // סוכר  
-                    Quantity = 50,
-                    Units = "gram",
-                    Recipe = recipes.First(r => r.RecipeID == ChocolateMousse.RecipeID),
+                    RecipeID = jerusalemBagel.RecipeID,
+                    IngredientID = 29, // שמרים
+                    Quantity = 1,
+                    Units = "כף",
+                    Recipe = recipes.First(r => r.RecipeID == jerusalemBagel.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 29)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = jerusalemBagel.RecipeID,
+                    IngredientID = 4, // קמח
+                    Quantity = 500,
+                    Units = "גרם",
+                    Recipe = recipes.First(r => r.RecipeID == jerusalemBagel.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 4)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = jerusalemBagel.RecipeID,
+                    IngredientID = 6, // סוכר
+                    Quantity = 2,
+                    Units = "כף",
+                    Recipe = recipes.First(r => r.RecipeID == jerusalemBagel.RecipeID),
                     Ingredient = ingredients.First(i => i.IngredientID == 6)
                 },
+                new RecipeIngredient
+                {
+                    RecipeID = jerusalemBagel.RecipeID,
+                    IngredientID = 24, // מים
+                    Quantity = 2,
+                    Units = "כוסות",
+                    Recipe = recipes.First(r => r.RecipeID == jerusalemBagel.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 24)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = jerusalemBagel.RecipeID,
+                    IngredientID = 30, // שמן
+                    Quantity = 3,
+                    Units = "כף",
+                    Recipe = recipes.First(r => r.RecipeID == jerusalemBagel.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 30)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = jerusalemBagel.RecipeID,
+                    IngredientID = 14, // מלח
+                    Quantity = 1,
+                    Units = "כפית",
+                    Recipe = recipes.First(r => r.RecipeID == jerusalemBagel.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 14)
+                },
+                new RecipeIngredient
+                {
+                    RecipeID = jerusalemBagel.RecipeID,
+                    IngredientID = 62, // שומשום (חסר בטבלת המצרכים!)
+                    Quantity = 3,
+                    Units = "כף",
+                    Recipe = recipes.First(r => r.RecipeID == jerusalemBagel.RecipeID),
+                    Ingredient = ingredients.First(i => i.IngredientID == 62)
+                },
 
-               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 38, Quantity = 2, Units = "units", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 38) }, // עגבניות  
-               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 39, Quantity = 1, Units = "unit", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 39) }, // מלפפונים  
-               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 40, Quantity = 1, Units = "unit", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 40) }, // גזר  
-               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 14, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
-               new RecipeIngredient { RecipeID = salad.RecipeID, IngredientID = 44, Quantity = 2, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == salad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 44) }, // שמן זית
-
-               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 11, Quantity = 300, Units = "grams", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 11) }, // פסטה  
-               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 12, Quantity = 100, Units = "grams", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 12) }, // רסק עגבניות  
-               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 58, Quantity = 5, Units = "leaves", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 58) }, // בזיליקום  
-               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 14, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
-               new RecipeIngredient { RecipeID = pastaTomato.RecipeID, IngredientID = 30, Quantity = 2, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == pastaTomato.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן  
-
-               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 59, Quantity = 2, Units = "fillets", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 59) }, // פילה סלמון  
-               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 60, Quantity = 3, Units = "units", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 60) }, // תפוחי אדמה  
-               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 18, Quantity = 2, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 18) }, // חמאה  
-               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 14, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
-               new RecipeIngredient { RecipeID = salmon.RecipeID, IngredientID = 31, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == salmon.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור
-
-               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 1, Quantity = 2, Units = "units", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
-               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 2, Quantity = 1, Units = "cup", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 2) }, // חלב  
-               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 34, Quantity = 4, Units = "slices", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 34) }, // לחם  
-               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 18, Quantity = 1, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 18) }, // חמאה  
-               new RecipeIngredient { RecipeID = frenchToast.RecipeID, IngredientID = 61, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == frenchToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 61) }, // קינמון
-
-               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 8, Quantity = 300, Units = "grams", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 8) }, // בשר טחון  
-               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 16, Quantity = 1, Units = "unit", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 16) }, // בצל  
-               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 14, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
-               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 31, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
-               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 58, Quantity = 4, Units = "units", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 58) }, // פיתה  
-               new RecipeIngredient { RecipeID = arayes.RecipeID, IngredientID = 30, Quantity = 2, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == arayes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן
-
-               new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 59, Quantity = 1, Units = "pack", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 59) }, // בצק עלים  
-                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 60, Quantity = 250, Units = "grams", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 60) }, // גבינה לבנה  
-                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 1, Quantity = 1, Units = "unit", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
-                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 50, Quantity = 50, Units = "grams", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 50) }, // גבינה צהובה מגוררת  
-                new RecipeIngredient { RecipeID = bourekas.RecipeID, IngredientID = 30, Quantity = 1, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == bourekas.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן  
-
-                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 13, Quantity = 250, Units = "ml", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 13) }, // שמנת מתוקה  
-                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 19, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 19) }, // וניל  
-                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 53, Quantity = 100, Units = "grams", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 53) }, // פירות יער קפואים  
-                new RecipeIngredient { RecipeID = parfait.RecipeID, IngredientID = 6, Quantity = 3, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == parfait.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 6) }, // סוכר
-
-                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 58, Quantity = 500, Units = "grams", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 58) }, // דג טחון  
-                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 16, Quantity = 1, Units = "unit", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 16) }, // בצל  
-                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 1, Quantity = 1, Units = "unit", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
-                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 4, Quantity = 2, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 4) }, // קמח  
-                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 14, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
-                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 31, Quantity = 1, Units = "tsp", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
-                new RecipeIngredient { RecipeID = fishCakes.RecipeID, IngredientID = 30, Quantity = 3, Units = "tbsp", Recipe = recipes.First(r => r.RecipeID == fishCakes.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן לטיגון  
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 29, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 29) }, // שמרים
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 4, Quantity = 500, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 4) }, // קמח
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 6, Quantity = 100, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 6) }, // סוכר
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 1, Quantity = 2, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 2, Quantity = 1, Units = "כוס", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 2) }, // חלב
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 17, Quantity = 100, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 17) }, // חמאה
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 5, Quantity = 150, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 5) }, // שוקולד
+                new RecipeIngredient { RecipeID = chocolateYeastCake.RecipeID, IngredientID = 18, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == chocolateYeastCake.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 18) },  // קקאו
 
 
+                new RecipeIngredient { RecipeID = yogurtMuesli.RecipeID, IngredientID = 63, Quantity = 150, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == yogurtMuesli.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 63) }, // יוגורט  
+                new RecipeIngredient { RecipeID = yogurtMuesli.RecipeID, IngredientID = 64, Quantity = 50, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == yogurtMuesli.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 64) }, // גרנולה  
+                new RecipeIngredient { RecipeID = yogurtMuesli.RecipeID, IngredientID = 66, Quantity = 5, Units = "כף", Recipe = recipes.First(r => r.RecipeID == yogurtMuesli.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 66) }, // פירות טריים  
+                new RecipeIngredient { RecipeID = yogurtMuesli.RecipeID, IngredientID = 65, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == yogurtMuesli.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 65) }, // דבש  
+                new RecipeIngredient { RecipeID = yogurtMuesli.RecipeID, IngredientID = 69, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == yogurtMuesli.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 69) }, // אגוזים קצוצים
+
+
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 8, Quantity = 400, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 8) }, // בשר טחון  
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 16, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 16) }, // בצל  
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 27, Quantity = 2, Units = "שיניים", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 27) }, // שום  
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 12, Quantity = 200, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 12) }, // רסק עגבניות  
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 11, Quantity = 500, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 11) }, // פסטה  
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 31, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
+                new RecipeIngredient { RecipeID = pastaBolognese.RecipeID, IngredientID = 30, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == pastaBolognese.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן  
+
+                new RecipeIngredient { RecipeID = asianChickenSalad.RecipeID, IngredientID = 9, Quantity = 300, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == asianChickenSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 9) }, // חזה עוף  
+                new RecipeIngredient { RecipeID = asianChickenSalad.RecipeID, IngredientID = 40, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == asianChickenSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 40) }, // גזר  
+                new RecipeIngredient { RecipeID = asianChickenSalad.RecipeID, IngredientID = 41, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == asianChickenSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 41) }, // פלפל מתוק  
+                new RecipeIngredient { RecipeID = asianChickenSalad.RecipeID, IngredientID = 47, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == asianChickenSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 47) }, // עשבי תיבול  
+                new RecipeIngredient { RecipeID = asianChickenSalad.RecipeID, IngredientID = 67, Quantity = 2, Units = "כף", Recipe = recipes.First(r => r.RecipeID == asianChickenSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 67) }, // רוטב סויה  
+                new RecipeIngredient { RecipeID = asianChickenSalad.RecipeID, IngredientID = 68, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == asianChickenSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 68) }, // חומץ אורז  
+                new RecipeIngredient { RecipeID = asianChickenSalad.RecipeID, IngredientID = 30, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == asianChickenSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן לטיגון/צריבה  
+
+
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 4, Quantity = 1000, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 4) }, // קמח  
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 24, Quantity = 600, Units = "מייל", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 24) }, // מים  
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 6, Quantity = 50, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 6) }, // סוכר  
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 1, Quantity = 2, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 29, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 29) }, // שמרים  
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 30, Quantity = 60, Units = "מייל", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן (לשימון קל)  
+                new RecipeIngredient { RecipeID = homemadeChallah.RecipeID, IngredientID = 62, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == homemadeChallah.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 62) }, // שומשום  
+
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 72, Quantity = 500, Units = "גרם", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 72) }, // נתח אונטריב / כתף  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 16, Quantity = 1, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 16) }, // בצל  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 27, Quantity = 2, Units = "שיניים", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 27) }, // שום  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 15, Quantity = 1, Units = "חבילה", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 15) }, // פטריות  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 31, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 12, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 12) }, // רסק עגבניות  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 24, Quantity = 1, Units = "כוס", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 24) }, // מים  
+                new RecipeIngredient { RecipeID = beefMushroomStew.RecipeID, IngredientID = 71, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == beefMushroomStew.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 71) }, // טימין  
+
+                new RecipeIngredient { RecipeID = roastedEggplantSalad.RecipeID, IngredientID = 70, Quantity = 2, Units = "יחידות", Recipe = recipes.First(r => r.RecipeID == roastedEggplantSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 70) }, // חצילים  
+                new RecipeIngredient { RecipeID = roastedEggplantSalad.RecipeID, IngredientID = 27, Quantity = 1, Units = "שיניים", Recipe = recipes.First(r => r.RecipeID == roastedEggplantSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 27) }, // שום  
+                new RecipeIngredient { RecipeID = roastedEggplantSalad.RecipeID, IngredientID = 30, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == roastedEggplantSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן  
+                new RecipeIngredient { RecipeID = roastedEggplantSalad.RecipeID, IngredientID = 26, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == roastedEggplantSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 26) }, // מיץ לימון  
+                new RecipeIngredient { RecipeID = roastedEggplantSalad.RecipeID, IngredientID = 14, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == roastedEggplantSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+                new RecipeIngredient { RecipeID = roastedEggplantSalad.RecipeID, IngredientID = 31, Quantity = 1, Units = "כפית", Recipe = recipes.First(r => r.RecipeID == roastedEggplantSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
+                new RecipeIngredient { RecipeID = roastedEggplantSalad.RecipeID, IngredientID = 49, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == roastedEggplantSalad.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 49) }, // פטרוזיליה קצוצה  
+
+                 
+              new RecipeIngredient { RecipeID = avocadoToast.RecipeID, IngredientID = 34, Quantity = 2, Units = "פרוסות", Recipe = recipes.First(r => r.RecipeID == avocadoToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 34) }, // לחם  
+              new RecipeIngredient { RecipeID = avocadoToast.RecipeID, IngredientID = 73, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == avocadoToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 73) }, // אבוקדו  
+              new RecipeIngredient { RecipeID = avocadoToast.RecipeID, IngredientID = 1, Quantity = 1, Units = "יחידה", Recipe = recipes.First(r => r.RecipeID == avocadoToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 1) }, // ביצים  
+              new RecipeIngredient { RecipeID = avocadoToast.RecipeID, IngredientID = 14, Quantity = 1, Units = "קורט", Recipe = recipes.First(r => r.RecipeID == avocadoToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 14) }, // מלח  
+              new RecipeIngredient { RecipeID = avocadoToast.RecipeID, IngredientID = 31, Quantity = 1, Units = "קורט", Recipe = recipes.First(r => r.RecipeID == avocadoToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 31) }, // פלפל שחור  
+              new RecipeIngredient { RecipeID = avocadoToast.RecipeID, IngredientID = 30, Quantity = 1, Units = "כף", Recipe = recipes.First(r => r.RecipeID == avocadoToast.RecipeID), Ingredient = ingredients.First(i => i.IngredientID == 30) }, // שמן (לטיגון קל של הביצה)
 
 
 
@@ -1915,7 +2240,7 @@ namespace TheWorldOfRecipes.Data
 
 
 
-            };
+        };
 
 
 

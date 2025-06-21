@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllaRecipes.DAL", "EllaReci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllaRecipes.AdminPanel", "EllaRecipes.AdminPanel\EllaRecipes.AdminPanel.csproj", "{7058E29A-D7B2-4C17-9077-79169C568CEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWorldOfRecipes.API", "TheWorldOfRecipes.API\TheWorldOfRecipes.API.csproj", "{3B3B406C-CB56-41B6-98E9-BB85E01B9720}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheWorldOfRecipes.DesktopClient", "TheWorldOfRecipes.DesktopClient\TheWorldOfRecipes.DesktopClient.csproj", "{CAC4A89E-0863-438F-BB22-2007340E9ED3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{7058E29A-D7B2-4C17-9077-79169C568CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7058E29A-D7B2-4C17-9077-79169C568CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7058E29A-D7B2-4C17-9077-79169C568CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3B406C-CB56-41B6-98E9-BB85E01B9720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3B406C-CB56-41B6-98E9-BB85E01B9720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3B406C-CB56-41B6-98E9-BB85E01B9720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3B406C-CB56-41B6-98E9-BB85E01B9720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC4A89E-0863-438F-BB22-2007340E9ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC4A89E-0863-438F-BB22-2007340E9ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC4A89E-0863-438F-BB22-2007340E9ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC4A89E-0863-438F-BB22-2007340E9ED3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -82,13 +82,23 @@ body {
 
 
 .category-name {
-    font-size: 18px;
+    font-size: 23px;
     font-weight: bold;
     margin-top: 10px;
 }
 .recipe-img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
+.card border-0 p-3 {
+    width: 200px;
+    height: 200px;
+}
+.card-body {
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 10px;
+}
