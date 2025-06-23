@@ -1,0 +1,34 @@
+﻿@page
+@model TheWorldOfRecipes.Pages.Recipes.FavoritesModel
+
+<h2>המתכונים האהובים עליך</h2>
+@if (!Model.FavoriteRecipes.Any())
+{
+    <p>לא סימנת אף מתכון כאהוב (5/5).</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var recipe in Model.FavoriteRecipes)
+        {
+            <div class="col-4 col-lg-3 text-center mb-3">
+                <div class="card border-0 p-3" style="background-color: #f8f9fa; border-radius: 15px;">
+                    <a asp-page="/Recipes/Details" asp-route-id="@recipe.RecipeID">
+                        @if (!string.IsNullOrEmpty(recipe.ImageUrl))
+                        {
+                            <div class="d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <img src="~/images/@recipe.ImageUrl"
+                                     class="rounded"
+                                     style="width: 180px; height: 180px; object-fit: cover;"
+                                     alt="Recipe Image" />
+                            </div>
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@recipe.RecipeName</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+}

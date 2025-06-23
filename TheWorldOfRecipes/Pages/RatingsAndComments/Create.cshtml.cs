@@ -62,6 +62,17 @@ namespace TheWorldOfRecipes.Pages.RatingsAndComments
 
             RatingAndComment.UserID = user.UserID;
             _context.RatingAndComments.Add(RatingAndComment);
+
+            // הגדלת LikesCount אם הדירוג הוא 5
+            if (RatingAndComment.Rating == 5)
+            {
+                var recipe = await _context.Recipes.FindAsync(RatingAndComment.RecipeID);
+                if (recipe != null)
+                {
+                    recipe.LikesCount++;
+                }
+            }
+
             await _context.SaveChangesAsync();
 
             // הפנייה חזרה לדף פרטי המתכון
