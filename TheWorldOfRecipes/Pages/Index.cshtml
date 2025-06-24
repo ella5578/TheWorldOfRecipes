@@ -4,15 +4,35 @@
     ViewData["Title"] = "Home page";
 }
 <link rel="stylesheet" href="css/site.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<h1 class="card-text">ברוכים הבאים לאתר המתכונים של אלה </h1>
-<p class="card-text">
-    באתר זה תוכלו למצוא מתכונים קלילים וטעימים תוכלו לדרג ולסמן מתכונים אהובים ולהעביר את הזמן במשחקים כיפיים
-</p>
+
+<div class="container">
+    <h1 class="main-title">🧁 The World Of Recipes – המתכונים של אלה</h1>
+    <div class="subtitle">
+        🍽️ ברוכים הבאים לאתר המתכונים של אלה!<br>
+        מבחר מתכונים קלים, טעימים ומשפחתיים שתוכלו להכין באהבה – לדרג, לשתף, ולשחק יחד עם הילדים במיני-משחקים חינוכיים.
+    </div>
+    <img class="hero-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+         alt="אמא וילד מבשלים במטבח" />
+    <div class="features">
+        <div class="feature"><i class="fa fa-list"></i> מתכונים מסודרים לפי קטגוריות</div>
+        <div class="feature"><i class="fa fa-heart"></i> מערכת דירוגים ואהובים אישיים</div>
+        <div class="feature"><i class="fa fa-star"></i> דירוגים אמיתיים של משתמשים</div>
+        <div class="feature"><i class="fa fa-child"></i> משחקים חינוכיים לילדים</div>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="מה בא לכם לבשל היום?">
+        <button><i class="fa fa-search"></i> חפש</button>
+    </div>
+    <div class="cta-buttons">
+        <a asp-page="/Auth/Login"><i class="fa fa-sign-in-alt"></i> התחברו</a>
+        <a asp-page="/Recipes/Index"><i class="fa fa-utensils"></i> גלו מתכונים</a>
+    </div>
+</div>
 
 <div class="text-center">
   @*  <p><a asp-page="/Auth/Login">Login</a></p>
    <p><a asp-page="/Auth/Register">Register</a></p> *@
 </div>
 
-<img src="~/images/cooking.png" alt="בישול ואפייה" class="small-image" />
