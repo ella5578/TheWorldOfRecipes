@@ -26,24 +26,48 @@ namespace TheWorldOfRecipes.Pages.RatingsAndComments
                 return NotFound();
             }
 
-            var ratingandcomment =  await _context.RatingAndComments.FirstOrDefaultAsync(m => m.RatingAndCommentID == id);
+            var ratingandcomment = await _context.RatingAndComments.FirstOrDefaultAsync(m => m.RatingAndCommentID == id);
             if (ratingandcomment == null)
             {
                 return NotFound();
             }
             RatingAndComment = ratingandcomment;
-           ViewData["RecipeID"] = new SelectList(_context.Recipes, "RecipeID", "RecipeID");
-           ViewData["UserID"] = new SelectList(_context.Users, "UserID", "Email");
+            ViewData["RecipeID"] = new SelectList(_context.Recipes, "RecipeID", "RecipeID");
+            ViewData["UserID"] = new SelectList(_context.Users, "UserID", "Email");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
+            }
+
+            // שליפת הדירוג הקודם מה-DB
+            var original = await _context.RatingAndComments
+                .AsNoTracking()
+                .FirstOrDefaultAsync(rc => rc.RatingAndCommentID == RatingAndComment.RatingAndCommentID);
+
+            if (original == null)
+                return NotFound();
+
+            var recipe = await _context.Recipes.FindAsync(RatingAndComment.RecipeID);
+
+            // בדיקת שינוי דירוג והשפעה על LikesCount
+            if (recipe != null)
+            {
+                bool wasLike = original.Rating == 5;
+                bool isLike = RatingAndComment.Rating == 5;
+
+                if (!wasLike && isLike)
+                {
+                    recipe.LikesCount++;
+                }
+                else if (wasLike && !isLike && recipe.LikesCount > 0)
+                {
+                    recipe.LikesCount--;
+                }
             }
 
             _context.Attach(RatingAndComment).State = EntityState.Modified;
@@ -64,8 +88,10 @@ namespace TheWorldOfRecipes.Pages.RatingsAndComments
                 }
             }
 
-            return RedirectToPage("./Index");
+            // הפניה לדף פרטי המתכון
+            return RedirectToPage("/Recipes/Details", new { id = RatingAndComment.RecipeID });
         }
+
 
         private bool RatingAndCommentExists(int id)
         {

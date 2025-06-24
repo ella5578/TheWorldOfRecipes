@@ -61,7 +61,7 @@
             </table>
         }
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Recipe.Description)
+            <h5>אופן הכנה:</h5>
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Recipe.Description)
@@ -125,9 +125,9 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>Rating</th>
-                    <th>Comment</th>
+                    <th>שם משתמש</th>
+                    <th>דירוג</th>
+                    <th>תגובה</th>
                 </tr>
             </thead>
             <tbody>
@@ -149,6 +149,14 @@
                             }
                         </td>
                         <td>@comment.Comment</td>
+                        <td>
+                            @if (User.Identity.IsAuthenticated && comment.User.UserName == User.Identity.Name)
+                            {
+                                <a class="btn btn-sm btn-warning" asp-page="/RatingsAndComments/Edit" asp-route-id="@comment.RatingAndCommentID">ערוך</a>
+                                <a class="btn btn-sm btn-danger" asp-page="/RatingsAndComments/Delete" asp-route-id="@comment.RatingAndCommentID"
+                                   onclick="return confirm('האם אתה בטוח שברצונך למחוק את התגובה?');">מחק</a>
+                            }
+                        </td>
                     </tr>
                 }
             </tbody>
@@ -172,6 +180,6 @@
 
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Recipe.RecipeID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+   @* <a asp-page="./Edit" asp-route-id="@Model.Recipe.RecipeID">Edit</a> | *@
+    <a asp-page="Index">חזור למתכונים</a>
 </div>

@@ -4,13 +4,6 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1 class="text-center">קטגוריות</h1> <!-- כותרת ממורכזת -->
-
-@* <p class="text-center">
-    <a asp-page="Create">Create New</a> <!-- כפתור ליצירת קטגוריה חדשה -->
-</p> *@
-
 <div class="container">
     <div class="row justify-content-center"> <!-- ממרכז את השורות -->
         @foreach (var item in Model.Category)
